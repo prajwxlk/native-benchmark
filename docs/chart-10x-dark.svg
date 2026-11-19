@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" role="img" aria-label="Tokens per correct answer, 10× corpus (2,497 notes)">
+<rect width="760" height="260" rx="8" fill="#1a1a19"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#f0efec">Tokens per correct answer, 10× corpus (2,497 notes)</text>
+<text x="24" y="56" font-size="13" fill="#c3c2b7">Shorter bar = cheaper. Default Native only (no hint) at this size.</text>
+<rect x="24" y="72" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="42" y="82.5" font-size="13" fill="#c3c2b7">Markdown</text>
+<rect x="122" y="72" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="140" y="82.5" font-size="13" fill="#c3c2b7">Native (default)</text>
+<line x1="150.0" y1="100" x2="150.0" y2="204" stroke="#383835" stroke-width="1"/>
+<text x="150.0" y="222" font-size="12" fill="#898781" text-anchor="middle">0k</text>
+<line x1="250.0" y1="100" x2="250.0" y2="204" stroke="#2c2c2a" stroke-width="1"/>
+<text x="250.0" y="222" font-size="12" fill="#898781" text-anchor="middle">20k</text>
+<line x1="350.0" y1="100" x2="350.0" y2="204" stroke="#2c2c2a" stroke-width="1"/>
+<text x="350.0" y="222" font-size="12" fill="#898781" text-anchor="middle">40k</text>
+<line x1="450.0" y1="100" x2="450.0" y2="204" stroke="#2c2c2a" stroke-width="1"/>
+<text x="450.0" y="222" font-size="12" fill="#898781" text-anchor="middle">60k</text>
+<line x1="550.0" y1="100" x2="550.0" y2="204" stroke="#2c2c2a" stroke-width="1"/>
+<text x="550.0" y="222" font-size="12" fill="#898781" text-anchor="middle">80k</text>
+<line x1="650.0" y1="100" x2="650.0" y2="204" stroke="#2c2c2a" stroke-width="1"/>
+<text x="650.0" y="222" font-size="12" fill="#898781" text-anchor="middle">100k</text>
+<text x="138" y="127.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">gpt-5-mini</text>
+<path d="M150,108 H560.0772222222222 Q564.0772222222222,108 564.0772222222222,112 V118 Q564.0772222222222,122 560.0772222222222,122 H150 Z" fill="#3987e5"><title>gpt-5-mini, Markdown: 83k tokens per correct answer, 90% correct</title></path>
+<text x="570.0772222222222" y="119" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">83k</tspan> · 90% correct</text>
+<path d="M150,124 H374.9815 Q378.9815,124 378.9815,128 V134 Q378.9815,138 374.9815,138 H150 Z" fill="#d95926"><title>gpt-5-mini, Native (default): 46k tokens per correct answer, 100% correct</title></path>
+<text x="384.9815" y="135" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">46k</tspan> · 100% correct</text>
+<text x="138" y="175.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">gpt-5.6-luna</text>
+<path d="M150,156 H335.8535 Q339.8535,156 339.8535,160 V166 Q339.8535,170 335.8535,170 H150 Z" fill="#3987e5"><title>gpt-5.6-luna, Markdown: 38k tokens per correct answer, 100% correct</title></path>
+<text x="345.8535" y="167" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">38k</tspan> · 100% correct</text>
+<path d="M150,172 H603.73975 Q607.73975,172 607.73975,176 V182 Q607.73975,186 603.73975,186 H150 Z" fill="#d95926"><title>gpt-5.6-luna, Native (default): 92k tokens per correct answer, 100% correct</title></path>
+<text x="613.73975" y="183" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">92k</tspan> · 100% correct</text>
+<text x="24" y="250" font-size="11" fill="#898781">Source: results/scale10.jsonl</text>
+</svg>

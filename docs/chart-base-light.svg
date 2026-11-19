@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 548" width="760" height="548" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" role="img" aria-label="Tokens per correct answer, base corpus (333 notes)">
+<rect width="760" height="548" rx="8" fill="#fcfcfb"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#0b0b0b">Tokens per correct answer, base corpus (333 notes)</text>
+<text x="24" y="56" font-size="13" fill="#52514e">Shorter bar = cheaper. Label shows tokens per correct answer and % of questions answered correctly.</text>
+<rect x="24" y="72" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="42" y="82.5" font-size="13" fill="#52514e">Markdown</text>
+<rect x="122" y="72" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="140" y="82.5" font-size="13" fill="#52514e">Native (default)</text>
+<rect x="276" y="72" width="12" height="12" rx="3" fill="#1baf7a"/>
+<text x="294" y="82.5" font-size="13" fill="#52514e">Native + hint</text>
+<line x1="150.0" y1="100" x2="150.0" y2="492" stroke="#c3c2b7" stroke-width="1"/>
+<text x="150.0" y="510" font-size="12" fill="#898781" text-anchor="middle">0k</text>
+<line x1="250.0" y1="100" x2="250.0" y2="492" stroke="#e1e0d9" stroke-width="1"/>
+<text x="250.0" y="510" font-size="12" fill="#898781" text-anchor="middle">20k</text>
+<line x1="350.0" y1="100" x2="350.0" y2="492" stroke="#e1e0d9" stroke-width="1"/>
+<text x="350.0" y="510" font-size="12" fill="#898781" text-anchor="middle">40k</text>
+<line x1="450.0" y1="100" x2="450.0" y2="492" stroke="#e1e0d9" stroke-width="1"/>
+<text x="450.0" y="510" font-size="12" fill="#898781" text-anchor="middle">60k</text>
+<line x1="550.0" y1="100" x2="550.0" y2="492" stroke="#e1e0d9" stroke-width="1"/>
+<text x="550.0" y="510" font-size="12" fill="#898781" text-anchor="middle">80k</text>
+<line x1="650.0" y1="100" x2="650.0" y2="492" stroke="#e1e0d9" stroke-width="1"/>
+<text x="650.0" y="510" font-size="12" fill="#898781" text-anchor="middle">100k</text>
+<text x="138" y="131.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-nano</text>
+<text x="138" y="146.0" font-size="11" fill="#898781" text-anchor="end">cheapest</text>
+<path d="M150,108 H456.04657142857144 Q460.04657142857144,108 460.04657142857144,112 V118 Q460.04657142857144,122 456.04657142857144,122 H150 Z" fill="#2a78d6"><title>gpt-5-nano, Markdown: 62k tokens per correct answer, 88% correct</title></path>
+<text x="466.04657142857144" y="119" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">62k</tspan> · 88% correct</text>
+<path d="M150,124 H391.9995945945946 Q395.9995945945946,124 395.9995945945946,128 V134 Q395.9995945945946,138 391.9995945945946,138 H150 Z" fill="#eb6834"><title>gpt-5-nano, Native (default): 49k tokens per correct answer, 92% correct</title></path>
+<text x="401.9995945945946" y="135" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">49k</tspan> · 92% correct</text>
+<path d="M150,140 H284.55325 Q288.55325,140 288.55325,144 V150 Q288.55325,154 284.55325,154 H150 Z" fill="#1baf7a"><title>gpt-5-nano, Native + hint: 28k tokens per correct answer, 100% correct</title></path>
+<text x="294.55325" y="151" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">28k</tspan> · 100% correct</text>
+<text x="138" y="199.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-mini</text>
+<path d="M150,172 H428.54527777777776 Q432.54527777777776,172 432.54527777777776,176 V182 Q432.54527777777776,186 428.54527777777776,186 H150 Z" fill="#2a78d6"><title>gpt-5-mini, Markdown: 57k tokens per correct answer, 90% correct</title></path>
+<text x="438.54527777777776" y="183" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">57k</tspan> · 90% correct</text>
+<path d="M150,188 H320.2437179487179 Q324.2437179487179,188 324.2437179487179,192 V198 Q324.2437179487179,202 320.2437179487179,202 H150 Z" fill="#eb6834"><title>gpt-5-mini, Native (default): 35k tokens per correct answer, 98% correct</title></path>
+<text x="330.2437179487179" y="199" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">35k</tspan> · 98% correct</text>
+<path d="M150,204 H315.32175 Q319.32175,204 319.32175,208 V214 Q319.32175,218 315.32175,218 H150 Z" fill="#1baf7a"><title>gpt-5-mini, Native + hint: 34k tokens per correct answer, 100% correct</title></path>
+<text x="325.32175" y="215" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">34k</tspan> · 100% correct</text>
+<text x="138" y="263.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.4-mini</text>
+<path d="M150,236 H404.9786842105263 Q408.9786842105263,236 408.9786842105263,240 V246 Q408.9786842105263,250 404.9786842105263,250 H150 Z" fill="#2a78d6"><title>gpt-5.4-mini, Markdown: 52k tokens per correct answer, 95% correct</title></path>
+<text x="414.9786842105263" y="247" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">52k</tspan> · 95% correct</text>
+<path d="M150,252 H556.2719999999999 Q560.2719999999999,252 560.2719999999999,256 V262 Q560.2719999999999,266 556.2719999999999,266 H150 Z" fill="#eb6834"><title>gpt-5.4-mini, Native (default): 82k tokens per correct answer, 100% correct</title></path>
+<text x="566.2719999999999" y="263" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">82k</tspan> · 100% correct</text>
+<text x="156" y="279" font-size="12" fill="#898781" font-style="italic">not run</text>
+<text x="138" y="327.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.6-luna</text>
+<path d="M150,300 H289.88075000000003 Q293.88075000000003,300 293.88075000000003,304 V310 Q293.88075000000003,314 289.88075000000003,314 H150 Z" fill="#2a78d6"><title>gpt-5.6-luna, Markdown: 29k tokens per correct answer, 100% correct</title></path>
+<text x="299.88075000000003" y="311" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">29k</tspan> · 100% correct</text>
+<path d="M150,316 H541.8695 Q545.8695,316 545.8695,320 V326 Q545.8695,330 541.8695,330 H150 Z" fill="#eb6834"><title>gpt-5.6-luna, Native (default): 79k tokens per correct answer, 100% correct</title></path>
+<text x="551.8695" y="327" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">79k</tspan> · 100% correct</text>
+<path d="M150,332 H214.9555 Q218.9555,332 218.9555,336 V342 Q218.9555,346 214.9555,346 H150 Z" fill="#1baf7a"><title>gpt-5.6-luna, Native + hint: 14k tokens per correct answer, 100% correct</title></path>
+<text x="224.9555" y="343" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">14k</tspan> · 100% correct</text>
+<text x="138" y="387.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.6-terra</text>
+<text x="138" y="402.0" font-size="11" fill="#898781" text-anchor="end">strongest</text>
+<path d="M150,364 H234.0795 Q238.0795,364 238.0795,368 V374 Q238.0795,378 234.0795,378 H150 Z" fill="#2a78d6"><title>gpt-5.6-terra, Markdown: 18k tokens per correct answer, 100% correct</title></path>
+<text x="244.0795" y="375" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">18k</tspan> · 100% correct</text>
+<path d="M150,380 H401.36675 Q405.36675,380 405.36675,384 V390 Q405.36675,394 401.36675,394 H150 Z" fill="#eb6834"><title>gpt-5.6-terra, Native (default): 51k tokens per correct answer, 100% correct</title></path>
+<text x="411.36675" y="391" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">51k</tspan> · 100% correct</text>
+<path d="M150,396 H202.33575 Q206.33575,396 206.33575,400 V406 Q206.33575,410 202.33575,410 H150 Z" fill="#1baf7a"><title>gpt-5.6-terra, Native + hint: 11k tokens per correct answer, 100% correct</title></path>
+<text x="212.33575" y="407" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">11k</tspan> · 100% correct</text>
+<line x1="24" y1="419.0" x2="736" y2="419.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="138" y="455.5" font-size="13" font-weight="600" fill="#0b0b0b" text-anchor="end">All models</text>
+<path d="M150,428 H381.25430769230775 Q385.25430769230775,428 385.25430769230775,432 V438 Q385.25430769230775,442 381.25430769230775,442 H150 Z" fill="#2a78d6"><title>All models, Markdown: 47k tokens per correct answer, 93% correct</title></path>
+<text x="391.25430769230775" y="439" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">47k</tspan> · 93% correct</text>
+<path d="M150,444 H418.9974632352941 Q422.9974632352941,444 422.9974632352941,448 V454 Q422.9974632352941,458 418.9974632352941,458 H150 Z" fill="#eb6834"><title>All models, Native (default): 55k tokens per correct answer, 97% correct</title></path>
+<text x="428.9974632352941" y="455" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">55k</tspan> · 97% correct</text>
+<path d="M150,460 H254.2915625 Q258.2915625,460 258.2915625,464 V470 Q258.2915625,474 254.2915625,474 H150 Z" fill="#1baf7a"><title>All models, Native + hint: 22k tokens per correct answer, 100% correct</title></path>
+<text x="264.2915625" y="471" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">22k</tspan> · 100% correct</text>
+<text x="24" y="538" font-size="11" fill="#898781">“All models” for Native + hint covers 4 models (gpt-5.4-mini not run). Source: results/*.jsonl</text>
+</svg>

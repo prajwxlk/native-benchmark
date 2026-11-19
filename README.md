@@ -1,89 +1,143 @@
 # Native vs Markdown: an independent check across 5 OpenAI models
 
-An independent, rerunnable test of [Native](https://www.withnative.ai/)'s claim that agents answer company-context questions with far fewer tokens and failures than with a Markdown vault ([their benchmark](https://www.withnative.ai/research-and-posts/markdown-context-benchmark)). It runs on a different model family (OpenAI), a synthetic corpus with known answers, and two corpus sizes.
+An independent, rerunnable test of [Native](https://www.withnative.ai/)'s [Markdown benchmark](https://www.withnative.ai/research-and-posts/markdown-context-benchmark).
 
-**443 agent trials · 5 OpenAI models · 2 corpus sizes · $9.82 in API spend.**
+**443 agent runs · 5 OpenAI models · 2 workspace sizes · $9.82 in API spend.**
 
-## TL;DR
+## 1. What Native claims, and what we checked
 
-1. **Native is more accurate.** On the base corpus it got 97% right vs 93% for Markdown (136/140 vs 130/140), and 26/28 on two-step questions vs 23/28. Cheap models gained the most.
-2. **By default, Native used *more* tokens on a small corpus** (55k vs 47k per correct answer). Strong models grep efficiently, while Native's defaults cost a lot per session: a ~41.6k-character `bootstrap`, ~9× larger record payloads, and 29% of searches lost to a `scope` mix-up.
-3. **A 4-line hint that stands in for better defaults flips it.** With the hint, Native was 100% correct (80/80) at 22k tokens per correct answer. gpt-5.6-luna used 14k vs 29k for Markdown (2.1× fewer), and gpt-5.6-terra 11k vs 18k (1.6× fewer).
-4. **Corpus size moves the crossover.** At 10× size, default Native already beat Markdown for gpt-5-mini (1.8× fewer tokens, 100% vs 90%), but not yet for gpt-5.6-luna (2.4× more).
+Native is a database for AI agents. It replaces a folder of Markdown notes (like an Obsidian vault). Their pitch: an agent answering questions about your company uses about **40× fewer tokens** with Native than when it searches a folder of notes, and fails less often.
 
-## Results: base corpus (333 notes)
+Their own test used one model (DeepSeek) on their own company data. **We re-ran the same kind of test on 5 OpenAI models with data where we know every correct answer.** It's an independent check.
 
-Accuracy and tokens per fully correct answer (lower is better).
+## 2. How we benchmarked it
 
-| Model | Markdown | Native (default) | Native + hint |
+**Step 1: invent a company.** A script ([`bench/gen_corpus.py`](bench/gen_corpus.py)) generated "Fernwork", a fake 6-person startup with 10 weeks of notes: meetings, decisions, tasks, customer calls and daily logs. That's 333 notes, plus a 10× bigger version with 2,497 notes.
+
+The trap built into the data: **16 decisions were later replaced.** For example, "SMS reminders go through Twilio" is replaced weeks later by "we're switching to Vonage". The old note is never edited, just like real life. Native's main selling point is that it knows which note is current.
+
+**Step 2: write 20 questions with exact answers** ([`data/questions.json`](data/questions.json)).
+- **10 freshness questions:** "We decided X. Is that still current?" These test whether the agent catches the replacement.
+- **6 lookups:** "Where is Kenji Watanabe based?"
+- **4 two-step questions:** "Who owns the task that implements our *current* pricing decision?" The agent has to find the current decision, then the task, then the owner.
+
+**Step 3: give the same questions to the agent in three setups.**
+
+| Setup | What the agent gets |
+|---|---|
+| **Markdown** | The folder of notes, plus tools to search and read files |
+| **Native** | The same notes loaded into Native, and *only* Native's tools |
+| **Native + hint** | Same as Native, plus 4 lines of tips in the prompt |
+
+**Step 4: run it.** Every question went to every setup on 5 models, from cheapest to strongest: gpt-5-nano, gpt-5-mini, gpt-5.4-mini, gpt-5.6-luna and gpt-5.6-terra. That's **443 runs for $9.82.** Each run starts from a clean slate in OpenCode, the same agent tool Native used.
+
+**Step 5: score it.** The answer counts as right only if it contains the exact correct facts. A script checks this; there's no AI judge. For each setup we also recorded **tokens used per correct answer**, the same measure Native uses.
+
+## 3. What the hint was, and why it mattered
+
+Reading the Native runs, we saw the agents wasting tokens in three ways:
+
+1. **They called `bootstrap` first.** It's Native's "here's everything about this workspace" tool, and it returns about 42,000 characters every time, even for "where is Kenji based?"
+2. **Their searches broke.** Models passed `scope: "all"`, but `scope` expects a record ID, so 29% of searches errored. The agent saw that as "no results" and kept searching.
+3. **Records are big.** Opening one record returned about 9× more text than reading the same note as a file.
+
+The hint told the agent four things:
+- Skip bootstrap.
+- Search with just the query; leave out `scope`.
+- Replaced decisions have a "supersedes" link you can look up.
+- Records are large, so only open the ones you need.
+
+The hint is a stand-in for fixes Native could make in the product itself. It isn't a suggestion that users should write prompts like this.
+
+## 4. The data
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/chart-base-dark.svg">
+  <img alt="Bar chart of tokens per correct answer by model and setup. Native + hint is shortest for every model it ran on; default Native is longest for gpt-5.4-mini, luna and terra." src="docs/chart-base-light.svg">
+</picture>
+
+**Base corpus, % correct · tokens per correct answer (lower is better):**
+
+| Model | Markdown | Native | Native + hint |
 |---|---|---|---|
-| gpt-5-nano | 88% · 62k | 92% · 49k | **100% · 28k** |
+| gpt-5-nano (cheapest) | 88% · 62k | 92% · 49k | **100% · 28k** |
 | gpt-5-mini | 90% · 57k | 98% · 35k | **100% · 34k** |
 | gpt-5.4-mini | 95% · 52k | 100% · 82k | not run |
 | gpt-5.6-luna | 100% · 29k | 100% · 79k | **100% · 14k** |
-| gpt-5.6-terra | 100% · 18k | 100% · 51k | **100% · 11k** |
-| **All** | 93% · 47k | 97% · 55k | 100% · 22k¹ |
+| gpt-5.6-terra (strongest) | 100% · 18k | 100% · 51k | **100% · 11k** |
+| **Overall** | 93% · 47k | 97% · 55k | **100% · 22k** |
 
-gpt-5-nano and gpt-5-mini: 2 runs × 20 questions on Markdown and Native. Everything else is 1 run × 20 questions.
-¹ Four models; gpt-5.4-mini wasn't run with the hint.
+gpt-5-nano and gpt-5-mini ran each question twice on Markdown and Native; everything else ran once. "Overall" for Native + hint covers 4 models.
 
-| By question type (all models) | Markdown | Native | Native + hint |
+What that means:
+- **Native is more accurate.** That's their claim, and it held. Weaker models benefit most, because Native hands them the "current" answer instead of making them work it out.
+- **By default, Native cost *more* tokens.** Strong models are good at searching files, and Native's big default responses outweighed its advantage. Luna used 79k with Native against 29k with Markdown.
+- **With the hint, Native won on both.** It got 100% right using about half the tokens of Markdown. Luna went from 79k to 14k.
+- **Size matters.** On the 10× corpus, plain Native already beat Markdown for gpt-5-mini, with 1.8× fewer tokens. Bigger workspaces favor Native because its fixed startup cost gets spread out.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/chart-10x-dark.svg">
+  <img alt="Bar chart for the 10× corpus. gpt-5-mini: Markdown 83k, Native 46k. gpt-5.6-luna: Markdown 38k, Native 92k." src="docs/chart-10x-light.svg">
+</picture>
+
+| 10× corpus (2,497 notes) | Markdown | Native (default) |
+|---|---|---|
+| gpt-5-mini | 90% · 83k | **100% · 46k** |
+| gpt-5.6-luna | 100% · 38k | 100% · 92k |
+
+By question type (all models, base corpus):
+
+| | Markdown | Native | Native + hint |
 |---|---|---|---|
-| Freshness ("is X still current?") | 65/70 | 68/70 | 40/40 |
+| Freshness | 65/70 | 68/70 | 40/40 |
 | Lookup | 42/42 | 42/42 | 24/24 |
 | Two-step | 23/28 | 26/28 | 16/16 |
 
-Median steps per trial: Markdown 4, Native 5, Native + hint 3. Cost per correct answer: $0.018, $0.028, $0.016.
+Raw tables: [`results/summary.md`](results/summary.md), [`results/summary-hinted.md`](results/summary-hinted.md), [`results/summary-scale10.md`](results/summary-scale10.md).
 
-## Results: 10× corpus (2,497 notes)
+## 5. Friction points
 
-| Model | Markdown | Native (default) | Markdown ÷ Native tokens |
-|---|---|---|---|
-| gpt-5-mini | 90% · 83k | **100% · 46k** | 1.8× (Native cheaper) |
-| gpt-5.6-luna | 100% · 38k | 100% · 92k | 0.4× (Markdown cheaper) |
+Things that went wrong or confused us while setting up and using Native. Full list with evidence: [findings/friction-log.md](findings/friction-log.md).
 
-Going from base to 10×, Markdown tokens per correct answer grew (gpt-5-mini 57k → 83k, luna 29k → 38k), while default Native stayed roughly flat for mini (35k → 46k). Native's fixed per-session cost is why its advantage needs scale, or slimmer defaults.
+**Website and docs**
+- Googling "withnative" lands on withnative.com, a different company.
+- The benchmark post's numbers don't agree with each other: "97% fewer failed trials" vs "30× fewer", and 43.5× vs 40×.
+- The "Stanford research" claim is on the homepage but isn't linked from the benchmark post.
 
-## Where Native's tokens go (from 140 default-Native traces)
+**Setup**
+- The build was quick: 3 minutes and about 4 GB. That's a positive.
+- The setup guide's first check (`engine_info`) fails if you follow it literally.
+- Importing notes doesn't apply "this replaces that" automatically, so new users miss the main benefit.
 
-| Cause | Evidence | Suggested fix |
-|---|---|---|
-| `bootstrap` orientation | called in 91 of 140 trials, often first; ~41.6k characters each time | slim `answer` profile (~2k characters) for read-only Q&A |
-| Large payloads | `get_record` median 8.2k characters vs 0.9k for the same note read as a file; `search` p90 20k | `compact` / `fields` option |
-| `search.scope` mix-up | 98 of 333 searches empty: models pass `scope: "all"`; it's a record id, so the call errors (shown by OpenCode as empty) | treat `all`/`workspace` as no scope, or rename to `subtree_id` |
+**Using it as an agent**
+- About 16k tokens of startup cost, mostly from `bootstrap`.
+- The `scope` trap that empties 29% of searches.
+- Responses are about 9× bigger than the notes they replace.
+- The same "why" field has three names (`reason`, `note`, `rationale`) across different calls.
+- Some read operations fail on the first try and only work through a side route (`call_executor`).
+- A valid SQL query (`count(*)`) returns "not authorized".
+- The README's showcase step, "build an artifact", is the hardest step and is undocumented. We couldn't finish it in 7 tries.
+- One clear positive: the error messages are excellent. Every mistake told the agent exactly how to fix it.
 
-Details and 13 more findings from setup and use: [findings/friction-log.md](findings/friction-log.md). Short ranked version: [findings/product-notes.md](findings/product-notes.md). Raw tables: [`results/summary.md`](results/summary.md), [`results/summary-scale10.md`](results/summary-scale10.md).
+## 6. The three things we'd build
 
-## Method
+1. **native-bench.** Native's post says they're planning to release a reproducible benchmark. This repo already runs with a single command across models, with a budget limit. We'd hand it over and maintain it.
+2. **A "freshness" importer.** It reads your notes, finds explicit lines like "this replaces [[X]]", and links them as replacements during import. New users then get Native's main benefit on day one without any manual work.
+3. **One-command setup: `npx native-connect`.** It installs Native and connects it to Claude Code, Codex or OpenCode with the slim defaults already applied.
 
-**Corpus.** [`bench/gen_corpus.py`](bench/gen_corpus.py) generates "Fernwork", a fake 6-person startup over 10 weeks, from a fixed seed: decisions, tasks, people, organisations, weekly meetings, customer calls and daily logs. 16 of 31 decisions are later replaced, some twice. Old notes are never edited: the newer decision says "This replaces [[X]]", like real notes. Meetings, calls and logs mention old values as distractors.
-- **Base:** 333 notes, 244 KB.
-- **10×:** 2,497 notes, 2 MB, with identical decisions, tasks, questions and answers (`--scale 10`).
+The top fixes on Native's side:
+- A slim `bootstrap`.
+- Accepting `scope: "all"`.
+- A compact record option.
+- Accepting the same field name for "why" everywhere.
 
-**Questions.** 20 with exact answer keys ([`data/questions.json`](data/questions.json)):
-- 10 freshness questions: "X was decided as Y. Is that still current? If not, what is it now?"
-- 6 lookups: contact, role, city, vendor.
-- 4 two-step questions: "who owns the task(s) implementing our CURRENT X decision?"
+Those four product fixes would make the hint unnecessary. Ranked version: [findings/product-notes.md](findings/product-notes.md).
 
-**Setups.** Each trial runs in a fresh, isolated OpenCode 1.18.3 workspace outside any git repo, with its own config and data directories:
+---
 
-| Setup | Tools the agent gets | Data |
-|---|---|---|
-| `markdown` | bash, read, grep, glob, list (read-only) | the vault folder (`[[wikilinks]]`) |
-| `native` | only Native's MCP tools (`mcp-stdio`, public snapshot `c4edccf`); every built-in off and denied | the same vault, loaded with `native import` + typed `supersedes` / `implements` links |
-| `native_hinted` | same as `native` | same, plus a 4-line hint in the prompt (below) |
+## Technical details
 
-The `native_hinted` prompt adds: *skip bootstrap; search with `{query}` only (scope is a record id); newer records have a `supersedes` link (use `query_sql` on `links`/`records`); `get_record` payloads are large, so fetch only what you need.* It stands in for product-side defaults; it isn't a claim that users should write prompts like this.
-
-**Loading Native.** [`bench/load_native.py`](bench/load_native.py) writes a `native.enrichment.v1` sidecar from ground truth (record types, task lifecycle, task → decision `implements`) and runs `native import --enrichment`. It then asserts the 16 `supersedes` links over MCP, because import only lists supersession candidates. This gives Native perfect enrichment; we're testing retrieval, not enrichment quality.
-
-**Models.** gpt-5-nano, gpt-5-mini, gpt-5.4-mini, gpt-5.6-luna and gpt-5.6-terra, at default reasoning effort, one run per question. gpt-5-nano and gpt-5-mini got a second run on Markdown and Native.
-
-**Grading.** Deterministic: the final `ANSWER:` line must contain the answer key's distinctive substrings ([`bench/gen_corpus.py`](bench/gen_corpus.py) `key_for`). No LLM judge.
-
-**Metrics** (as in Native's post): tokens per fully correct answer (all tokens ÷ correct answers), failed trials, median steps and time, plus cost per correct answer at list prices.
-
-## How this differs from Native's benchmark
+**How this differs from Native's benchmark**
 
 | | Native's post | This repo |
 |---|---|---|
@@ -93,13 +147,20 @@ The `native_hinted` prompt adds: *skip bootstrap; search with `{query}` only (sc
 | Runs | 3 per question | 1 (2 for nano and mini) |
 | Markdown baseline | plain, wikilinks, Native-to-Markdown | wikilinks only |
 
-## Limits
+**Loading Native.** [`bench/load_native.py`](bench/load_native.py) writes a `native.enrichment.v1` sidecar from the ground truth (record types, task lifecycle, task → decision `implements` links) and runs `native import --enrichment`. It then adds the 16 `supersedes` links over MCP, because import only lists them as candidates. Native gets perfect enrichment, so this tests retrieval, not enrichment quality.
 
-- **Small corpora.** Native's fixed per-session cost matters much more here than at 120 MB. That's partly the point of the 10× run, but neither is their scale.
-- **Mostly one run per question.** Single-question differences are noisy; read the model-level totals.
+**Isolation.** Each run gets a fresh OpenCode workspace outside any git repo, with its own config and data folders. The Markdown setup gets read-only bash, read, grep, glob and list. The Native setups get only Native's MCP tools (`mcp-stdio`, public snapshot `c4edccf`), with every built-in tool switched off.
+
+**The exact hint text:**
+
+> Tips: you do not need to call bootstrap. Search with records_read operation 'search' and arguments {query} only (scope is a record id, so omit it). A newer record that replaces an older one has a link with relationship 'supersedes' (see sql_read query_sql on the links and records tables). get_record payloads are large, so fetch only records you need.
+
+**Limits**
+- **Small workspaces.** Native's fixed startup cost matters much more here than at 120 MB. That's partly the point of the 10× run, but neither is their scale.
+- **Mostly one run per question.** Differences on a single question are noisy; read the per-model totals.
 - **Synthetic notes are cleaner than real ones,** and every replacement is stated explicitly, which helps grep.
 - **The hint is a prompt,** not a shipped product change. It shows what better defaults could do; it doesn't prove a given implementation would match.
-- **OpenCode shows MCP errors to the model as empty results.** That inflates the cost of Native's `scope` errors. A client that surfaces error text would recover faster.
+- **OpenCode shows MCP errors to the model as empty results.** That inflates the cost of the `scope` errors. A client that shows the error text would recover faster.
 
 ## Reproduce
 
@@ -112,17 +173,19 @@ python3 -I bench/gen_corpus.py && python3 -I bench/load_native.py
 python3 -I bench/gen_corpus.py --out data/scale10 --scale 10 && python3 -I bench/load_native.py --data=data/scale10
 python3 -I bench/run.py --models gpt-5-mini --arms markdown native native_hinted --out results/mine.jsonl
 python3 -I bench/summarize.py results/mine.jsonl
+python3 -I bench/chart.py
 ```
 
-`run.py` skips finished trials, so it can be rerun, and stops before the total in `results/*.jsonl` passes `--budget` (default $9.90).
+`run.py` skips finished runs, so it can be rerun, and stops before the total in `results/*.jsonl` passes `--budget` (default $9.90).
 
-**Harness gotcha** for anyone driving OpenCode from a script: it resolves the project directory from `$PWD`, not the process cwd. An inherited `PWD` let our first "Native" agents grep the Markdown vault. `run.py` sets `PWD` per trial and keeps workspaces outside any git repo.
+**Harness gotcha** for anyone driving OpenCode from a script: it resolves the project folder from `$PWD`, not the process's working directory. An inherited `PWD` let our first "Native" agents grep the Markdown vault. `run.py` sets `PWD` per run and keeps workspaces outside any git repo.
 
 ## Files
 
-- `bench/`: generator, Native loader, MCP client, runner, summariser, price table.
-- `data/`: questions and ground truth. The vaults and DBs are generated; regenerate them with the commands above.
-- `results/*.jsonl`: one row per trial, with tokens, steps, time, cost, answer and grade. `*-invalid.jsonl` holds rows excluded for harness faults (kept so spend stays honest).
+- `bench/`: data generator, Native loader, MCP client, runner, summariser, chart script and price table.
+- `data/`: questions and ground truth. The vaults and databases are generated; rebuild them with the commands above.
+- `results/*.jsonl`: one row per run, with tokens, steps, time, cost, answer and grade. `*-invalid.jsonl` files hold rows excluded for harness faults; they're kept so the spend total stays honest.
+- `docs/`: the charts above (light and dark).
 - `findings/`: [product notes](findings/product-notes.md) (short and ranked) and the [friction log](findings/friction-log.md) (16 findings with evidence).
 
 Native's engine is AGPL-3.0 and isn't included here. This repo only calls its public binaries.
