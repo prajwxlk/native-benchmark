@@ -1,0 +1,775 @@
+{
+  "decisions": {
+    "Decision - Pricing is \u00a329 per clinic seat per month": {
+      "topic": "pricing",
+      "value": "\u00a329 per clinic seat per month",
+      "date": "2026-08-21",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 3
+    },
+    "Decision - Pricing is \u00a349 per clinic per month, unlimited seats": {
+      "topic": "pricing",
+      "value": "\u00a349 per clinic per month, unlimited seats",
+      "date": "2026-09-09",
+      "decided_by": "Maya Okafor",
+      "version": 2,
+      "of": 3
+    },
+    "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS": {
+      "topic": "pricing",
+      "value": "\u00a339 per clinic per month plus \u00a32 per booking SMS",
+      "date": "2026-09-25",
+      "decided_by": "Maya Okafor",
+      "version": 3,
+      "of": 3
+    },
+    "Decision - Public launch date is 15 September 2026": {
+      "topic": "launch date",
+      "value": "15 September 2026",
+      "date": "2026-08-10",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Public launch date is 6 October 2026": {
+      "topic": "launch date",
+      "value": "6 October 2026",
+      "date": "2026-08-11",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Primary database is MongoDB Atlas": {
+      "topic": "database",
+      "value": "MongoDB Atlas",
+      "date": "2026-09-10",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Primary database is PostgreSQL on Atlas Cloud": {
+      "topic": "database",
+      "value": "PostgreSQL on Atlas Cloud",
+      "date": "2026-09-18",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Target customer segment is independent dental practices": {
+      "topic": "target customer",
+      "value": "independent dental practices",
+      "date": "2026-09-08",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites": {
+      "topic": "target customer",
+      "value": "multi-site physiotherapy and dental groups with 3 to 20 sites",
+      "date": "2026-09-29",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Onboarding flow is self-serve signup with a 14-day free trial": {
+      "topic": "onboarding",
+      "value": "self-serve signup with a 14-day free trial",
+      "date": "2026-08-08",
+      "decided_by": "Sofia Marchetti",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Onboarding flow is concierge onboarding call before account creation": {
+      "topic": "onboarding",
+      "value": "concierge onboarding call before account creation",
+      "date": "2026-08-12",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - SMS reminder provider is Twilio": {
+      "topic": "sms provider",
+      "value": "Twilio",
+      "date": "2026-08-14",
+      "decided_by": "Kenji Watanabe",
+      "version": 1,
+      "of": 3
+    },
+    "Decision - SMS reminder provider is MessageBird": {
+      "topic": "sms provider",
+      "value": "MessageBird",
+      "date": "2026-09-06",
+      "decided_by": "Kenji Watanabe",
+      "version": 2,
+      "of": 3
+    },
+    "Decision - SMS reminder provider is Vonage": {
+      "topic": "sms provider",
+      "value": "Vonage",
+      "date": "2026-10-02",
+      "decided_by": "Tom Lindqvist",
+      "version": 3,
+      "of": 3
+    },
+    "Decision - Mobile platform priority is iOS first": {
+      "topic": "mobile",
+      "value": "iOS first",
+      "date": "2026-09-17",
+      "decided_by": "Tom Lindqvist",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Mobile platform priority is responsive web app only, no native apps until 2027": {
+      "topic": "mobile",
+      "value": "responsive web app only, no native apps until 2027",
+      "date": "2026-10-01",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Customer support tool is Intercom": {
+      "topic": "support tool",
+      "value": "Intercom",
+      "date": "2026-09-22",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Customer support tool is Plain": {
+      "topic": "support tool",
+      "value": "Plain",
+      "date": "2026-10-05",
+      "decided_by": "Maya Okafor",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Product analytics vendor is Mixpanel": {
+      "topic": "analytics",
+      "value": "Mixpanel",
+      "date": "2026-09-17",
+      "decided_by": "Tom Lindqvist",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Product analytics vendor is PostHog self-hosted": {
+      "topic": "analytics",
+      "value": "PostHog self-hosted",
+      "date": "2026-09-25",
+      "decided_by": "Maya Okafor",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Release cadence is weekly releases every Thursday": {
+      "topic": "release cadence",
+      "value": "weekly releases every Thursday",
+      "date": "2026-08-04",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Release cadence is continuous deploys behind feature flags": {
+      "topic": "release cadence",
+      "value": "continuous deploys behind feature flags",
+      "date": "2026-10-04",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Security audit vendor is Kestrel Security": {
+      "topic": "security audit",
+      "value": "Kestrel Security",
+      "date": "2026-09-12",
+      "decided_by": "Tom Lindqvist",
+      "version": 1,
+      "of": 1
+    },
+    "Decision - Next hire is a second backend engineer": {
+      "topic": "hiring",
+      "value": "a second backend engineer",
+      "date": "2026-09-22",
+      "decided_by": "Tom Lindqvist",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Next hire is a customer success lead": {
+      "topic": "hiring",
+      "value": "a customer success lead",
+      "date": "2026-09-30",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Design system is Tailwind UI kit": {
+      "topic": "design system",
+      "value": "Tailwind UI kit",
+      "date": "2026-08-29",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 1
+    },
+    "Decision - Investor update cadence is monthly email update on the first Monday": {
+      "topic": "investor updates",
+      "value": "monthly email update on the first Monday",
+      "date": "2026-08-09",
+      "decided_by": "Maya Okafor",
+      "version": 1,
+      "of": 2
+    },
+    "Decision - Investor update cadence is fortnightly update with a metrics dashboard link": {
+      "topic": "investor updates",
+      "value": "fortnightly update with a metrics dashboard link",
+      "date": "2026-08-16",
+      "decided_by": "Priya Raman",
+      "version": 2,
+      "of": 2
+    },
+    "Decision - Name of the waitlist feature is Waitlist": {
+      "topic": "feature name",
+      "value": "Waitlist",
+      "date": "2026-08-22",
+      "decided_by": "Priya Raman",
+      "version": 1,
+      "of": 3
+    },
+    "Decision - Name of the waitlist feature is Fill-in": {
+      "topic": "feature name",
+      "value": "Fill-in",
+      "date": "2026-09-04",
+      "decided_by": "Tom Lindqvist",
+      "version": 2,
+      "of": 3
+    },
+    "Decision - Name of the waitlist feature is Gap Filler": {
+      "topic": "feature name",
+      "value": "Gap Filler",
+      "date": "2026-09-20",
+      "decided_by": "Maya Okafor",
+      "version": 3,
+      "of": 3
+    }
+  },
+  "tasks": {
+    "Task - Document pricing (\u00a329 per clinic seat per month)": {
+      "topic": "pricing",
+      "decision": "Decision - Pricing is \u00a329 per clinic seat per month",
+      "owner": "Daniel Reyes",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for pricing (\u00a329 per clinic seat per month)": {
+      "topic": "pricing",
+      "decision": "Decision - Pricing is \u00a329 per clinic seat per month",
+      "owner": "Maya Okafor",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for pricing (\u00a349 per clinic per month, unlimited seats)": {
+      "topic": "pricing",
+      "decision": "Decision - Pricing is \u00a349 per clinic per month, unlimited seats",
+      "owner": "Kenji Watanabe",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Roll out pricing (\u00a339 per clinic per month plus \u00a32 per booking SMS)": {
+      "topic": "pricing",
+      "decision": "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS",
+      "owner": "Kenji Watanabe",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Update billing and docs for pricing (\u00a339 per clinic per month plus \u00a32 per booking SMS)": {
+      "topic": "pricing",
+      "decision": "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS",
+      "owner": "Sofia Marchetti",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Update billing and docs for public launch date (15 September 2026)": {
+      "topic": "launch date",
+      "decision": "Decision - Public launch date is 15 September 2026",
+      "owner": "Sofia Marchetti",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for public launch date (6 October 2026)": {
+      "topic": "launch date",
+      "decision": "Decision - Public launch date is 6 October 2026",
+      "owner": "Sofia Marchetti",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Roll out primary database (MongoDB Atlas)": {
+      "topic": "database",
+      "decision": "Decision - Primary database is MongoDB Atlas",
+      "owner": "Tom Lindqvist",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Document primary database (PostgreSQL on Atlas Cloud)": {
+      "topic": "database",
+      "decision": "Decision - Primary database is PostgreSQL on Atlas Cloud",
+      "owner": "Maya Okafor",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Update billing and docs for target customer segment (independent dental practices)": {
+      "topic": "target customer",
+      "decision": "Decision - Target customer segment is independent dental practices",
+      "owner": "Kenji Watanabe",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for target customer segment (multi-site physiotherapy and dental groups with 3 to 20 sites)": {
+      "topic": "target customer",
+      "decision": "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites",
+      "owner": "Priya Raman",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Document target customer segment (multi-site physiotherapy and dental groups with 3 to 20 sites)": {
+      "topic": "target customer",
+      "decision": "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites",
+      "owner": "Tom Lindqvist",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Document onboarding flow (self-serve signup with a 14-day free trial)": {
+      "topic": "onboarding",
+      "decision": "Decision - Onboarding flow is self-serve signup with a 14-day free trial",
+      "owner": "Daniel Reyes",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Update billing and docs for onboarding flow (concierge onboarding call before account creation)": {
+      "topic": "onboarding",
+      "decision": "Decision - Onboarding flow is concierge onboarding call before account creation",
+      "owner": "Kenji Watanabe",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Roll out onboarding flow (concierge onboarding call before account creation)": {
+      "topic": "onboarding",
+      "decision": "Decision - Onboarding flow is concierge onboarding call before account creation",
+      "owner": "Kenji Watanabe",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Roll out sms reminder provider (Twilio)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is Twilio",
+      "owner": "Tom Lindqvist",
+      "status": "closed",
+      "for_current": false
+    },
+    "Task - Update billing and docs for sms reminder provider (Twilio)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is Twilio",
+      "owner": "Maya Okafor",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Update billing and docs for sms reminder provider (MessageBird)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is MessageBird",
+      "owner": "Kenji Watanabe",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Roll out sms reminder provider (MessageBird)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is MessageBird",
+      "owner": "Tom Lindqvist",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Roll out sms reminder provider (Vonage)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is Vonage",
+      "owner": "Kenji Watanabe",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Update billing and docs for sms reminder provider (Vonage)": {
+      "topic": "sms provider",
+      "decision": "Decision - SMS reminder provider is Vonage",
+      "owner": "Daniel Reyes",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Update billing and docs for mobile platform priority (iOS first)": {
+      "topic": "mobile",
+      "decision": "Decision - Mobile platform priority is iOS first",
+      "owner": "Maya Okafor",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for mobile platform priority (responsive web app only, no native apps until 2027)": {
+      "topic": "mobile",
+      "decision": "Decision - Mobile platform priority is responsive web app only, no native apps until 2027",
+      "owner": "Sofia Marchetti",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Roll out customer support tool (Intercom)": {
+      "topic": "support tool",
+      "decision": "Decision - Customer support tool is Intercom",
+      "owner": "Tom Lindqvist",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Document customer support tool (Plain)": {
+      "topic": "support tool",
+      "decision": "Decision - Customer support tool is Plain",
+      "owner": "Sofia Marchetti",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Prepare customer comms for customer support tool (Plain)": {
+      "topic": "support tool",
+      "decision": "Decision - Customer support tool is Plain",
+      "owner": "Priya Raman",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Prepare customer comms for product analytics vendor (Mixpanel)": {
+      "topic": "analytics",
+      "decision": "Decision - Product analytics vendor is Mixpanel",
+      "owner": "Kenji Watanabe",
+      "status": "closed",
+      "for_current": false
+    },
+    "Task - Roll out product analytics vendor (PostHog self-hosted)": {
+      "topic": "analytics",
+      "decision": "Decision - Product analytics vendor is PostHog self-hosted",
+      "owner": "Sofia Marchetti",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Update billing and docs for product analytics vendor (PostHog self-hosted)": {
+      "topic": "analytics",
+      "decision": "Decision - Product analytics vendor is PostHog self-hosted",
+      "owner": "Sofia Marchetti",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Update billing and docs for release cadence (weekly releases every Thursday)": {
+      "topic": "release cadence",
+      "decision": "Decision - Release cadence is weekly releases every Thursday",
+      "owner": "Sofia Marchetti",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for release cadence (continuous deploys behind feature flags)": {
+      "topic": "release cadence",
+      "decision": "Decision - Release cadence is continuous deploys behind feature flags",
+      "owner": "Daniel Reyes",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Roll out security audit vendor (Kestrel Security)": {
+      "topic": "security audit",
+      "decision": "Decision - Security audit vendor is Kestrel Security",
+      "owner": "Priya Raman",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Document next hire (a second backend engineer)": {
+      "topic": "hiring",
+      "decision": "Decision - Next hire is a second backend engineer",
+      "owner": "Maya Okafor",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for next hire (a second backend engineer)": {
+      "topic": "hiring",
+      "decision": "Decision - Next hire is a second backend engineer",
+      "owner": "Tom Lindqvist",
+      "status": "closed",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for next hire (a customer success lead)": {
+      "topic": "hiring",
+      "decision": "Decision - Next hire is a customer success lead",
+      "owner": "Sofia Marchetti",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Document next hire (a customer success lead)": {
+      "topic": "hiring",
+      "decision": "Decision - Next hire is a customer success lead",
+      "owner": "Priya Raman",
+      "status": "completed",
+      "for_current": true
+    },
+    "Task - Document design system (Tailwind UI kit)": {
+      "topic": "design system",
+      "decision": "Decision - Design system is Tailwind UI kit",
+      "owner": "Kenji Watanabe",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Update billing and docs for investor update cadence (monthly email update on the first Monday)": {
+      "topic": "investor updates",
+      "decision": "Decision - Investor update cadence is monthly email update on the first Monday",
+      "owner": "Sofia Marchetti",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Roll out investor update cadence (monthly email update on the first Monday)": {
+      "topic": "investor updates",
+      "decision": "Decision - Investor update cadence is monthly email update on the first Monday",
+      "owner": "Priya Raman",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link)": {
+      "topic": "investor updates",
+      "decision": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+      "owner": "Daniel Reyes",
+      "status": "in_progress",
+      "for_current": true
+    },
+    "Task - Document name of the waitlist feature (Waitlist)": {
+      "topic": "feature name",
+      "decision": "Decision - Name of the waitlist feature is Waitlist",
+      "owner": "Maya Okafor",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for name of the waitlist feature (Waitlist)": {
+      "topic": "feature name",
+      "decision": "Decision - Name of the waitlist feature is Waitlist",
+      "owner": "Maya Okafor",
+      "status": "completed",
+      "for_current": false
+    },
+    "Task - Prepare customer comms for name of the waitlist feature (Fill-in)": {
+      "topic": "feature name",
+      "decision": "Decision - Name of the waitlist feature is Fill-in",
+      "owner": "Tom Lindqvist",
+      "status": "open",
+      "for_current": false
+    },
+    "Task - Roll out name of the waitlist feature (Gap Filler)": {
+      "topic": "feature name",
+      "decision": "Decision - Name of the waitlist feature is Gap Filler",
+      "owner": "Tom Lindqvist",
+      "status": "open",
+      "for_current": true
+    },
+    "Task - Update billing and docs for name of the waitlist feature (Gap Filler)": {
+      "topic": "feature name",
+      "decision": "Decision - Name of the waitlist feature is Gap Filler",
+      "owner": "Tom Lindqvist",
+      "status": "completed",
+      "for_current": true
+    }
+  },
+  "people": {
+    "Maya Okafor": {
+      "role": "CEO and co-founder",
+      "city": "London"
+    },
+    "Tom Lindqvist": {
+      "role": "CTO and co-founder",
+      "city": "Stockholm"
+    },
+    "Priya Raman": {
+      "role": "Product designer",
+      "city": "Bangalore"
+    },
+    "Daniel Reyes": {
+      "role": "Backend engineer",
+      "city": "Lisbon"
+    },
+    "Sofia Marchetti": {
+      "role": "Growth and partnerships",
+      "city": "Milan"
+    },
+    "Kenji Watanabe": {
+      "role": "Frontend engineer",
+      "city": "Osaka"
+    }
+  },
+  "orgs": {
+    "Harbour Dental Group": {
+      "kind": "customer",
+      "contact": "Elena Brooks",
+      "owner": "Maya Okafor"
+    },
+    "Northside Physio": {
+      "kind": "customer",
+      "contact": "Arjun Mehta",
+      "owner": "Sofia Marchetti"
+    },
+    "Clearview Opticians": {
+      "kind": "customer",
+      "contact": "Hannah Cole",
+      "owner": "Maya Okafor"
+    },
+    "Brightpath Ventures": {
+      "kind": "investor",
+      "contact": "Lucas Grant",
+      "owner": "Sofia Marchetti"
+    },
+    "Kestrel Security": {
+      "kind": "vendor",
+      "contact": "Nina Petrova",
+      "owner": "Maya Okafor"
+    },
+    "Tidewater Health": {
+      "kind": "prospect",
+      "contact": "Omar Haddad",
+      "owner": "Maya Okafor"
+    },
+    "Juniper Payroll": {
+      "kind": "partner",
+      "contact": "Grace Kim",
+      "owner": "Sofia Marchetti"
+    },
+    "Atlas Cloud": {
+      "kind": "vendor",
+      "contact": "Ben Foster",
+      "owner": "Maya Okafor"
+    }
+  },
+  "threads": {
+    "pricing": {
+      "stem": "Pricing",
+      "chain": [
+        "Decision - Pricing is \u00a329 per clinic seat per month",
+        "Decision - Pricing is \u00a349 per clinic per month, unlimited seats",
+        "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS"
+      ],
+      "current": "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS",
+      "current_value": "\u00a339 per clinic per month plus \u00a32 per booking SMS"
+    },
+    "launch date": {
+      "stem": "Public launch date",
+      "chain": [
+        "Decision - Public launch date is 15 September 2026",
+        "Decision - Public launch date is 6 October 2026"
+      ],
+      "current": "Decision - Public launch date is 6 October 2026",
+      "current_value": "6 October 2026"
+    },
+    "database": {
+      "stem": "Primary database",
+      "chain": [
+        "Decision - Primary database is MongoDB Atlas",
+        "Decision - Primary database is PostgreSQL on Atlas Cloud"
+      ],
+      "current": "Decision - Primary database is PostgreSQL on Atlas Cloud",
+      "current_value": "PostgreSQL on Atlas Cloud"
+    },
+    "target customer": {
+      "stem": "Target customer segment",
+      "chain": [
+        "Decision - Target customer segment is independent dental practices",
+        "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites"
+      ],
+      "current": "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites",
+      "current_value": "multi-site physiotherapy and dental groups with 3 to 20 sites"
+    },
+    "onboarding": {
+      "stem": "Onboarding flow",
+      "chain": [
+        "Decision - Onboarding flow is self-serve signup with a 14-day free trial",
+        "Decision - Onboarding flow is concierge onboarding call before account creation"
+      ],
+      "current": "Decision - Onboarding flow is concierge onboarding call before account creation",
+      "current_value": "concierge onboarding call before account creation"
+    },
+    "sms provider": {
+      "stem": "SMS reminder provider",
+      "chain": [
+        "Decision - SMS reminder provider is Twilio",
+        "Decision - SMS reminder provider is MessageBird",
+        "Decision - SMS reminder provider is Vonage"
+      ],
+      "current": "Decision - SMS reminder provider is Vonage",
+      "current_value": "Vonage"
+    },
+    "mobile": {
+      "stem": "Mobile platform priority",
+      "chain": [
+        "Decision - Mobile platform priority is iOS first",
+        "Decision - Mobile platform priority is responsive web app only, no native apps until 2027"
+      ],
+      "current": "Decision - Mobile platform priority is responsive web app only, no native apps until 2027",
+      "current_value": "responsive web app only, no native apps until 2027"
+    },
+    "support tool": {
+      "stem": "Customer support tool",
+      "chain": [
+        "Decision - Customer support tool is Intercom",
+        "Decision - Customer support tool is Plain"
+      ],
+      "current": "Decision - Customer support tool is Plain",
+      "current_value": "Plain"
+    },
+    "analytics": {
+      "stem": "Product analytics vendor",
+      "chain": [
+        "Decision - Product analytics vendor is Mixpanel",
+        "Decision - Product analytics vendor is PostHog self-hosted"
+      ],
+      "current": "Decision - Product analytics vendor is PostHog self-hosted",
+      "current_value": "PostHog self-hosted"
+    },
+    "release cadence": {
+      "stem": "Release cadence",
+      "chain": [
+        "Decision - Release cadence is weekly releases every Thursday",
+        "Decision - Release cadence is continuous deploys behind feature flags"
+      ],
+      "current": "Decision - Release cadence is continuous deploys behind feature flags",
+      "current_value": "continuous deploys behind feature flags"
+    },
+    "security audit": {
+      "stem": "Security audit vendor",
+      "chain": [
+        "Decision - Security audit vendor is Kestrel Security"
+      ],
+      "current": "Decision - Security audit vendor is Kestrel Security",
+      "current_value": "Kestrel Security"
+    },
+    "hiring": {
+      "stem": "Next hire",
+      "chain": [
+        "Decision - Next hire is a second backend engineer",
+        "Decision - Next hire is a customer success lead"
+      ],
+      "current": "Decision - Next hire is a customer success lead",
+      "current_value": "a customer success lead"
+    },
+    "design system": {
+      "stem": "Design system",
+      "chain": [
+        "Decision - Design system is Tailwind UI kit"
+      ],
+      "current": "Decision - Design system is Tailwind UI kit",
+      "current_value": "Tailwind UI kit"
+    },
+    "investor updates": {
+      "stem": "Investor update cadence",
+      "chain": [
+        "Decision - Investor update cadence is monthly email update on the first Monday",
+        "Decision - Investor update cadence is fortnightly update with a metrics dashboard link"
+      ],
+      "current": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+      "current_value": "fortnightly update with a metrics dashboard link"
+    },
+    "feature name": {
+      "stem": "Name of the waitlist feature",
+      "chain": [
+        "Decision - Name of the waitlist feature is Waitlist",
+        "Decision - Name of the waitlist feature is Fill-in",
+        "Decision - Name of the waitlist feature is Gap Filler"
+      ],
+      "current": "Decision - Name of the waitlist feature is Gap Filler",
+      "current_value": "Gap Filler"
+    }
+  }
+}

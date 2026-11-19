@@ -1,0 +1,66 @@
+[
+  [
+    "Decision - Pricing is \u00a349 per clinic per month, unlimited seats",
+    "Decision - Pricing is \u00a329 per clinic seat per month"
+  ],
+  [
+    "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS",
+    "Decision - Pricing is \u00a349 per clinic per month, unlimited seats"
+  ],
+  [
+    "Decision - Public launch date is 6 October 2026",
+    "Decision - Public launch date is 15 September 2026"
+  ],
+  [
+    "Decision - Primary database is PostgreSQL on Atlas Cloud",
+    "Decision - Primary database is MongoDB Atlas"
+  ],
+  [
+    "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites",
+    "Decision - Target customer segment is independent dental practices"
+  ],
+  [
+    "Decision - Onboarding flow is concierge onboarding call before account creation",
+    "Decision - Onboarding flow is self-serve signup with a 14-day free trial"
+  ],
+  [
+    "Decision - SMS reminder provider is MessageBird",
+    "Decision - SMS reminder provider is Twilio"
+  ],
+  [
+    "Decision - SMS reminder provider is Vonage",
+    "Decision - SMS reminder provider is MessageBird"
+  ],
+  [
+    "Decision - Mobile platform priority is responsive web app only, no native apps until 2027",
+    "Decision - Mobile platform priority is iOS first"
+  ],
+  [
+    "Decision - Customer support tool is Plain",
+    "Decision - Customer support tool is Intercom"
+  ],
+  [
+    "Decision - Product analytics vendor is PostHog self-hosted",
+    "Decision - Product analytics vendor is Mixpanel"
+  ],
+  [
+    "Decision - Release cadence is continuous deploys behind feature flags",
+    "Decision - Release cadence is weekly releases every Thursday"
+  ],
+  [
+    "Decision - Next hire is a customer success lead",
+    "Decision - Next hire is a second backend engineer"
+  ],
+  [
+    "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+    "Decision - Investor update cadence is monthly email update on the first Monday"
+  ],
+  [
+    "Decision - Name of the waitlist feature is Fill-in",
+    "Decision - Name of the waitlist feature is Waitlist"
+  ],
+  [
+    "Decision - Name of the waitlist feature is Gap Filler",
+    "Decision - Name of the waitlist feature is Fill-in"
+  ]
+]

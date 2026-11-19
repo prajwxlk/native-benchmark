@@ -1,0 +1,240 @@
+[
+  {
+    "id": "F01",
+    "type": "freshness",
+    "question": "Our pricing was decided as '\u00a329 per clinic seat per month'. Is that still current? If not, what is it now?",
+    "answer": "\u00a339 per clinic per month plus \u00a32 per booking SMS",
+    "keys": [
+      [
+        "39",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": "F02",
+    "type": "freshness",
+    "question": "Our public launch date was decided as '15 September 2026'. Is that still current? If not, what is it now?",
+    "answer": "6 October 2026",
+    "keys": [
+      [
+        "6 Oct"
+      ],
+      [
+        "2026-10-06"
+      ],
+      [
+        "October 6"
+      ]
+    ]
+  },
+  {
+    "id": "F03",
+    "type": "freshness",
+    "question": "Our primary database was decided as 'MongoDB Atlas'. Is that still current? If not, what is it now?",
+    "answer": "PostgreSQL on Atlas Cloud",
+    "keys": [
+      [
+        "Postgres"
+      ]
+    ]
+  },
+  {
+    "id": "F04",
+    "type": "freshness",
+    "question": "Our sms reminder provider was decided as 'Twilio'. Is that still current? If not, what is it now?",
+    "answer": "Vonage",
+    "keys": [
+      [
+        "Vonage"
+      ]
+    ]
+  },
+  {
+    "id": "F05",
+    "type": "freshness",
+    "question": "Our name of the waitlist feature was decided as 'Waitlist'. Is that still current? If not, what is it now?",
+    "answer": "Gap Filler",
+    "keys": [
+      [
+        "Gap Filler"
+      ]
+    ]
+  },
+  {
+    "id": "F06",
+    "type": "freshness",
+    "question": "Our onboarding flow was decided as 'self-serve signup with a 14-day free trial'. Is that still current? If not, what is it now?",
+    "answer": "concierge onboarding call before account creation",
+    "keys": [
+      [
+        "concierge"
+      ]
+    ]
+  },
+  {
+    "id": "F07",
+    "type": "freshness",
+    "question": "Our customer support tool was decided as 'Intercom'. Is that still current? If not, what is it now?",
+    "answer": "Plain",
+    "keys": [
+      [
+        "Plain"
+      ]
+    ]
+  },
+  {
+    "id": "F08",
+    "type": "freshness",
+    "question": "Our product analytics vendor was decided as 'Mixpanel'. Is that still current? If not, what is it now?",
+    "answer": "PostHog self-hosted",
+    "keys": [
+      [
+        "PostHog"
+      ]
+    ]
+  },
+  {
+    "id": "F09",
+    "type": "freshness",
+    "question": "Our next hire was decided as 'a second backend engineer'. Is that still current? If not, what is it now?",
+    "answer": "a customer success lead",
+    "keys": [
+      [
+        "customer success"
+      ]
+    ]
+  },
+  {
+    "id": "F10",
+    "type": "freshness",
+    "question": "Our investor update cadence was decided as 'monthly email update on the first Monday'. Is that still current? If not, what is it now?",
+    "answer": "fortnightly update with a metrics dashboard link",
+    "keys": [
+      [
+        "fortnight"
+      ],
+      [
+        "every two weeks"
+      ],
+      [
+        "biweekly"
+      ],
+      [
+        "bi-weekly"
+      ]
+    ]
+  },
+  {
+    "id": "L01",
+    "type": "lookup",
+    "question": "Who is the main contact at Harbour Dental Group?",
+    "answer": "Elena Brooks",
+    "keys": [
+      [
+        "Elena Brooks"
+      ]
+    ]
+  },
+  {
+    "id": "L02",
+    "type": "lookup",
+    "question": "What is Daniel Reyes's role?",
+    "answer": "Backend engineer",
+    "keys": [
+      [
+        "backend"
+      ]
+    ]
+  },
+  {
+    "id": "L03",
+    "type": "lookup",
+    "question": "Which vendor did we choose for the security audit?",
+    "answer": "Kestrel Security",
+    "keys": [
+      [
+        "Kestrel Security"
+      ]
+    ]
+  },
+  {
+    "id": "L04",
+    "type": "lookup",
+    "question": "Who is the account owner for Tidewater Health?",
+    "answer": "Maya Okafor",
+    "keys": [
+      [
+        "Maya Okafor"
+      ]
+    ]
+  },
+  {
+    "id": "L05",
+    "type": "lookup",
+    "question": "Where is Kenji Watanabe based?",
+    "answer": "Osaka",
+    "keys": [
+      [
+        "Osaka"
+      ]
+    ]
+  },
+  {
+    "id": "L06",
+    "type": "lookup",
+    "question": "What design system did we choose?",
+    "answer": "Tailwind UI kit",
+    "keys": [
+      [
+        "Tailwind"
+      ]
+    ]
+  },
+  {
+    "id": "M01",
+    "type": "multi_hop",
+    "question": "Who owns the task(s) implementing our CURRENT pricing decision? Give owner name(s).",
+    "answer": "Kenji Watanabe, Sofia Marchetti",
+    "keys": [
+      [
+        "Kenji",
+        "Sofia"
+      ]
+    ]
+  },
+  {
+    "id": "M02",
+    "type": "multi_hop",
+    "question": "Who owns the task(s) implementing our CURRENT sms reminder provider decision? Give owner name(s).",
+    "answer": "Daniel Reyes, Kenji Watanabe",
+    "keys": [
+      [
+        "Daniel",
+        "Kenji"
+      ]
+    ]
+  },
+  {
+    "id": "M03",
+    "type": "multi_hop",
+    "question": "Who owns the task(s) implementing our CURRENT primary database decision? Give owner name(s).",
+    "answer": "Maya Okafor",
+    "keys": [
+      [
+        "Maya"
+      ]
+    ]
+  },
+  {
+    "id": "M04",
+    "type": "multi_hop",
+    "question": "Who owns the task(s) implementing our CURRENT name of the waitlist feature decision? Give owner name(s).",
+    "answer": "Tom Lindqvist",
+    "keys": [
+      [
+        "Tom"
+      ]
+    ]
+  }
+]

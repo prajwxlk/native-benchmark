@@ -1,0 +1,15 @@
+vendor/
+.env
+outreach/
+__pycache__/
+
+# Generated data: regenerate with bench/gen_corpus.py and bench/load_native.py.
+# Keep only the small ground-truth files (questions, truth, link lists).
+data/*
+!data/questions.json
+!data/truth.json
+!data/supersedes.json
+!data/implements.json
+!data/scale10/
+data/scale10/*
+!data/scale10/questions.json

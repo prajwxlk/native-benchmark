@@ -1,0 +1,182 @@
+[
+  [
+    "Task - Document pricing (\u00a329 per clinic seat per month)",
+    "Decision - Pricing is \u00a329 per clinic seat per month"
+  ],
+  [
+    "Task - Prepare customer comms for pricing (\u00a329 per clinic seat per month)",
+    "Decision - Pricing is \u00a329 per clinic seat per month"
+  ],
+  [
+    "Task - Prepare customer comms for pricing (\u00a349 per clinic per month, unlimited seats)",
+    "Decision - Pricing is \u00a349 per clinic per month, unlimited seats"
+  ],
+  [
+    "Task - Roll out pricing (\u00a339 per clinic per month plus \u00a32 per booking SMS)",
+    "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS"
+  ],
+  [
+    "Task - Update billing and docs for pricing (\u00a339 per clinic per month plus \u00a32 per booking SMS)",
+    "Decision - Pricing is \u00a339 per clinic per month plus \u00a32 per booking SMS"
+  ],
+  [
+    "Task - Update billing and docs for public launch date (15 September 2026)",
+    "Decision - Public launch date is 15 September 2026"
+  ],
+  [
+    "Task - Prepare customer comms for public launch date (6 October 2026)",
+    "Decision - Public launch date is 6 October 2026"
+  ],
+  [
+    "Task - Roll out primary database (MongoDB Atlas)",
+    "Decision - Primary database is MongoDB Atlas"
+  ],
+  [
+    "Task - Document primary database (PostgreSQL on Atlas Cloud)",
+    "Decision - Primary database is PostgreSQL on Atlas Cloud"
+  ],
+  [
+    "Task - Update billing and docs for target customer segment (independent dental practices)",
+    "Decision - Target customer segment is independent dental practices"
+  ],
+  [
+    "Task - Prepare customer comms for target customer segment (multi-site physiotherapy and dental groups with 3 to 20 sites)",
+    "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites"
+  ],
+  [
+    "Task - Document target customer segment (multi-site physiotherapy and dental groups with 3 to 20 sites)",
+    "Decision - Target customer segment is multi-site physiotherapy and dental groups with 3 to 20 sites"
+  ],
+  [
+    "Task - Document onboarding flow (self-serve signup with a 14-day free trial)",
+    "Decision - Onboarding flow is self-serve signup with a 14-day free trial"
+  ],
+  [
+    "Task - Update billing and docs for onboarding flow (concierge onboarding call before account creation)",
+    "Decision - Onboarding flow is concierge onboarding call before account creation"
+  ],
+  [
+    "Task - Roll out onboarding flow (concierge onboarding call before account creation)",
+    "Decision - Onboarding flow is concierge onboarding call before account creation"
+  ],
+  [
+    "Task - Roll out sms reminder provider (Twilio)",
+    "Decision - SMS reminder provider is Twilio"
+  ],
+  [
+    "Task - Update billing and docs for sms reminder provider (Twilio)",
+    "Decision - SMS reminder provider is Twilio"
+  ],
+  [
+    "Task - Update billing and docs for sms reminder provider (MessageBird)",
+    "Decision - SMS reminder provider is MessageBird"
+  ],
+  [
+    "Task - Roll out sms reminder provider (MessageBird)",
+    "Decision - SMS reminder provider is MessageBird"
+  ],
+  [
+    "Task - Roll out sms reminder provider (Vonage)",
+    "Decision - SMS reminder provider is Vonage"
+  ],
+  [
+    "Task - Update billing and docs for sms reminder provider (Vonage)",
+    "Decision - SMS reminder provider is Vonage"
+  ],
+  [
+    "Task - Update billing and docs for mobile platform priority (iOS first)",
+    "Decision - Mobile platform priority is iOS first"
+  ],
+  [
+    "Task - Prepare customer comms for mobile platform priority (responsive web app only, no native apps until 2027)",
+    "Decision - Mobile platform priority is responsive web app only, no native apps until 2027"
+  ],
+  [
+    "Task - Roll out customer support tool (Intercom)",
+    "Decision - Customer support tool is Intercom"
+  ],
+  [
+    "Task - Document customer support tool (Plain)",
+    "Decision - Customer support tool is Plain"
+  ],
+  [
+    "Task - Prepare customer comms for customer support tool (Plain)",
+    "Decision - Customer support tool is Plain"
+  ],
+  [
+    "Task - Prepare customer comms for product analytics vendor (Mixpanel)",
+    "Decision - Product analytics vendor is Mixpanel"
+  ],
+  [
+    "Task - Roll out product analytics vendor (PostHog self-hosted)",
+    "Decision - Product analytics vendor is PostHog self-hosted"
+  ],
+  [
+    "Task - Update billing and docs for product analytics vendor (PostHog self-hosted)",
+    "Decision - Product analytics vendor is PostHog self-hosted"
+  ],
+  [
+    "Task - Update billing and docs for release cadence (weekly releases every Thursday)",
+    "Decision - Release cadence is weekly releases every Thursday"
+  ],
+  [
+    "Task - Prepare customer comms for release cadence (continuous deploys behind feature flags)",
+    "Decision - Release cadence is continuous deploys behind feature flags"
+  ],
+  [
+    "Task - Roll out security audit vendor (Kestrel Security)",
+    "Decision - Security audit vendor is Kestrel Security"
+  ],
+  [
+    "Task - Document next hire (a second backend engineer)",
+    "Decision - Next hire is a second backend engineer"
+  ],
+  [
+    "Task - Prepare customer comms for next hire (a second backend engineer)",
+    "Decision - Next hire is a second backend engineer"
+  ],
+  [
+    "Task - Prepare customer comms for next hire (a customer success lead)",
+    "Decision - Next hire is a customer success lead"
+  ],
+  [
+    "Task - Document next hire (a customer success lead)",
+    "Decision - Next hire is a customer success lead"
+  ],
+  [
+    "Task - Document design system (Tailwind UI kit)",
+    "Decision - Design system is Tailwind UI kit"
+  ],
+  [
+    "Task - Update billing and docs for investor update cadence (monthly email update on the first Monday)",
+    "Decision - Investor update cadence is monthly email update on the first Monday"
+  ],
+  [
+    "Task - Roll out investor update cadence (monthly email update on the first Monday)",
+    "Decision - Investor update cadence is monthly email update on the first Monday"
+  ],
+  [
+    "Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link)",
+    "Decision - Investor update cadence is fortnightly update with a metrics dashboard link"
+  ],
+  [
+    "Task - Document name of the waitlist feature (Waitlist)",
+    "Decision - Name of the waitlist feature is Waitlist"
+  ],
+  [
+    "Task - Prepare customer comms for name of the waitlist feature (Waitlist)",
+    "Decision - Name of the waitlist feature is Waitlist"
+  ],
+  [
+    "Task - Prepare customer comms for name of the waitlist feature (Fill-in)",
+    "Decision - Name of the waitlist feature is Fill-in"
+  ],
+  [
+    "Task - Roll out name of the waitlist feature (Gap Filler)",
+    "Decision - Name of the waitlist feature is Gap Filler"
+  ],
+  [
+    "Task - Update billing and docs for name of the waitlist feature (Gap Filler)",
+    "Decision - Name of the waitlist feature is Gap Filler"
+  ]
+]
