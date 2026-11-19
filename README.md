@@ -97,13 +97,6 @@ Raw tables: [`results/summary.md`](results/summary.md), [`results/summary-hinted
 
 ## 5. Friction points
 
-Things that went wrong or confused us while setting up and using Native. Full list with evidence: [findings/friction-log.md](findings/friction-log.md).
-
-**Website and docs**
-- Googling "withnative" lands on withnative.com, a different company.
-- The benchmark post's numbers don't agree with each other: "97% fewer failed trials" vs "30× fewer", and 43.5× vs 40×.
-- The "Stanford research" claim is on the homepage but isn't linked from the benchmark post.
-
 **Setup**
 - The build was quick: 3 minutes and about 4 GB. That's a positive.
 - The setup guide's first check (`engine_info`) fails if you follow it literally.
