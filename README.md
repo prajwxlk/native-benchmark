@@ -118,11 +118,34 @@ Three setups again. "Native + hint" here is a different, 5-line hint about *writ
 | gpt-5-mini | 100% · 99k | 82% · 83k | **100% · 64k** |
 | gpt-5.6-luna (strongest tested) | 100% · 29k | 100% · 73k | **100% · 28k** |
 
+**Replacements marked with a `supersedes` link** (Native only; 5 per run × 3 runs):
+
+| Model | Native | Native + hint |
+|---|---|---|
+| gpt-5-nano | 0/15 (3 more in prose only) | 8/15 (2 more in prose only) |
+| gpt-5-mini | 9/15 (5 more in prose only) | **15/15** |
+| gpt-5.6-luna | 15/15 | 15/15 |
+
+**What the next agent got right** (all 3 models, 9 runs per setup):
+
+| | Markdown | Native | Native + hint |
+|---|---|---|---|
+| Task-status questions (2 per run) | **15/18** | 9/18 | 2/18 |
+| All other questions (7 per run) | 54/63 | 50/63 | **55/63** |
+| Traps kept out (2 per run) | 18/18 | 17/18 | 18/18 |
+
+**Why task status failed** (Native writers, by what they changed on the task):
+
+| Writer changed | Next agent got the status right |
+|---|---|
+| Only the `lifecycle` field | 3 of 19 |
+| `lifecycle` and the note text | 8 of 8 |
+
 What that means:
 - **Strong models write well in every setup.** luna made every change, every time. Default Native cost it 2.5× more tokens per change than Markdown; with the hint they were level.
-- **Weaker models forget the link.** Native only knows a decision was replaced if the agent adds a `supersedes` link. Without the hint, gpt-5-mini wrote "this supersedes the Vonage decision" in the text 5 times without adding the link, and gpt-5-nano never added one. Native's own data shows the same pattern: 52 links against 246 replacements written in prose. With the hint, gpt-5-mini linked 15 out of 15.
-- **The traps worked as intended.** 26 of 27 runs left the Zendesk proposal and the launch-date repeat alone.
-- **We found a status bug in imported notes.** After import, a task's status lives in three places: Native's `lifecycle` field, a copy of the note's frontmatter (`fm.status`), and the "Status:" line in the note text. Agents that set the proper field usually left the other two alone, and the next agent read the old status from the text. When a writer updated only `lifecycle`, the next agent got that task's status right 3 times out of 19. When the writer also changed the text, it was right 8 times out of 8. On the two task-status questions overall, the next agent was right 2 times out of 18 after Native + hint, against 15 out of 18 after Markdown. On the decision questions the setups were level: Markdown 54/63, Native 50/63, Native + hint 55/63.
+- **Weaker models forget the link.** Native only knows a decision was replaced if the agent adds a `supersedes` link. Without the hint, gpt-5-mini often wrote "this supersedes the Vonage decision" in the text without adding the link, and gpt-5-nano never added one. Native's own data shows the same pattern: 52 links against 246 replacements written in prose. The hint fixed it for gpt-5-mini.
+- **The traps worked as intended.** Only one run, gpt-5-nano on default Native, recorded the Zendesk proposal as a decision.
+- **We found a status bug in imported notes.** After import, a task's status lives in three places: Native's `lifecycle` field, a copy of the note's frontmatter (`fm.status`), and the "Status:" line in the note text. Agents that set the proper field usually left the other two alone, and the next agent read the old status from the text. On every other question the setups were level.
 
 The fixes on Native's side: on import, move the note's status into `lifecycle` and drop the duplicates. Also, let `create_record` take a `replaces` argument, so marking the old decision is part of creating the new one instead of a second step agents forget.
 
@@ -151,10 +174,20 @@ The read hint and the write hint were tested separately, but a real agent does b
 | gpt-5.6-luna | 100% · 28k | **100% · 20k** |
 | **Overall** | 90% · 47k | 86% · 50k |
 
+**Writing, the other checks** (all 3 models, 9 runs per hint; Markdown for reference):
+
+| | Write hint | Combined hint | Markdown |
+|---|---|---|---|
+| Replacements linked with `supersedes` | 38/45 | **39/45** | n/a |
+| Traps kept out | 18/18 | 18/18 | 18/18 |
+| Next agent: task-status questions | 2/18 | 5/18 | **15/18** |
+| Next agent: all other questions | 55/63 | **57/63** | 54/63 |
+| Next agent: total | 57/81 | 62/81 | **69/81** |
+
 What that means:
-- **One hint is enough.** The extra writing lines cost reading nothing: still 100% correct, with slightly fewer tokens on every model. On writing it matched the write-only hint within run-to-run noise. gpt-5-nano swings the most. Replacements linked: 39 of 45 with the combined hint, 38 of 45 with the write hint. The next agent was right 62 of 81 times, against 57 of 81.
+- **One hint is enough.** The extra writing lines cost reading nothing: still 100% correct, with slightly fewer tokens on every model. On writing it matched the write-only hint within run-to-run noise. gpt-5-nano swings the most.
 - **So Native could ship this as its default.** A block this short, in the tool descriptions or a slim `bootstrap`, would replace a 42,000-character orientation.
-- **It doesn't fix the status bug.** Combined-hint writers also updated only `lifecycle`, and the next agent got the task-status questions right 5 times out of 18 (Markdown: 15 out of 18). That needs the product fix from section 5, not a better prompt.
+- **It doesn't fix the status bug.** Combined-hint writers also updated only `lifecycle`, so the next agent still missed most task-status questions. That needs the product fix from section 5, not a better prompt.
 - **The cleaner prompt didn't change the read results.** The read hint scored 21k per correct answer now against 22k before, at 100% both times.
 
 One read run (gpt-5-nano, read hint, question M03) hung at OpenCode startup four times in a row, before reaching the model. It's excluded as a harness fault, so that cell has 19 runs.
