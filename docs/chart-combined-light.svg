@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 694" width="760" height="694" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" role="img" aria-label="One combined hint vs a hint per task">
+<rect width="760" height="694" rx="8" fill="#fcfcfb"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#0b0b0b">One combined hint vs a hint per task</text>
+<text x="24" y="56" font-size="13" fill="#52514e">Shorter bar = cheaper. Separate hint = the read hint for reading, the write hint for writing.</text>
+<rect x="24" y="72" width="12" height="12" rx="3" fill="#1baf7a"/>
+<text x="42" y="82.5" font-size="13" fill="#52514e">Separate hint</text>
+<rect x="157" y="72" width="12" height="12" rx="3" fill="#eda100"/>
+<text x="175" y="82.5" font-size="13" fill="#52514e">Combined hint</text>
+<text x="24" y="112" font-size="13" font-weight="600" fill="#0b0b0b">Reading: tokens per correct answer</text>
+<line x1="150.0" y1="126" x2="150.0" y2="374" stroke="#c3c2b7" stroke-width="1"/>
+<text x="150.0" y="392" font-size="12" fill="#898781" text-anchor="middle">0k</text>
+<line x1="275.0" y1="126" x2="275.0" y2="374" stroke="#e1e0d9" stroke-width="1"/>
+<text x="275.0" y="392" font-size="12" fill="#898781" text-anchor="middle">20k</text>
+<line x1="400.0" y1="126" x2="400.0" y2="374" stroke="#e1e0d9" stroke-width="1"/>
+<text x="400.0" y="392" font-size="12" fill="#898781" text-anchor="middle">40k</text>
+<line x1="525.0" y1="126" x2="525.0" y2="374" stroke="#e1e0d9" stroke-width="1"/>
+<text x="525.0" y="392" font-size="12" fill="#898781" text-anchor="middle">60k</text>
+<line x1="650.0" y1="126" x2="650.0" y2="374" stroke="#e1e0d9" stroke-width="1"/>
+<text x="650.0" y="392" font-size="12" fill="#898781" text-anchor="middle">80k</text>
+<text x="138" y="153.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-nano</text>
+<path d="M150,134 H300.208552631579 Q304.208552631579,134 304.208552631579,138 V144 Q304.208552631579,148 300.208552631579,148 H150 Z" fill="#1baf7a"><title>gpt-5-nano, Separate hint: 25k tokens per correct answer, 100% correct</title></path>
+<text x="310.208552631579" y="145" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">25k</tspan> · 100% correct</text>
+<path d="M150,150 H297.3628125 Q301.3628125,150 301.3628125,154 V160 Q301.3628125,164 297.3628125,164 H150 Z" fill="#eda100"><title>gpt-5-nano, Combined hint: 24k tokens per correct answer, 100% correct</title></path>
+<text x="307.3628125" y="161" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">24k</tspan> · 100% correct</text>
+<text x="138" y="201.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-mini</text>
+<path d="M150,182 H332.9109375 Q336.9109375,182 336.9109375,186 V192 Q336.9109375,196 332.9109375,196 H150 Z" fill="#1baf7a"><title>gpt-5-mini, Separate hint: 30k tokens per correct answer, 100% correct</title></path>
+<text x="342.9109375" y="193" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">30k</tspan> · 100% correct</text>
+<path d="M150,198 H323.03218749999996 Q327.03218749999996,198 327.03218749999996,202 V208 Q327.03218749999996,212 323.03218749999996,212 H150 Z" fill="#eda100"><title>gpt-5-mini, Combined hint: 28k tokens per correct answer, 100% correct</title></path>
+<text x="333.03218749999996" y="209" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">28k</tspan> · 100% correct</text>
+<text x="138" y="249.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.6-luna</text>
+<path d="M150,230 H246.81843750000002 Q250.81843750000002,230 250.81843750000002,234 V240 Q250.81843750000002,244 246.81843750000002,244 H150 Z" fill="#1baf7a"><title>gpt-5.6-luna, Separate hint: 16k tokens per correct answer, 100% correct</title></path>
+<text x="256.8184375" y="241" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">16k</tspan> · 100% correct</text>
+<path d="M150,246 H232.03875 Q236.03875,246 236.03875,250 V256 Q236.03875,260 232.03875,260 H150 Z" fill="#eda100"><title>gpt-5.6-luna, Combined hint: 14k tokens per correct answer, 100% correct</title></path>
+<text x="242.03875" y="257" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">14k</tspan> · 100% correct</text>
+<text x="138" y="297.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.6-terra</text>
+<path d="M150,278 H220.03875 Q224.03875,278 224.03875,282 V288 Q224.03875,292 220.03875,292 H150 Z" fill="#1baf7a"><title>gpt-5.6-terra, Separate hint: 12k tokens per correct answer, 100% correct</title></path>
+<text x="230.03875" y="289" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">12k</tspan> · 100% correct</text>
+<path d="M150,294 H205.40812499999998 Q209.40812499999998,294 209.40812499999998,298 V304 Q209.40812499999998,308 205.40812499999998,308 H150 Z" fill="#eda100"><title>gpt-5.6-terra, Combined hint: 10k tokens per correct answer, 100% correct</title></path>
+<text x="215.40812499999998" y="305" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">10k</tspan> · 100% correct</text>
+<line x1="24" y1="317.0" x2="736" y2="317.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="138" y="345.5" font-size="13" font-weight="600" fill="#0b0b0b" text-anchor="end">All models</text>
+<path d="M150,326 H274.675 Q278.675,326 278.675,330 V336 Q278.675,340 274.675,340 H150 Z" fill="#1baf7a"><title>All models, Separate hint: 21k tokens per correct answer, 100% correct</title></path>
+<text x="284.675" y="337" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">21k</tspan> · 100% correct</text>
+<path d="M150,342 H264.46046875 Q268.46046875,342 268.46046875,346 V352 Q268.46046875,356 264.46046875,356 H150 Z" fill="#eda100"><title>All models, Combined hint: 19k tokens per correct answer, 100% correct</title></path>
+<text x="274.46046875" y="353" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">19k</tspan> · 100% correct</text>
+<text x="24" y="424" font-size="13" font-weight="600" fill="#0b0b0b">Writing: tokens per correct change</text>
+<line x1="150.0" y1="438" x2="150.0" y2="638" stroke="#c3c2b7" stroke-width="1"/>
+<text x="150.0" y="656" font-size="12" fill="#898781" text-anchor="middle">0k</text>
+<line x1="275.0" y1="438" x2="275.0" y2="638" stroke="#e1e0d9" stroke-width="1"/>
+<text x="275.0" y="656" font-size="12" fill="#898781" text-anchor="middle">20k</text>
+<line x1="400.0" y1="438" x2="400.0" y2="638" stroke="#e1e0d9" stroke-width="1"/>
+<text x="400.0" y="656" font-size="12" fill="#898781" text-anchor="middle">40k</text>
+<line x1="525.0" y1="438" x2="525.0" y2="638" stroke="#e1e0d9" stroke-width="1"/>
+<text x="525.0" y="656" font-size="12" fill="#898781" text-anchor="middle">60k</text>
+<line x1="650.0" y1="438" x2="650.0" y2="638" stroke="#e1e0d9" stroke-width="1"/>
+<text x="650.0" y="656" font-size="12" fill="#898781" text-anchor="middle">80k</text>
+<text x="138" y="465.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-nano</text>
+<path d="M150,446 H450.49120370370366 Q454.49120370370366,446 454.49120370370366,450 V456 Q454.49120370370366,460 450.49120370370366,460 H150 Z" fill="#1baf7a"><title>gpt-5-nano, Separate hint: 49k tokens per correct change, 69% applied</title></path>
+<text x="460.49120370370366" y="457" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">49k</tspan> · 69% applied</text>
+<path d="M150,462 H509.8307065217391 Q513.8307065217391,462 513.8307065217391,466 V472 Q513.8307065217391,476 509.8307065217391,476 H150 Z" fill="#eda100"><title>gpt-5-nano, Combined hint: 58k tokens per correct change, 59% applied</title></path>
+<text x="519.8307065217391" y="473" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">58k</tspan> · 59% applied</text>
+<text x="138" y="513.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5-mini</text>
+<path d="M150,494 H546.5376602564103 Q550.5376602564103,494 550.5376602564103,498 V504 Q550.5376602564103,508 546.5376602564103,508 H150 Z" fill="#1baf7a"><title>gpt-5-mini, Separate hint: 64k tokens per correct change, 100% applied</title></path>
+<text x="556.5376602564103" y="505" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">64k</tspan> · 100% applied</text>
+<path d="M150,510 H607.782532051282 Q611.782532051282,510 611.782532051282,514 V520 Q611.782532051282,524 607.782532051282,524 H150 Z" fill="#eda100"><title>gpt-5-mini, Combined hint: 74k tokens per correct change, 100% applied</title></path>
+<text x="617.782532051282" y="521" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">74k</tspan> · 100% applied</text>
+<text x="138" y="561.5" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="end">gpt-5.6-luna</text>
+<path d="M150,542 H320.5698717948718 Q324.5698717948718,542 324.5698717948718,546 V552 Q324.5698717948718,556 320.5698717948718,556 H150 Z" fill="#1baf7a"><title>gpt-5.6-luna, Separate hint: 28k tokens per correct change, 100% applied</title></path>
+<text x="330.5698717948718" y="553" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">28k</tspan> · 100% applied</text>
+<path d="M150,558 H272.0719551282051 Q276.0719551282051,558 276.0719551282051,562 V568 Q276.0719551282051,572 272.0719551282051,572 H150 Z" fill="#eda100"><title>gpt-5.6-luna, Combined hint: 20k tokens per correct change, 100% applied</title></path>
+<text x="282.0719551282051" y="569" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">20k</tspan> · 100% applied</text>
+<line x1="24" y1="581.0" x2="736" y2="581.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="138" y="609.5" font-size="13" font-weight="600" fill="#0b0b0b" text-anchor="end">All models</text>
+<path d="M150,590 H437.9091071428571 Q441.9091071428571,590 441.9091071428571,594 V600 Q441.9091071428571,604 437.9091071428571,604 H150 Z" fill="#1baf7a"><title>All models, Separate hint: 47k tokens per correct change, 90% applied</title></path>
+<text x="447.9091071428571" y="601" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">47k</tspan> · 90% applied</text>
+<path d="M150,606 H455.8458539603961 Q459.8458539603961,606 459.8458539603961,610 V616 Q459.8458539603961,620 455.8458539603961,620 H150 Z" fill="#eda100"><title>All models, Combined hint: 50k tokens per correct change, 86% applied</title></path>
+<text x="465.8458539603961" y="617" font-size="12" fill="#52514e"><tspan font-weight="600" fill="#0b0b0b">50k</tspan> · 86% applied</text>
+<text x="24" y="684" font-size="11" fill="#898781">Reading: 1 run per question. Writing: 3 runs. Source: results/combined-read.jsonl, results/writes.jsonl</text>
+</svg>
