@@ -68,7 +68,7 @@ def main(paths):
         by[(r["model"], r["arm"], r["qtype"])].append(r)
         by[("ALL", r["arm"])].append(r)
         by[("ALL", r["arm"], r["qtype"])].append(r)
-    arms = [a for a in ("markdown", "native", "native_hinted") if any(r["arm"] == a for r in rows)]
+    arms = [a for a in ("markdown", "native", "native_hinted", "native_combined") if any(r["arm"] == a for r in rows)]
     for m in models + ["ALL"]:
         for arm in arms:
             g = agg(by[(m, arm)])

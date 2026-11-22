@@ -9,7 +9,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ARMS = ["markdown", "native", "native_hinted"]
+ARMS = ["markdown", "native", "native_hinted", "native_combined"]
 # The typed status Native's own views use; fm.status facets copied from the import also pass the checks.
 LIFE = [("T1", {"completed"}), ("T2", {"closed"})]
 

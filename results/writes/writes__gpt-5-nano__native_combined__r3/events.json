@@ -1,0 +1,238 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "2d4a62ca-4578-4ac0-bede-c83527ff8c6a",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:27.460Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Self-hosting PostHog was consuming too much ops time; EU-hosted solution keeps data in EU and simplifies maintenance.",
+   "kind": "decision",
+   "name": "Switch product analytics to PostHog Cloud (EU region)",
+   "body": "Decision to move analytics from self-hosted PostHog to PostHog Cloud hosted in the EU region. This ensures clinic data remains in the EU and reduces ops overhead.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "link.added",
+  "record_id": "2d4a62ca-4578-4ac0-bede-c83527ff8c6a",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:29.490Z",
+  "payload": {
+   "source_id": "2d4a62ca-4578-4ac0-bede-c83527ff8c6a",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "Replaces PostHog self-hosted decision (f004a28a)"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "300bc489-23bc-474d-8e31-8b106d8fdd9e",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:31.552Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Operational reliability and cost; Portuguese number support issue with Vonage.",
+   "kind": "decision",
+   "name": "Move SMS reminders to Sinch; decommission Vonage",
+   "body": "Decision to move SMS reminders to Sinch effective 1 November. Vonage rollout is decommissioned. Kenji to stop the Vonage rollout; the task is no longer needed.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "link.added",
+  "record_id": "300bc489-23bc-474d-8e31-8b106d8fdd9e",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:34.217Z",
+  "payload": {
+   "source_id": "300bc489-23bc-474d-8e31-8b106d8fdd9e",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "Replaces Vonage as SMS provider decision."
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "916e9dcc-c951-4a4d-8811-f52192f94b7d",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:36.561Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Dan Reyes 2026-10-15; agreed with Tom Lindqvist to reduce pilot clinic disruption.",
+   "kind": "decision",
+   "name": "Ship releases twice-weekly on Tuesdays and Thursdays behind feature flags",
+   "body": "Decision to ship releases twice weekly on Tuesdays and Thursdays, behind feature flags to minimize disruptions and allow gradual rollout.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "link.added",
+  "record_id": "916e9dcc-c951-4a4d-8811-f52192f94b7d",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:38.237Z",
+  "payload": {
+   "source_id": "916e9dcc-c951-4a4d-8811-f52192f94b7d",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes",
+   "note": "Replaces continuous deploy cadence decision with twice-weekly releases behind feature flags."
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "c92d1c3d-be48-4dbf-9893-6593fb94a6e6",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:39.596Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Brightpath asked to slow updates; also maintain KPI access via metrics dashboard.",
+   "kind": "decision",
+   "name": "Investor updates cadence changed to monthly; keep metrics dashboard link",
+   "body": "Decision to reduce investor updates cadence to monthly while continuing to publish the metrics dashboard link for visibility.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "c92d1c3d-be48-4dbf-9893-6593fb94a6e6",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:42.806Z",
+  "payload": {
+   "source_id": "c92d1c3d-be48-4dbf-9893-6593fb94a6e6",
+   "target_id": "0d9d5ca0-fe2e-4b79-9d18-78663ef2bba5",
+   "relationship": "supersedes",
+   "note": "Replaces previous investor cadence decision."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "b536efc9-25b8-4d87-a8e4-83d484c1eb3a",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:44.249Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Priya and Kenji agreed on 2026-10-16.",
+   "kind": "decision",
+   "name": "Replace Tailwind UI kit with shadcn/ui as design system",
+   "body": "Decision to switch from Tailwind UI kit to shadcn/ui for the design system.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "b536efc9-25b8-4d87-a8e4-83d484c1eb3a",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:46.676Z",
+  "payload": {
+   "source_id": "b536efc9-25b8-4d87-a8e4-83d484c1eb3a",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Replaces Tailwind UI kit decision with shadcn/ui design system."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "602bca78-5386-4d7a-9b6e-b963f46d8e8f",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:48.694Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action item from 2026-10-13 weekly sync.",
+   "kind": "task",
+   "name": "SMS reminders: redesign templates for Sinch",
+   "body": "Redesign SMS reminder templates for Sinch; due 2026-10-30.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "714985c9-3d1f-4522-bc34-66073da4b910",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:51.685Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Status update from 2026-10-15 Kenji Watanabe note.",
+   "kind": "task",
+   "name": "Concierge onboarding rollout completed",
+   "body": "Concierge onboarding is live for all pilot clinics and the onboarding rollout task is completed.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.updated",
+  "record_id": "714985c9-3d1f-4522-bc34-66073da4b910",
+  "intent": null,
+  "created_at": "2026-11-22T09:04:57.795Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Onboarding rollout completed as of 2026-10-15 per Kenji Watanabe."
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "record.updated",
+  "record_id": "714985c9-3d1f-4522-bc34-66073da4b910",
+  "intent": null,
+  "created_at": "2026-11-22T09:05:00.087Z",
+  "payload": {
+   "summary": "Onboarding rollout completed: Concierge onboarding live for all pilot clinics; help center updated.",
+   "lifecycle": "completed",
+   "reason": "Status update for onboarding."
+  }
+ },
+ {
+  "seq": 2476,
+  "type": "record.created",
+  "record_id": "11f1291c-7427-4dc6-9613-cc2f7d3fac66",
+  "intent": null,
+  "created_at": "2026-11-22T09:05:03.526Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Status update from 2026-10-15 Kenji Watanabe.",
+   "kind": "task",
+   "name": "Dark mode day view: beta",
+   "body": "Dark mode for day view is now in beta; monitor feedback and plan transition to GA.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2477,
+  "type": "record.created",
+  "record_id": "050d9c87-1c07-4617-9258-e7174262e550",
+  "intent": null,
+  "created_at": "2026-11-22T09:05:06.622Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Decision to move SMS to Sinch and stop Vonage rollout.",
+   "kind": "task",
+   "name": "Vonage rollout stopped",
+   "body": "Vonage SMS reminders rollout stopped; Sinch will handle SMS reminders from 1 November.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ }
+]

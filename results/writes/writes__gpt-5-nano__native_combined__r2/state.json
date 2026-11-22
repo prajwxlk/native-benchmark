@@ -1,0 +1,368 @@
+{
+ "checks": {
+  "R1_new_decision": true,
+  "R1_replacement_recorded": true,
+  "R2_new_decision": true,
+  "R2_replacement_recorded": true,
+  "R3_new_decision": false,
+  "R3_replacement_recorded": false,
+  "R4_new_decision": false,
+  "R4_replacement_recorded": false,
+  "R5_new_decision": true,
+  "R5_replacement_recorded": true,
+  "T1_status": true,
+  "T2_status": false,
+  "T3_new_task": true,
+  "D1_not_recorded": true,
+  "D2_not_recorded": true,
+  "no_deletions": true
+ },
+ "details": {
+  "R1": {
+   "candidates": [
+    "Move SMS reminders from Vonage to Sinch starting 1 November"
+   ],
+   "typed_as_decision": true,
+   "edited_old_in_place": false,
+   "reversed": false,
+   "prose_only": false
+  },
+  "R2": {
+   "candidates": [
+    "Decision - Product analytics vendor is PostHog Cloud (EU region)"
+   ],
+   "typed_as_decision": true,
+   "edited_old_in_place": false,
+   "reversed": false,
+   "prose_only": false
+  },
+  "R3": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false,
+   "reversed": false,
+   "prose_only": false
+  },
+  "R4": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false,
+   "reversed": false,
+   "prose_only": false
+  },
+  "R5": {
+   "candidates": [
+    "Decision - Design system is shadcn/ui"
+   ],
+   "typed_as_decision": true,
+   "edited_old_in_place": false,
+   "reversed": false,
+   "prose_only": false
+  },
+  "T1": {
+   "statuses": [
+    "completed",
+    "in_progress"
+   ],
+   "lifecycle": "completed"
+  },
+  "T2": {
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "lifecycle": "in_progress"
+  },
+  "T3": {
+   "candidates": [
+    "Redesign SMS reminder templates for Sinch"
+   ]
+  },
+  "D1": {
+   "wrong_decisions": [],
+   "current_marked_superseded": false
+  },
+  "D2": {
+   "wrong_decisions": [],
+   "current_marked_superseded": false
+  }
+ },
+ "arm": "native",
+ "new": [
+  {
+   "id": "21c94915-34d3-4570-be7a-616f3d22eec1",
+   "name": "Move SMS reminders from Vonage to Sinch starting 1 November",
+   "text": "Move SMS reminders from Vonage to Sinch starting 1 November\nVonage SMS reminders will be migrated to Sinch effective 1 November. Vonage is decommissioned for reminders; Sinch will handle all SMS reminders going forward.",
+   "nameless": false,
+   "statuses": [],
+   "type": "Resolution",
+   "kind": "decision",
+   "decision": true,
+   "task": false
+  },
+  {
+   "id": "86586b94-3f1b-4425-b703-d0636eeb94c8",
+   "name": "Decision - Product analytics vendor is PostHog Cloud (EU region)",
+   "text": "Decision - Product analytics vendor is PostHog Cloud (EU region)\nSwitch product analytics from PostHog self-hosted to PostHog Cloud in the EU region to keep data within the EU.",
+   "nameless": false,
+   "statuses": [],
+   "type": "Resolution",
+   "kind": "decision",
+   "decision": true,
+   "task": false
+  },
+  {
+   "id": "75384259-7d50-4a4b-86e2-84a8bdfb5035",
+   "name": "Concierge onboarding rollout completed",
+   "text": "Concierge onboarding rollout completed\nConcierge onboarding is live for all pilot clinics and the help centre is updated; onboarding rollout task is completed.",
+   "nameless": false,
+   "statuses": [],
+   "type": "Resolution",
+   "kind": "decision",
+   "decision": true,
+   "task": false
+  },
+  {
+   "id": "5fa5308a-8d6a-487c-9d45-87966373dfb4",
+   "name": "Redesign SMS reminder templates for Sinch",
+   "text": "Redesign SMS reminder templates for Sinch\nPriya to redesign the SMS reminder templates for Sinch. Due by 30 October.",
+   "nameless": false,
+   "statuses": [
+    "open"
+   ],
+   "type": "WorkItem",
+   "kind": "task",
+   "decision": false,
+   "task": true
+  },
+  {
+   "id": "50d06b15-e937-4401-b9f6-115e42e74d5f",
+   "name": "Investigate per-practitioner colours on the calendar",
+   "text": "Investigate per-practitioner colours on the calendar\nInvestigate and plan implementation of per-practitioner calendar colours. Gather requirements from reception staff.",
+   "nameless": false,
+   "statuses": [
+    "open"
+   ],
+   "type": "WorkItem",
+   "kind": "task",
+   "decision": false,
+   "task": true
+  },
+  {
+   "id": "da9bb831-bee4-4138-89b6-256dffd9cd5e",
+   "name": "Revisit support tool Plain vs Zendesk in December",
+   "text": "Revisit support tool Plain vs Zendesk in December\nDecision on moving support tools to Zendesk or Plain will be revisited in December.",
+   "nameless": false,
+   "statuses": [
+    "open"
+   ],
+   "type": "WorkItem",
+   "kind": "task",
+   "decision": false,
+   "task": true
+  },
+  {
+   "id": "78b6da5e-fec7-4b95-8bd3-2406715606e7",
+   "name": "Ship twice-weekly releases on Tuesdays and Thursdays, behind feature flags",
+   "text": "Ship twice-weekly releases on Tuesdays and Thursdays, behind feature flags\nAdopt a twice-weekly release cadence (Tue/Thu) behind feature flags.",
+   "nameless": false,
+   "statuses": [
+    "open"
+   ],
+   "type": "WorkItem",
+   "kind": "task",
+   "decision": false,
+   "task": true
+  },
+  {
+   "id": "68c54ab2-0a67-43f0-a927-324f885a2f5b",
+   "name": "Decision - Design system is shadcn/ui",
+   "text": "Decision - Design system is shadcn/ui\nReplace Tailwind UI kit with shadcn/ui as the design system across Fernwork.",
+   "nameless": false,
+   "statuses": [],
+   "type": "Resolution",
+   "kind": "decision",
+   "decision": true,
+   "task": false
+  }
+ ],
+ "old": {
+  "Decision - SMS reminder provider is Vonage": {
+   "id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "exists": true,
+   "name": "Decision - SMS reminder provider is Vonage",
+   "text": "Decision - SMS reminder provider is Vonage\n\n# SMS reminder provider: Vonage\n\nDecided on 2026-10-02 by [[Tom Lindqvist]].\n\n## Decision\nSMS reminder provider is **Vonage**.\n\n## Why\nMessagebird delivery failures in portugal.\n\nThis replaces [[Decision - SMS reminder provider is MessageBird]], which is no longer current.\n\n## Context\nAccessibility review flagged low contrast on the cancelled-appointment chips. Support volume is highest on Monday mornings before 10am. Reception teams keep asking for fewer clicks when moving appointments.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Decision - Product analytics vendor is PostHog self-hosted": {
+   "id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "exists": true,
+   "name": "Decision - Product analytics vendor is PostHog self-hosted",
+   "text": "Decision - Product analytics vendor is PostHog self-hosted\n\n# Product analytics vendor: PostHog self-hosted\n\nDecided on 2026-09-25 by [[Maya Okafor]].\n\n## Decision\nProduct analytics vendor is **PostHog self-hosted**.\n\n## Why\nClinic data must stay in the eu.\n\nThis replaces [[Decision - Product analytics vendor is Mixpanel]], which is no longer current.\n\n## Context\nClinic owners care about no-show rates more than any other metric. Accessibility review flagged low contrast on the cancelled-appointment chips. A few clinics want per-practitioner colours on the calendar.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Decision - Release cadence is continuous deploys behind feature flags": {
+   "id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "exists": true,
+   "name": "Decision - Release cadence is continuous deploys behind feature flags",
+   "text": "Decision - Release cadence is continuous deploys behind feature flags\n\n# Release cadence: continuous deploys behind feature flags\n\nDecided on 2026-10-04 by [[Tom Lindqvist]].\n\n## Decision\nRelease cadence is **continuous deploys behind feature flags**.\n\n## Why\nWeekly batches hid regressions.\n\nThis replaces [[Decision - Release cadence is weekly releases every Thursday]], which is no longer current.\n\n## Context\nExports to CSV are used weekly by clinic managers for payroll. Support volume is highest on Monday mornings before 10am. Load testing showed the booking endpoint is fine up to 300 requests per second.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Decision - Investor update cadence is fortnightly update with a metrics dashboard link": {
+   "id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "exists": true,
+   "name": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+   "text": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link\n\n# Investor update cadence: fortnightly update with a metrics dashboard link\n\nDecided on 2026-08-16 by [[Priya Raman]].\n\n## Decision\nInvestor update cadence is **fortnightly update with a metrics dashboard link**.\n\n## Why\nBrightpath wanted more frequent numbers.\n\nThis replaces [[Decision - Investor update cadence is monthly email update on the first Monday]], which is no longer current.\n\n## Context\nReception teams keep asking for fewer clicks when moving appointments. Calendar sync with Google and Outlook still drops edits made within the same minute. Clinic owners care about no-show rates more than any other metric.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Decision - Design system is Tailwind UI kit": {
+   "id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "exists": true,
+   "name": "Decision - Design system is Tailwind UI kit",
+   "text": "Decision - Design system is Tailwind UI kit\n\n# Design system: Tailwind UI kit\n\nDecided on 2026-08-29 by [[Maya Okafor]].\n\n## Decision\nDesign system is **Tailwind UI kit**.\n\n## Why\nSpeed.\n\n## Context\nCalendar sync with Google and Outlook still drops edits made within the same minute. Support volume is highest on Monday mornings before 10am. Load testing showed the booking endpoint is fine up to 300 requests per second.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Task - Roll out onboarding flow (concierge onboarding call before account creation)": {
+   "id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+   "exists": true,
+   "name": "Task - Roll out onboarding flow (concierge onboarding call before account creation)",
+   "text": "Task - Roll out onboarding flow (concierge onboarding call before account creation)\n\n# Task - Roll out onboarding flow (concierge onboarding call before account creation)\n\nStatus: in_progress\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - Onboarding flow is concierge onboarding call before account creation]]\n\n## Done when\nThe change is live for all pilot clinics and the help centre is updated.\n\n## Notes\nThe rota integration needs a clearer error when staff IDs do not match. Clinic owners care about no-show rates more than any other metric.\n",
+   "added": "",
+   "statuses": [
+    "completed",
+    "in_progress"
+   ],
+   "lifecycle": "completed",
+   "modified": true,
+   "events": [
+    "record.updated"
+   ]
+  },
+  "Task - Roll out sms reminder provider (Vonage)": {
+   "id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+   "exists": true,
+   "name": "Task - Roll out sms reminder provider (Vonage)",
+   "text": "Task - Roll out sms reminder provider (Vonage)\n\n# Task - Roll out sms reminder provider (Vonage)\n\nStatus: in_progress\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - SMS reminder provider is Vonage]]\n\n## Done when\nThe change is live for all pilot clinics and the help centre is updated.\n\n## Notes\nLoad testing showed the booking endpoint is fine up to 300 requests per second. A few clinics want per-practitioner colours on the calendar.\n",
+   "added": "",
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "lifecycle": "in_progress",
+   "modified": false,
+   "events": []
+  },
+  "Decision - Customer support tool is Plain": {
+   "id": "ef6b7449-842d-4db8-ab81-d5fe5b03a5fb",
+   "exists": true,
+   "name": "Decision - Customer support tool is Plain",
+   "text": "Decision - Customer support tool is Plain\n\n# Customer support tool: Plain\n\nDecided on 2026-10-05 by [[Maya Okafor]].\n\n## Decision\nCustomer support tool is **Plain**.\n\n## Why\nIntercom pricing jumped at 5 seats.\n\nThis replaces [[Decision - Customer support tool is Intercom]], which is no longer current.\n\n## Context\nThe rota integration needs a clearer error when staff IDs do not match. Exports to CSV are used weekly by clinic managers for payroll. Several receptionists asked for a dark mode on the day view.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  },
+  "Decision - Public launch date is 6 October 2026": {
+   "id": "ea111f04-a85f-48c1-bc7c-53720abf0155",
+   "exists": true,
+   "name": "Decision - Public launch date is 6 October 2026",
+   "text": "Decision - Public launch date is 6 October 2026\n\n# Public launch date: 6 October 2026\n\nDecided on 2026-08-11 by [[Tom Lindqvist]].\n\n## Decision\nPublic launch date is **6 October 2026**.\n\n## Why\nCalendar sync bugs pushed the date.\n\nThis replaces [[Decision - Public launch date is 15 September 2026]], which is no longer current.\n\n## Context\nWe discussed whether SMS reminders should be sent 24 or 48 hours ahead. Load testing showed the booking endpoint is fine up to 300 requests per second. A few clinics want per-practitioner colours on the calendar.\n",
+   "added": "",
+   "statuses": [
+    "decided"
+   ],
+   "lifecycle": null,
+   "modified": false,
+   "events": []
+  }
+ },
+ "supersedes": [
+  [
+   "68c54ab2-0a67-43f0-a927-324f885a2f5b",
+   "02437649-4835-4d9d-8576-917b980e8b66"
+  ],
+  [
+   "86586b94-3f1b-4425-b703-d0636eeb94c8",
+   "f004a28a-0f5b-4147-9470-c5e335b1e803"
+  ],
+  [
+   "21c94915-34d3-4570-be7a-616f3d22eec1",
+   "28e16715-b34d-4570-95dd-b363bd47fd5a"
+  ]
+ ],
+ "links": [
+  {
+   "source_id": "68c54ab2-0a67-43f0-a927-324f885a2f5b",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Replaces the Tailwind UI kit design decision"
+  },
+  {
+   "source_id": "86586b94-3f1b-4425-b703-d0636eeb94c8",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "Replaces PostHog self-hosted decision"
+  },
+  {
+   "source_id": "21c94915-34d3-4570-be7a-616f3d22eec1",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "Replaces Vonage SMS reminder provider decision."
+  }
+ ],
+ "deleted": [],
+ "touched": [
+  "Task - Roll out onboarding flow (concierge onboarding call before account creation)",
+  "Task - Roll out product analytics vendor (PostHog self-hosted)"
+ ],
+ "intents": [],
+ "event_types": [
+  "record.created",
+  "record.created",
+  "record.created",
+  "record.created",
+  "record.created",
+  "record.created",
+  "record.created",
+  "record.created",
+  "link.added",
+  "link.added",
+  "record.updated",
+  "record.updated",
+  "record.updated",
+  "link.added"
+ ]
+}

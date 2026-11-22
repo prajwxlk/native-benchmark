@@ -51,13 +51,12 @@ WHERE = {
 # Same idea as the read benchmark's hint: emulate product-side docs, not extra capability.
 WHERE["native_hinted"] = WHERE["native"] + (
     " Tips: you do not need to call bootstrap. Find records with records_read operation 'search' and arguments "
-    "{query} only. Create records with records_write operation 'create_record' and arguments {type, kind, name, "
-    "body, reason}: decisions are type 'Resolution' kind 'decision'; tasks are type 'WorkItem' kind 'task' with a "
-    "lifecycle. Record that a new decision replaces an older one with records_write operation 'manage_links.add' "
-    "and arguments {source_id: new id, target_id: old id, relationship: 'supersedes', note}. Change a task's status "
-    "with records_write operation 'update_record' and arguments {id, lifecycle, reason}; lifecycle is one of open, "
-    "in_progress, blocked, completed, closed.")
-READER_ARM = {"markdown": "markdown", "native": "native_hinted", "native_hinted": "native_hinted"}
+    "{query} only. " + R.WRITE_TIPS)
+# The read hint and the write hint together (bench/run.py HINT_COMBINED).
+WHERE["native_combined"] = WHERE["native"] + " " + R.HINT_COMBINED
+# Every Native setup is read back by the same read-hint reader, so read-back compares what was written.
+READER_ARM = {"markdown": "markdown", "native": "native_hinted", "native_hinted": "native_hinted",
+              "native_combined": "native_hinted"}
 REPLACE_WORDS = r"replac|supersed|instead of|no longer|switch(ed|ing)? from|mov(e|ed|ing) (away )?from|in place of"
 
 
@@ -262,7 +261,6 @@ def readback(arm, base, ws_writer, db, key, model, timeout):
     if rarm != "markdown":
         cfg["mcp"]["native"]["command"][1] = str(db)
     ws, env = R.make_workspace(rbase, cfg, key)
-    env["OPENCODE_DISABLE_CLAUDE_CODE"] = "1"
     if rarm == "markdown":
         shutil.copytree(ws_writer / "vault", ws / "vault")
     msg = (R.PROMPT[rarm] + "\n\nBe accurate about what is CURRENT: notes can be replaced by later ones. "
@@ -290,8 +288,6 @@ def run_one(model, arm, run, key, a, workroot):
     if arm != "markdown":
         cfg["mcp"]["native"]["command"][1] = str(db)
     ws, env = R.make_workspace(base, cfg, key)
-    # OpenCode otherwise loads ~/.claude/CLAUDE.md and skills into every agent's prompt.
-    env["OPENCODE_DISABLE_CLAUDE_CODE"] = "1"
     if arm == "markdown":
         shutil.copytree(VAULT, ws / "vault")
     else:

@@ -1,0 +1,198 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "8f490028-a23b-488c-9d23-e1565c905074",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.369Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed SMS provider change from the 2026-10-13 weekly sync.",
+   "kind": "decision",
+   "name": "Decision - SMS reminder provider is Sinch",
+   "body": "# SMS reminder provider: Sinch\n\nDecided on 2026-10-13 by Maya Okafor, Tom Lindqvist, Priya Raman, Daniel Reyes, Sofia Marchetti, and Kenji Watanabe.\n\n## Decision\nSMS reminders move to **Sinch** from 2026-11-01; Vonage is no longer the provider.\n\n## Why\nVonage continues to fail on Portuguese numbers.\n\n## Context\nThe public launch occurred on 2026-10-06 as planned, and early clinic feedback is good.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "f371ab49-3fcf-4eaa-bf05-11f1715a9e1b",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.395Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed product analytics vendor change from the 2026-10-14 message.",
+   "kind": "decision",
+   "name": "Decision - Product analytics vendor is PostHog Cloud in the EU region",
+   "body": "# Product analytics vendor: PostHog Cloud in the EU region\n\nDecided on 2026-10-14 by Maya Okafor and Tom Lindqvist.\n\n## Decision\nProduct analytics switches to **PostHog Cloud in the EU region**.\n\n## Why\nSelf-hosting PostHog is taking too much operations time while clinic data must remain in the EU.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "e7723e6c-b086-440b-8ea5-3a1850cb62a4",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.406Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed release cadence change from the 2026-10-15 message.",
+   "kind": "decision",
+   "name": "Decision - Releases ship Tuesdays and Thursdays behind feature flags",
+   "body": "# Release cadence: Tuesdays and Thursdays behind feature flags\n\nDecided on 2026-10-15 by Daniel Reyes and Tom Lindqvist.\n\n## Decision\nShip releases **twice weekly on Tuesdays and Thursdays**, still behind feature flags.\n\n## Why\nContinuous deploys are surprising pilot clinics in the middle of the day.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "be2ed7bf-ff51-495b-9c1e-b80e7d859284",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.417Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record Maya's agreed investor-update cadence change from the 2026-10-16 message.",
+   "kind": "decision",
+   "name": "Decision - Investor updates are monthly with the metrics dashboard link",
+   "body": "# Investor update cadence: monthly with the metrics dashboard link\n\nDecided on 2026-10-16 by Maya Okafor.\n\n## Decision\nInvestor updates return to a **monthly** cadence, while retaining the metrics dashboard link.\n\n## Why\nBrightpath asked Fernwork to slow down.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "34a2c85f-7730-4fb4-93ec-720f12324e94",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.426Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed design-system change from the 2026-10-16 message.",
+   "kind": "decision",
+   "name": "Decision - Design system is shadcn/ui",
+   "body": "# Design system: shadcn/ui\n\nDecided on 2026-10-16 by Priya Raman and Kenji Watanabe.\n\n## Decision\nReplace the Tailwind UI kit with **shadcn/ui** as Fernwork's design system.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "29e21af0-5573-401c-ab93-c398ecdfbc4d",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:22.438Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record Priya's explicit action from the 2026-10-13 weekly sync.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "# Task - Redesign SMS reminder templates for Sinch\n\nStatus: open\nOwner: [[Priya Raman]]\n\n## Done when\nThe SMS reminder templates are redesigned for Sinch by 2026-10-30.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "link.added",
+  "record_id": "8f490028-a23b-488c-9d23-e1565c905074",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.348Z",
+  "payload": {
+   "source_id": "8f490028-a23b-488c-9d23-e1565c905074",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "The 2026-10-13 sync replaces Vonage with Sinch from 2026-11-01 because Vonage fails on Portuguese numbers."
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "f371ab49-3fcf-4eaa-bf05-11f1715a9e1b",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.356Z",
+  "payload": {
+   "source_id": "f371ab49-3fcf-4eaa-bf05-11f1715a9e1b",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "The 2026-10-14 agreement replaces self-hosted PostHog with PostHog Cloud in the EU region because self-hosting consumes too much operations time."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "link.added",
+  "record_id": "e7723e6c-b086-440b-8ea5-3a1850cb62a4",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.362Z",
+  "payload": {
+   "source_id": "e7723e6c-b086-440b-8ea5-3a1850cb62a4",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes",
+   "note": "The 2026-10-15 decision replaces continuous deploys with Tuesday and Thursday releases, still behind feature flags."
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "be2ed7bf-ff51-495b-9c1e-b80e7d859284",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.366Z",
+  "payload": {
+   "source_id": "be2ed7bf-ff51-495b-9c1e-b80e7d859284",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes",
+   "note": "On 2026-10-16 Maya changed investor updates back to monthly while retaining the metrics dashboard link."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "link.added",
+  "record_id": "34a2c85f-7730-4fb4-93ec-720f12324e94",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.369Z",
+  "payload": {
+   "source_id": "34a2c85f-7730-4fb4-93ec-720f12324e94",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "The 2026-10-16 agreement replaces Tailwind UI kit with shadcn/ui as the design system."
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.375Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Kenji is to stop the Vonage rollout; the task is no longer needed after the 2026-10-13 decision to move to Sinch."
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:29.380Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Kenji reported on 2026-10-15 that concierge onboarding is live for all pilot clinics and the help centre is updated."
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:35.079Z",
+  "payload": {
+   "summary": "Concierge onboarding is live for all pilot clinics and the help centre is updated.",
+   "lifecycle": "completed",
+   "reason": "Add the reported completion outcome to the onboarding rollout task."
+  }
+ }
+]
