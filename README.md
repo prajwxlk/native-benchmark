@@ -2,7 +2,7 @@
 
 An independent, rerunnable test of [Native](https://www.withnative.ai/)'s [Markdown benchmark](https://www.withnative.ai/research-and-posts/markdown-context-benchmark).
 
-**443 read runs and 27 write runs · 5 OpenAI models · 2 workspace sizes · $13.01 in API spend.**
+**602 read runs and 36 write runs · 5 OpenAI models · 2 workspace sizes · $16.03 in API spend.**
 
 ## 1. What Native claims, and what we checked
 
@@ -128,7 +128,40 @@ The fixes on Native's side: on import, move the note's status into `lifecycle` a
 
 Raw tables: [`results/summary-writes.md`](results/summary-writes.md). What every agent actually wrote: `results/writes/<run>/`, with `changes.diff` for Markdown and `events.json` (Native's change log) for Native.
 
-## 6. Friction points
+## 6. One hint for reading and writing
+
+The read hint and the write hint were tested separately, but a real agent does both. So we merged them into one hint: the read hint, followed by the write hint's lines on creating records, linking replacements and setting status. The two tips they share are said once. Then we ran both benchmarks again with it. For a fair comparison we re-ran the read hint next to it, because these runs use a cleaner prompt than the earlier read runs ([details](#technical-details)). Cost: $3.02.
+
+**Reading** (20 questions, 1 run each; % correct · tokens per correct answer):
+
+| Model | Read hint | Combined hint |
+|---|---|---|
+| gpt-5-nano | 100% · 25k | 100% · 24k |
+| gpt-5-mini | 100% · 30k | 100% · 28k |
+| gpt-5.6-luna | 100% · 16k | 100% · 14k |
+| gpt-5.6-terra | 100% · 12k | 100% · 10k |
+| **Overall** | 100% · 21k | **100% · 19k** |
+
+**Writing** (3 runs each; changes applied correctly · tokens per correct change):
+
+| Model | Write hint | Combined hint |
+|---|---|---|
+| gpt-5-nano | 69% · 49k | 59% · 58k |
+| gpt-5-mini | 100% · 64k | 100% · 74k |
+| gpt-5.6-luna | 100% · 28k | **100% · 20k** |
+| **Overall** | 90% · 47k | 86% · 50k |
+
+What that means:
+- **One hint is enough.** The extra writing lines cost reading nothing: still 100% correct, with slightly fewer tokens on every model. On writing it matched the write-only hint within run-to-run noise. gpt-5-nano swings the most. Replacements linked: 39 of 45 with the combined hint, 38 of 45 with the write hint. The next agent was right 62 of 81 times, against 57 of 81.
+- **So Native could ship this as its default.** A block this short, in the tool descriptions or a slim `bootstrap`, would replace a 42,000-character orientation.
+- **It doesn't fix the status bug.** Combined-hint writers also updated only `lifecycle`, and the next agent got the task-status questions right 5 times out of 18 (Markdown: 15 out of 18). That needs the product fix from section 5, not a better prompt.
+- **The cleaner prompt didn't change the read results.** The read hint scored 21k per correct answer now against 22k before, at 100% both times.
+
+One read run (gpt-5-nano, read hint, question M03) hung at OpenCode startup four times in a row, before reaching the model. It's excluded as a harness fault, so that cell has 19 runs.
+
+Raw tables: [`results/summary-combined-read.md`](results/summary-combined-read.md), [`results/summary-writes.md`](results/summary-writes.md).
+
+## 7. Friction points
 
 **Setup**
 - The build was quick: 3 minutes and about 4 GB. That's a positive.
@@ -145,7 +178,7 @@ Raw tables: [`results/summary-writes.md`](results/summary-writes.md). What every
 - The README's showcase step, "build an artifact", is the hardest step and is undocumented. We couldn't finish it in 7 tries.
 - One clear positive: the error messages are excellent. Every mistake told the agent exactly how to fix it.
 
-## 7. The three things we'd build
+## 8. The three things we'd build
 
 1. **native-bench.** Native's post says they're planning to release a reproducible benchmark. This repo already runs with a single command across models, with a budget limit. We'd hand it over and maintain it.
 2. **A "freshness" importer.** It reads your notes, finds explicit lines like "this replaces [[X]]", and links them as replacements during import. New users then get Native's main benefit on day one without any manual work.
@@ -192,6 +225,10 @@ Task statuses pass if `lifecycle` or the `fm.status` copy is right in Native, or
 **The exact write hint:**
 
 > Tips: you do not need to call bootstrap. Find records with records_read operation 'search' and arguments {query} only. Create records with records_write operation 'create_record' and arguments {type, kind, name, body, reason}: decisions are type 'Resolution' kind 'decision'; tasks are type 'WorkItem' kind 'task' with a lifecycle. Record that a new decision replaces an older one with records_write operation 'manage_links.add' and arguments {source_id: new id, target_id: old id, relationship: 'supersedes', note}. Change a task's status with records_write operation 'update_record' and arguments {id, lifecycle, reason}; lifecycle is one of open, in_progress, blocked, completed, closed.
+
+**The combined hint** is the read hint above, followed by the write hint from "Create records…" onward. It's built in [`bench/run.py`](bench/run.py) (`HINT_COMBINED`) and used for both benchmarks.
+
+**Prompt hygiene.** OpenCode's Claude Code compatibility layer loads the machine's global Claude Code instructions (`~/.claude/CLAUDE.md`) into every agent's prompt. The write runs and the combined-hint runs switch it off. The earlier read runs (sections 2–4) had it on, the same for every setup. Re-running the read hint without it moved tokens per correct answer from 22k to 21k, which suggests the effect is small. The Markdown and default-Native read runs haven't been re-run yet.
 
 **Limits**
 - **The write test is one small feed,** 10 changes over a week, run 3 times per model and setup. One nano Markdown run dumped every message into a single note. It scored 0 on our checks but 9 out of 9 on read-back, because in a small vault a dump is enough for the next reader. A bigger, messier workspace would punish that more.

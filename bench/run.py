@@ -28,6 +28,22 @@ NATIVE_DB = DATA / "native.db"
 TAG = ""  # set by --tag; prefixes trial ids so corpora never collide
 PRICES = json.loads((ROOT / "bench/prices.json").read_text()) if (ROOT / "bench/prices.json").exists() else {}
 
+# The read hint: stands in for product-side fixes (slim orientation, forgiving search scope,
+# surfacing the superseded-by recipe).
+HINT_READ = ("Tips: you do not need to call bootstrap. Search with records_read operation 'search' and "
+             "arguments {query} only (scope is a record id, so omit it). A newer record that replaces an "
+             "older one has a link with relationship 'supersedes' (see sql_read query_sql on the links "
+             "and records tables). get_record payloads are large, so fetch only records you need.")
+# The write-specific part of the write hint (bench/run_writes.py): how to create, link and set status.
+WRITE_TIPS = ("Create records with records_write operation 'create_record' and arguments {type, kind, name, "
+              "body, reason}: decisions are type 'Resolution' kind 'decision'; tasks are type 'WorkItem' kind "
+              "'task' with a lifecycle. Record that a new decision replaces an older one with records_write "
+              "operation 'manage_links.add' and arguments {source_id: new id, target_id: old id, relationship: "
+              "'supersedes', note}. Change a task's status with records_write operation 'update_record' and "
+              "arguments {id, lifecycle, reason}; lifecycle is one of open, in_progress, blocked, completed, closed.")
+# Read hint + write hint, with the two tips they share (skip bootstrap, query-only search) said once.
+HINT_COMBINED = HINT_READ + " " + WRITE_TIPS
+
 PROMPT = {
     "markdown": "You are answering a question about the company Fernwork, using only its notes. "
                 "The notes are Markdown files (with [[wikilinks]]) in the folder ./vault in your working directory. "
@@ -35,15 +51,12 @@ PROMPT = {
     "native": "You are answering a question about the company Fernwork, using only its notes. "
               "The notes are in a Native workspace, available to you through the `native` MCP tools. "
               "Use those tools to search and read them.",
-    # Same tools as "native", plus a short hint that emulates the product-side fixes we suggest
-    # (slim orientation, forgiving search scope, surfacing the superseded-by recipe).
-    "native_hinted": "You are answering a question about the company Fernwork, using only its notes. "
-                     "The notes are in a Native workspace, available to you through the `native` MCP tools. "
-                     "Tips: you do not need to call bootstrap. Search with records_read operation 'search' and "
-                     "arguments {query} only (scope is a record id, so omit it). A newer record that replaces an "
-                     "older one has a link with relationship 'supersedes' (see sql_read query_sql on the links "
-                     "and records tables). get_record payloads are large, so fetch only records you need.",
 }
+# Same tools as "native", plus a hint (see HINT_READ / HINT_COMBINED).
+_NATIVE_INTRO = ("You are answering a question about the company Fernwork, using only its notes. "
+                 "The notes are in a Native workspace, available to you through the `native` MCP tools. ")
+PROMPT["native_hinted"] = _NATIVE_INTRO + HINT_READ
+PROMPT["native_combined"] = _NATIVE_INTRO + HINT_COMBINED
 SUFFIX = ("\n\nBe accurate about what is CURRENT: notes can be replaced by later ones. "
           "When done, put your final answer on the last line, starting with 'ANSWER:'.\n\nQuestion: ")
 
@@ -139,7 +152,10 @@ def make_workspace(base, cfg, key):
     # inherited PWD pointed agents at this repo (and its data/vault) instead of ws/.
     env.update(PWD=str(ws), OPENAI_API_KEY=key, XDG_CONFIG_HOME=str(xdg / "config"), XDG_DATA_HOME=str(xdg / "data"),
                XDG_STATE_HOME=str(xdg / "state"), XDG_CACHE_HOME=str(xdg / "cache"),
-               OPENCODE_DISABLE_AUTOUPDATE="1")
+               OPENCODE_DISABLE_AUTOUPDATE="1",
+               # Otherwise OpenCode loads ~/.claude/CLAUDE.md and Claude Code skills into every
+               # agent's prompt. Read runs before the combined-hint run did not set this.
+               OPENCODE_DISABLE_CLAUDE_CODE="1")
     return ws, env
 
 

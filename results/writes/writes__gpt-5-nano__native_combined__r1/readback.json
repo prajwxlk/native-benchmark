@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Sinch",
+  "correct": true
+ },
+ "Q2": {
+  "answer": "PostHog Cloud (EU region)",
+  "correct": true
+ },
+ "Q3": {
+  "answer": "Continuous deploys behind feature flags",
+  "correct": false
+ },
+ "Q4": {
+  "answer": "Fortnightly update with a metrics dashboard link",
+  "correct": false
+ },
+ "Q5": {
+  "answer": "shadcn/ui",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q8": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q9": {
+  "answer": "Account b386beba",
+  "correct": false
+ }
+}

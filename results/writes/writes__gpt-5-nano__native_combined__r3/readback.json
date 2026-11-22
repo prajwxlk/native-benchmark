@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Sinch (moving SMS reminders to Sinch; Vonage decommissioned)",
+  "correct": true
+ },
+ "Q2": {
+  "answer": "PostHog Cloud (EU region)",
+  "correct": true
+ },
+ "Q3": {
+  "answer": "Ship releases twice-weekly — Tuesdays and Thursdays, behind feature flags",
+  "correct": true
+ },
+ "Q4": {
+  "answer": "Monthly (investor updates reduced to monthly)",
+  "correct": false
+ },
+ "Q5": {
+  "answer": "shadcn/ui",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q8": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q9": {
+  "answer": "Unassigned (no owner listed for the \"redesign SMS reminder templates\" task)",
+  "correct": false
+ }
+}

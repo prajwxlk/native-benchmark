@@ -1,0 +1,196 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "3fc8435a-2786-4221-bbde-8bc78eea4bc2",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:46.648Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Weekly sync 2026-10-13: decision to switch SMS reminders to Sinch; Vonage rollout is no longer needed.",
+   "kind": "decision",
+   "name": "Decision - Move SMS reminders to Sinch from 1 November (Vonage decommissioned)",
+   "body": "From 1 November, move SMS reminder provider from Vonage to Sinch; Vonage is out.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "a62574bf-38e1-4034-abbb-594b7987e676",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:47.855Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Priya has to redesign SMS templates for Sinch by 30 Oct per weekly sync.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "Redesign the SMS reminder templates to align with Sinch, including message copy, fallback flows, and error handling. Due by 30 October 2026.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "eebb4b47-8772-4869-8640-c7f9aa015282",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:48.955Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Design system refresh discussed in 2026-10-16 notes.",
+   "kind": "decision",
+   "name": "Decision - Replace Tailwind UI kit with shadcn/ui as design system",
+   "body": "Replace Tailwind UI kit with shadcn/ui as the design system across products.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "link.added",
+  "record_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:54.283Z",
+  "payload": {
+   "source_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "target_id": "0d9d5ca0-fe2e-4b79-9d18-78663ef2bba5",
+   "relationship": "supersedes",
+   "note": "Replaces monthly investor update cadence."
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:56.421Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Replaced by decision Move SMS reminders to Sinch from 1 November; Vonage rollout is no longer needed."
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "link.added",
+  "record_id": "eebb4b47-8772-4869-8640-c7f9aa015282",
+  "intent": null,
+  "created_at": "2026-11-22T08:59:58.898Z",
+  "payload": {
+   "source_id": "eebb4b47-8772-4869-8640-c7f9aa015282",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Replaces previous design system Tailwind UI kit decision."
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "cd60f4c9-9c11-4e0a-90c0-b4a9a91aba6b",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:00.243Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Tom and Maya discussed 2026-10-14; reduces ops overhead and ensures EU data residency.",
+   "kind": "decision",
+   "name": "Decision - Move analytics to PostHog Cloud (EU region)",
+   "body": "Switch analytics to PostHog Cloud hosted in the EU region to keep clinic data within EU. Stop self-hosted/PostHog on-prem.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "cd60f4c9-9c11-4e0a-90c0-b4a9a91aba6b",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:02.064Z",
+  "payload": {
+   "source_id": "cd60f4c9-9c11-4e0a-90c0-b4a9a91aba6b",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "Replaces previous PostHog self-hosted decision."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "ee8dd32a-651e-4980-b0fa-ff2c2182d5b7",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:05.020Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Requested by reception staff in 13 Oct notes.",
+   "kind": "task",
+   "name": "Task - Investigate per-practitioner colours on the calendar",
+   "body": "Prototype calendar view options with per-practitioner color coding and gather feedback from receptionists.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "record.created",
+  "record_id": "d32fc160-2b1f-400e-962c-fa9ae9fd76d5",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:06.876Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Not decided during 13 Oct notes; plan to revisit in December.",
+   "kind": "task",
+   "name": "Task - Evaluate Plain pricing vs Zendesk; revisit in December",
+   "body": "Compare Plain and Zendesk pricing and capabilities; revisit decision in December with recommended option.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "b7477f7c-c938-4780-b7b6-9c803ac36a64",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:13.003Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Update from 2026-10-15/16 notes.",
+   "kind": "decision",
+   "name": "Decision - Day view dark mode in beta",
+   "body": "Dark mode for the day view is now in beta.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "4fa51a32-de76-4d3f-ad78-3522cb275e95",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:15.991Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Status update from 2026-10-15 notes.",
+   "kind": "decision",
+   "name": "Decision - Concierge onboarding is live; onboarding rollout is complete; day view dark mode in beta",
+   "body": "Concierge onboarding is live for pilot clinics; onboarding rollout completed; day view dark mode is in beta.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "link.added",
+  "record_id": "4fa51a32-de76-4d3f-ad78-3522cb275e95",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:19.525Z",
+  "payload": {
+   "source_id": "4fa51a32-de76-4d3f-ad78-3522cb275e95",
+   "target_id": "1cef8ddb-a093-40c7-929d-4f0a854b6c4c",
+   "relationship": "supersedes",
+   "note": "Replaces onboarding policy described in older decision."
+  }
+ }
+]

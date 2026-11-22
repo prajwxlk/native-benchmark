@@ -1,0 +1,321 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:01.010Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Vonage rollout cancelled after decision to switch SMS reminders to Sinch"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "55476fab-2ae5-4923-bf7e-91d38e84ab0e",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:25.899Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record decision from weekly sync 2026-10-13 to switch SMS reminders to Sinch (effective 2026-11-01).",
+   "kind": "decision",
+   "name": "Decision - SMS reminder provider is Sinch (Vonage discontinued)",
+   "body": "# Decision - SMS reminder provider is Sinch (Vonage discontinued)\n\nDecided on 2026-10-13 by Weekly sync attendees.\n\n## Decision\nWe will move SMS reminders from Vonage to Sinch, starting 2026-11-01. Vonage will no longer be used for SMS reminders.\n\n## Why\nVonage kept failing on Portuguese numbers; Sinch is chosen as the replacement to improve delivery.\n",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "link.added",
+  "record_id": "55476fab-2ae5-4923-bf7e-91d38e84ab0e",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:29.986Z",
+  "payload": {
+   "source_id": "55476fab-2ae5-4923-bf7e-91d38e84ab0e",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "Sinch decision replaces earlier Vonage decision (Decided 2026-10-13)."
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "7b222e2e-34b8-43f9-9d83-e11992b9249b",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:33.021Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create task for Priya to redesign SMS templates for Sinch (due 2026-10-30) as agreed in weekly sync 2026-10-13.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "# Task - Redesign SMS reminder templates for Sinch\n\nStatus: open\nOwner: Priya Raman\n\n## Done when\nRedesigned SMS templates are implemented in Sinch and help centre documentation is updated.\n\n## Due\n2026-10-30\n\n## Notes\nAction agreed at weekly sync 2026-10-13 following decision to switch SMS reminders to Sinch.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "2a7c852d-e3b6-47ff-91dc-a6e71155d406",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:36.306Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record decision from Tom message 2026-10-14 to switch analytics to PostHog Cloud (EU).",
+   "kind": "decision",
+   "name": "Decision - Product analytics vendor is PostHog Cloud (EU)",
+   "body": "# Decision - Product analytics vendor is PostHog Cloud (EU)\n\nDecided on 2026-10-14 by Maya Okafor and Tom Lindqvist.\n\n## Decision\nWe will migrate product analytics to PostHog Cloud (EU region) and stop self-hosting PostHog.\n\n## Why\nSelf-hosting PostHog is taking too much ops time. PostHog Cloud (EU) keeps clinic data in the EU while reducing ops overhead.\n",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "link.added",
+  "record_id": "2a7c852d-e3b6-47ff-91dc-a6e71155d406",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:46.120Z",
+  "payload": {
+   "source_id": "2a7c852d-e3b6-47ff-91dc-a6e71155d406",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "PostHog Cloud decision replaces prior self-hosted PostHog decision (Decided 2026-10-14)."
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.updated",
+  "record_id": "0b49dca3-00e9-4428-9142-549797d37fab",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:48.044Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Switch to PostHog Cloud (EU) agreed; self-hosted rollout cancelled."
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "record.created",
+  "record_id": "f13eb5b8-144b-4fc4-b64c-fbd9d262b000",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:51.291Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create task to perform migration to PostHog Cloud (EU) following decision on 2026-10-14.",
+   "kind": "task",
+   "name": "Task - Migrate analytics to PostHog Cloud (EU)",
+   "body": "# Task - Migrate analytics to PostHog Cloud (EU)\n\nStatus: open\nOwner: Tom Lindqvist\n\n## Done when\nProduct analytics is running on PostHog Cloud (EU) and dashboards and data exports work as before.\n\n## Notes\nDecision to switch to PostHog Cloud (EU) agreed by Maya and Tom on 2026-10-14 to reduce ops overhead while keeping data in the EU.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "be1745d3-2428-4d9f-bbac-8549e8b107eb",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:56.356Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record decision from Daniel Reyes 2026-10-15 to change release cadence to twice-weekly (Tuesdays & Thursdays).",
+   "kind": "decision",
+   "name": "Decision - Release cadence is twice-weekly on Tuesdays and Thursdays (behind feature flags)",
+   "body": "# Decision - Release cadence is twice-weekly on Tuesdays and Thursdays (behind feature flags)\n\nDecided on 2026-10-15 by Daniel Reyes and Tom Lindqvist.\n\n## Decision\nFrom now on we will ship twice-weekly releases on Tuesdays and Thursdays, and continue using feature flags to control rollout.\n\n## Why\nContinuous deploys were surprising pilot clinics; a predictable twice-weekly schedule reduces disruption while keeping feature flag protection.\n",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "be1745d3-2428-4d9f-bbac-8549e8b107eb",
+  "intent": null,
+  "created_at": "2026-11-22T09:00:58.447Z",
+  "payload": {
+   "source_id": "be1745d3-2428-4d9f-bbac-8549e8b107eb",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes",
+   "note": "Replacement of continuous deploys decision; agreed on 2026-10-15."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "2c6d48a3-e6d5-41c5-b4cb-24689eaa9e35",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:01.503Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create task to implement release cadence change agreed 2026-10-15.",
+   "kind": "task",
+   "name": "Task - Implement twice-weekly release cadence (Tuesdays & Thursdays)",
+   "body": "# Task - Implement twice-weekly release cadence (Tuesdays & Thursdays)\n\nStatus: open\nOwner: Daniel Reyes\n\n## Done when\nDeployment pipeline and release calendar reflect twice-weekly releases (Tuesdays & Thursdays); customer comms and help centre note the new cadence.\n\n## Notes\nDecision to switch released cadence agreed by Daniel and Tom on 2026-10-15. Releases remain behind feature flags.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:03.542Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Concierge onboarding rollout is live for all pilot clinics and help centre updated (Kenji message 2026-10-15)."
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.created",
+  "record_id": "38801067-1a75-409b-9535-23b123916557",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:06.497Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record status of dark mode being in beta and create task for tracking further rollout.",
+   "kind": "task",
+   "name": "Task - Dark mode for day view (beta)",
+   "body": "# Task - Dark mode for day view (beta)\n\nStatus: in_progress\nOwner: Kenji Watanabe\n\n## Done when\nDark mode is out of beta and released to pilot clinics, with help centre documentation updated.\n\n## Notes\nKenji reported the day view dark mode is in beta (2026-10-15).",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "record.updated",
+  "record_id": "38801067-1a75-409b-9535-23b123916557",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:10.273Z",
+  "payload": {
+   "lifecycle": "in_progress",
+   "reason": "Beta testing under way as reported 2026-10-15 by Kenji."
+  }
+ },
+ {
+  "seq": 2476,
+  "type": "record.created",
+  "record_id": "9385a091-3446-4c30-812c-ae576fb6c764",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:13.250Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record decision from Maya Okafor (2026-10-16) to change investor update cadence to monthly while keeping metrics link.",
+   "kind": "decision",
+   "name": "Decision - Investor update cadence is monthly with metrics dashboard link",
+   "body": "# Decision - Investor update cadence is monthly with metrics dashboard link\n\nDecided on 2026-10-16 by Maya Okafor.\n\n## Decision\nInvestor updates will revert to a monthly cadence. We will continue to provide the metrics dashboard link with updates.\n\n## Why\nBrightpath requested a slower cadence; maintain transparency by keeping the metrics dashboard link.\n",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2477,
+  "type": "link.added",
+  "record_id": "9385a091-3446-4c30-812c-ae576fb6c764",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:15.271Z",
+  "payload": {
+   "source_id": "9385a091-3446-4c30-812c-ae576fb6c764",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes",
+   "note": "Replaces fortnightly investor updates; decided 2026-10-16."
+  }
+ },
+ {
+  "seq": 2478,
+  "type": "record.created",
+  "record_id": "e89170dd-4f26-46ea-83bb-1e29d2031110",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:21.749Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record decision from Priya and Kenji (2026-10-16) to adopt shadcn/ui as the design system, replacing Tailwind UI kit.",
+   "kind": "decision",
+   "name": "Decision - Design system is shadcn/ui",
+   "body": "# Decision - Design system: shadcn/ui\n\nDecided on 2026-10-16 by Priya Raman and Kenji Watanabe.\n\n## Decision\nWe will replace the Tailwind UI kit with shadcn/ui as our design system.\n\n## Why\nAgreed by design leads to standardise on shadcn/ui for component primitives and developer ergonomics.\n",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2479,
+  "type": "link.added",
+  "record_id": "e89170dd-4f26-46ea-83bb-1e29d2031110",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:24.413Z",
+  "payload": {
+   "source_id": "e89170dd-4f26-46ea-83bb-1e29d2031110",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Design system change agreed by Priya and Kenji on 2026-10-16; shadcn/ui replaces Tailwind UI kit."
+  }
+ },
+ {
+  "seq": 2480,
+  "type": "record.updated",
+  "record_id": "4862b6cd-6a47-4fde-b54b-788c7911d8d9",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:29.628Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Design system replaced by shadcn/ui (decision 2026-10-16); documenting Tailwind is no longer current."
+  }
+ },
+ {
+  "seq": 2481,
+  "type": "record.created",
+  "record_id": "0b9ce007-8462-43f6-bbfe-02d509dea147",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:32.409Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create task to execute design system change to shadcn/ui as agreed 2026-10-16.",
+   "kind": "task",
+   "name": "Task - Adopt shadcn/ui design system",
+   "body": "# Task - Adopt shadcn/ui design system\n\nStatus: open\nOwner: Priya Raman\n\n## Done when\nComponents and guidelines are published, and the codebase is migrated to use shadcn/ui with documentation updated.\n\n## Notes\nPriya and Kenji agreed to replace Tailwind UI kit with shadcn/ui on 2026-10-16.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2482,
+  "type": "record.created",
+  "record_id": "fa60843c-5e05-477c-9897-7a50d125c147",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:35.694Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create reminder task to revisit support tool options in December as agreed in weekly sync 2026-10-13.",
+   "kind": "task",
+   "name": "Task - Revisit customer support tool choice (Plain vs Zendesk)",
+   "body": "# Task - Revisit customer support tool choice (Plain vs Zendesk)\n\nStatus: open\nOwner: Maya Okafor\n\n## Done when\nDecision on whether to move from Plain to Zendesk is made after reviewing Plain's new pricing.\n\n## Due\n2026-12-01\n\n## Notes\nSofia floated moving from Plain to Zendesk; Maya requested we see Plain's new pricing first and to revisit in December (weekly sync 2026-10-13).",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2483,
+  "type": "record.created",
+  "record_id": "2c9881dd-3309-4a34-b7ff-2aac091fbf95",
+  "intent": null,
+  "created_at": "2026-11-22T09:01:38.316Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Create task to investigate and prioritise per-practitioner calendar colours following requests from clinics.",
+   "kind": "task",
+   "name": "Task - Investigate per-practitioner calendar colours",
+   "body": "# Task - Investigate per-practitioner calendar colours\n\nStatus: open\nOwner: \n\n## Done when\nWe have a recommendation (design and implementation plan) for per-practitioner colours on the calendar, with estimated effort and UX notes.\n\n## Notes\nSeveral receptionists requested per-practitioner colours (mentioned in weekly sync 2026-10-13).",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ }
+]
