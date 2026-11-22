@@ -1,0 +1,206 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "c974143a-c25d-4cc3-9378-a1ccca13f989",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.525Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Weekly sync 2026-10-13; replaces earlier Vonage stop decision.",
+   "kind": "SMSReminders-Sinch",
+   "name": "SMS reminders: move to Sinch; Vonage decommissioned",
+   "body": "Decision: Move SMS reminders to Sinch effective 1 November. Vonage will be decommissioned. This replaces the earlier plan to stop the Vonage rollout.",
+   "summary": "Move SMS reminders to Sinch; decommission Vonage; replaces earlier stop-Vonage decision.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "5a12ea0e-d1c9-4401-9f0b-872022a09a33",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.538Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action from 2026-10-13 weekly sync.",
+   "kind": "SMSReminders-Templates",
+   "name": "Redesign SMS reminder templates for Sinch",
+   "body": "Due by 2026-10-30. Priya to redesign SMS reminder templates for Sinch.",
+   "summary": "Design SMS templates for Sinch deployment.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "3eeb446f-e7a9-4927-9133-ead671e576f1",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.548Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Not decided at 2026-10-13 weekly sync; revisit in December.",
+   "kind": "SupportTool-Decision",
+   "name": "Support tool direction: Zendesk vs Plain pricing; revisit in December",
+   "body": "Plan not decided. Maya wants to see Plain pricing first. Revisit in December.",
+   "summary": "Decision pending: Zendesk vs Plain; revisit December.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "46b11ed0-af64-403f-b788-24a7e745dd52",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.558Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action from 2026-10-13 weekly sync.",
+   "kind": "CalendarColors-Req",
+   "name": "Investigate per-practitioner calendar colors",
+   "body": "Receptionists requested per-practitioner calendar colors; gather requirements and propose UI changes.",
+   "summary": "Investigate and propose per-practitioner calendar colors feature.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "9a747599-c9fe-4efa-bbfc-48f764431087",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.566Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Self-hosted PostHog ops time; agreed to Cloud EU.",
+   "kind": "Analytics-PostHog",
+   "name": "Analytics migration: switch to PostHog Cloud EU",
+   "body": "Decision to switch from self-hosted PostHog to PostHog Cloud EU region; clinic data remains in EU. Plan migration.",
+   "summary": "Move analytics to PostHog Cloud EU; data residency maintained.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "50931748-3905-4ce0-8a4b-d87da0cdb3de",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.571Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action item from 2026-10-14 note.",
+   "kind": "Analytics-Migration",
+   "name": "Migrate analytics to PostHog Cloud EU",
+   "body": "Plan migration, update dashboards, and ensure EU data residency compliance.",
+   "summary": "Migrate analytics to PostHog Cloud EU.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "1bd0d5e3-1ad6-4506-bdeb-dde6872eb279",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.579Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Decision from 2026-10-15 (Daniel) noted in 2026-10-13 sync.",
+   "kind": "Deployment-Cadence",
+   "name": "Deployment cadence: Bi-weekly releases Tue/Thu",
+   "body": "Adopt a twice-weekly release cadence on Tuesdays and Thursdays, behind feature flags.",
+   "summary": "Bi-weekly releases behind feature flags.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "record.created",
+  "record_id": "85869413-1a9d-46b2-9f12-9ca1bf2ed54f",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.586Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action item from deployment cadence decision.",
+   "kind": "Deployment-Implementation",
+   "name": "Ship twice-weekly releases (Tue/Thu) behind feature flags",
+   "body": "Implement release cadence in CI/CD, gating via feature flags, and communicate to pilot clinics.",
+   "summary": "Enable Tue/Thu releases behind feature flags.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "d1469d4c-1ad2-45e0-8c29-afbcffa971dd",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.594Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Kenji Watanabe 2026-10-15 note.",
+   "kind": "UI-DarkMode-DayView",
+   "name": "Dark mode for day view: beta",
+   "body": "Status: beta; continue testing with pilot clinics; gather feedback.",
+   "summary": "Dark mode day view in beta.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "record.created",
+  "record_id": "d2b0d52e-c75b-4e80-825c-1d227cbaa842",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.602Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Kenji Watanabe 2026-10-15 note.",
+   "kind": "Onboarding",
+   "name": "Concierge onboarding rollout completed",
+   "body": "Onboarding live for all pilot clinics and help center updated; onboarding rollout task considered done.",
+   "summary": "Concierge onboarding rollout completed.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "0040ea0d-5e9b-4d41-af85-190def2228ec",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.609Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Maya 2026-10-16 note.",
+   "kind": "Investor-Cadence",
+   "name": "Investor updates cadence: monthly",
+   "body": "Investor updates to monthly cadence; metrics dashboard link remains publicly accessible.",
+   "summary": "Monthly investor updates; keep metrics dashboard link.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "73e52ff7-adff-4156-9d69-aa815a1c5a2d",
+  "intent": null,
+  "created_at": "2026-11-22T08:36:30.616Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Maya 2026-10-16 note.",
+   "kind": "DesignSystem-Migration",
+   "name": "Design system migration: Tailwind -> shadcn/ui",
+   "body": "Replace Tailwind UI kit with shadcn/ui as the design system.",
+   "summary": "Design system migrated to shadcn/ui.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ }
+]

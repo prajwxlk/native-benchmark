@@ -13,3 +13,4 @@ data/*
 !data/scale10/
 data/scale10/*
 !data/scale10/questions.json
+!data/writes/

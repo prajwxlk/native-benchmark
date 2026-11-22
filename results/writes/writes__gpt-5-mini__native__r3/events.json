@@ -1,0 +1,683 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.710Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Move from self-hosted PostHog to PostHog Cloud to reduce ops burden while keeping clinic data in the EU.",
+   "kind": "decision",
+   "name": "Decision - Product analytics vendor is PostHog Cloud (EU)",
+   "body": "# Product analytics vendor: PostHog Cloud (EU)\n\nDecided on 2026-10-14 by Tom Lindqvist and Maya Okafor.\n\n## Decision\nProduct analytics vendor is **PostHog Cloud (EU region)**.\n\n## Why\nSelf-hosted PostHog is consuming excessive ops time; moving to PostHog Cloud keeps clinic data in the EU while reducing ops burden.\n\nThis replaces Decision - Product analytics vendor is PostHog self-hosted, which is no longer current.\n",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "facet.set",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.712Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-14"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "facet.set",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.713Z",
+  "payload": {
+   "key": "fm.decided_by",
+   "value": "Tom Lindqvist, Maya Okafor"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "facet.set",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.714Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "decided"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "facet.set",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.715Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Decision - Product analytics vendor is PostHog Cloud (EU)"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "link.added",
+  "record_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:36.716Z",
+  "payload": {
+   "source_id": "28d90ed8-2ef7-4357-8143-4714b26d189c",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.555Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Vonage failing on Portuguese numbers; agreed at weekly sync to migrate to Sinch starting 2026-11-01.",
+   "kind": "decision",
+   "name": "Decision - SMS reminder provider is Sinch",
+   "body": "# SMS reminder provider: Sinch\n\nDecided on 2026-10-13 by the Weekly sync (Maya Okafor, Tom Lindqvist, Priya Raman, Daniel Reyes, Sofia Marchetti, Kenji Watanabe).\n\n## Decision\nSMS reminder provider is **Sinch**, effective 2026-11-01.\n\n## Why\nVonage is failing deliveries on Portuguese numbers; Sinch is chosen as the replacement.\n\nThis replaces Decision - SMS reminder provider is Vonage, which is no longer current.\n",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "facet.set",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.557Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-13"
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "facet.set",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.558Z",
+  "payload": {
+   "key": "fm.decided_by",
+   "value": "Weekly sync attendees"
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "facet.set",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.559Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "decided"
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "facet.set",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.559Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Decision - SMS reminder provider is Sinch"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "link.added",
+  "record_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:42.560Z",
+  "payload": {
+   "source_id": "0169d83a-ab4b-4760-afde-b4ec7255ae8b",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.created",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.667Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Continuous deploys were surprising pilot clinics; agreed to reduce frequency to twice-weekly releases while keeping feature flags.",
+   "kind": "decision",
+   "name": "Decision - Release cadence is twice-weekly on Tuesdays and Thursdays (behind feature flags)",
+   "body": "# Release cadence: Twice-weekly (Tuesdays & Thursdays)\n\nDecided on 2026-10-15 by Daniel Reyes and Tom Lindqvist.\n\n## Decision\nRelease cadence is **twice-weekly**, on **Tuesdays and Thursdays**, with releases still rolled out behind feature flags.\n\n## Why\nContinuous deploys were surprising pilot clinics during the day; reducing to two scheduled releases each week reduces disruption while retaining feature-flagged control.\n\nThis replaces Decision - Release cadence is continuous deploys behind feature flags and Decision - Release cadence is weekly releases every Thursday, which are no longer current.\n",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "facet.set",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.669Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-15"
+  }
+ },
+ {
+  "seq": 2476,
+  "type": "facet.set",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.670Z",
+  "payload": {
+   "key": "fm.decided_by",
+   "value": "Daniel Reyes, Tom Lindqvist"
+  }
+ },
+ {
+  "seq": 2477,
+  "type": "facet.set",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.672Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "decided"
+  }
+ },
+ {
+  "seq": 2478,
+  "type": "facet.set",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.672Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Decision - Release cadence is twice-weekly on Tuesdays and Thursdays (behind feature flags)"
+  }
+ },
+ {
+  "seq": 2479,
+  "type": "link.added",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.673Z",
+  "payload": {
+   "source_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2480,
+  "type": "link.added",
+  "record_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:48.674Z",
+  "payload": {
+   "source_id": "736c343f-ba9b-4012-9ec2-c4850eb8ecf1",
+   "target_id": "50c97122-cc81-430a-bedf-5429508ae496",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2481,
+  "type": "record.created",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.081Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Priya and Kenji agreed to replace the Tailwind UI kit with shadcn/ui as the design system.",
+   "kind": "decision",
+   "name": "Decision - Design system is shadcn/ui",
+   "body": "# Design system: shadcn/ui\n\nDecided on 2026-10-16 by Priya Raman and Kenji Watanabe.\n\n## Decision\nDesign system is **shadcn/ui** (replace Tailwind UI kit).\n\n## Why\nTeam agreed shadcn/ui better fits our component needs and workflow.\n\nThis replaces Decision - Design system is Tailwind UI kit, which is no longer current.\n",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2482,
+  "type": "facet.set",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.082Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-16"
+  }
+ },
+ {
+  "seq": 2483,
+  "type": "facet.set",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.083Z",
+  "payload": {
+   "key": "fm.decided_by",
+   "value": "Priya Raman, Kenji Watanabe"
+  }
+ },
+ {
+  "seq": 2484,
+  "type": "facet.set",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.083Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "decided"
+  }
+ },
+ {
+  "seq": 2485,
+  "type": "facet.set",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.084Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Decision - Design system is shadcn/ui"
+  }
+ },
+ {
+  "seq": 2486,
+  "type": "link.added",
+  "record_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:53.084Z",
+  "payload": {
+   "source_id": "c356ae7f-b9d8-414b-8dd8-9a3b8f6a696c",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2487,
+  "type": "record.created",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.542Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Brightpath asked to slow down updates to monthly; keep the metrics dashboard link available.",
+   "kind": "decision",
+   "name": "Decision - Investor update cadence is monthly with metrics dashboard link",
+   "body": "# Investor update cadence: Monthly with metrics dashboard link\n\nDecided on 2026-10-16 by Maya Okafor.\n\n## Decision\nInvestor update cadence is **monthly email**, sent on the first Monday of the month, and will continue to include a link to the metrics dashboard.\n\n## Why\nBrightpath requested fewer investor updates; keeping the metrics dashboard link preserves transparency while reducing update frequency.\n\nThis replaces Decision - Investor update cadence is fortnightly update with a metrics dashboard link, which is no longer current.\n",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2488,
+  "type": "facet.set",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.544Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-16"
+  }
+ },
+ {
+  "seq": 2489,
+  "type": "facet.set",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.545Z",
+  "payload": {
+   "key": "fm.decided_by",
+   "value": "Maya Okafor"
+  }
+ },
+ {
+  "seq": 2490,
+  "type": "facet.set",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.545Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "decided"
+  }
+ },
+ {
+  "seq": 2491,
+  "type": "facet.set",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.546Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Decision - Investor update cadence is monthly with metrics dashboard link"
+  }
+ },
+ {
+  "seq": 2492,
+  "type": "link.added",
+  "record_id": "d974c102-3457-4119-be01-f6d038518bfc",
+  "intent": null,
+  "created_at": "2026-11-22T08:41:57.547Z",
+  "payload": {
+   "source_id": "d974c102-3457-4119-be01-f6d038518bfc",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes"
+  }
+ },
+ {
+  "seq": 2493,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:13.727Z",
+  "payload": {
+   "body": "# Task - Roll out sms reminder provider (Vonage)\n\nStatus: cancelled\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - SMS reminder provider is Vonage]]\n\n## Done when\nTask cancelled — migration to Sinch agreed and scheduled for 2026-11-01; Vonage rollout stopped.\n\n## Notes\nCancelled on 2026-10-13 after the weekly sync. Kenji to stop the Vonage rollout; the work is no longer needed.",
+   "reason": "Cancelled after weekly sync — team agreed to migrate SMS reminders to Sinch on 2026-11-01; Vonage rollout stopped."
+  }
+ },
+ {
+  "seq": 2494,
+  "type": "facet.set",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:13.729Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "cancelled"
+  }
+ },
+ {
+  "seq": 2495,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:20.148Z",
+  "payload": {
+   "body": "# Task - Roll out onboarding flow (concierge onboarding call before account creation)\n\nStatus: completed\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - Onboarding flow is concierge onboarding call before account creation]]\n\n## Done when\nThe change is live for all pilot clinics and the help centre is updated.\n\n## Notes\nCompleted on 2026-10-15: concierge onboarding is live for all pilot clinics and the help centre was updated.",
+   "reason": "Concierge onboarding rolled out to all pilot clinics and help centre updated (reported by Kenji). Marking task complete."
+  }
+ },
+ {
+  "seq": 2496,
+  "type": "facet.set",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:20.149Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "completed"
+  }
+ },
+ {
+  "seq": 2497,
+  "type": "record.updated",
+  "record_id": "785f22df-db80-482e-964c-0ef840a3d72f",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:26.791Z",
+  "payload": {
+   "body": "# Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link)\n\nStatus: cancelled\nOwner: [[Daniel Reyes]]\nImplements: [[Decision - Investor update cadence is fortnightly update with a metrics dashboard link]]\n\n## Done when\nTask cancelled — investor cadence reverted to monthly with metrics dashboard link.\n\n## Notes\nCancelled on 2026-10-16 after Maya requested investor updates go back to monthly; metrics dashboard link retained.",
+   "reason": "Investor update cadence reverted to monthly (Brightpath request); fortnightly rollout is no longer current."
+  }
+ },
+ {
+  "seq": 2498,
+  "type": "facet.set",
+  "record_id": "785f22df-db80-482e-964c-0ef840a3d72f",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:26.793Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "cancelled"
+  }
+ },
+ {
+  "seq": 2499,
+  "type": "record.created",
+  "record_id": "fadb1feb-7a42-43ef-8951-deb2a6feb364",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:33.304Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "New SMS provider (Sinch) requires template redesign; assigned action from weekly sync.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "# Task - Redesign SMS reminder templates for Sinch\n\nStatus: open\nOwner: [[Priya Raman]]\nImplements: [[Decision - SMS reminder provider is Sinch]]\n\n## Done when\nSinch-compatible SMS templates are implemented and tested.\n\n## Notes\nDue 2026-10-30 as agreed in the 2026-10-13 weekly sync.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open"
+  }
+ },
+ {
+  "seq": 2500,
+  "type": "facet.set",
+  "record_id": "fadb1feb-7a42-43ef-8951-deb2a6feb364",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:33.305Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Task - Redesign SMS reminder templates for Sinch"
+  }
+ },
+ {
+  "seq": 2501,
+  "type": "facet.set",
+  "record_id": "fadb1feb-7a42-43ef-8951-deb2a6feb364",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:33.306Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "open"
+  }
+ },
+ {
+  "seq": 2502,
+  "type": "facet.set",
+  "record_id": "fadb1feb-7a42-43ef-8951-deb2a6feb364",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:33.306Z",
+  "payload": {
+   "key": "fm.owner",
+   "value": "Priya Raman"
+  }
+ },
+ {
+  "seq": 2503,
+  "type": "facet.set",
+  "record_id": "fadb1feb-7a42-43ef-8951-deb2a6feb364",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:33.307Z",
+  "payload": {
+   "key": "due_date",
+   "value": "2026-10-30"
+  }
+ },
+ {
+  "seq": 2504,
+  "type": "record.created",
+  "record_id": "0412e6e5-ea51-4718-aedf-84fa4a7da1c7",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:39.791Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Switch to PostHog Cloud (EU) agreed to reduce ops burden; rollout task to implement the decision.",
+   "kind": "task",
+   "name": "Task - Roll out product analytics vendor (PostHog Cloud, EU)",
+   "body": "# Task - Roll out product analytics vendor (PostHog Cloud, EU)\n\nStatus: open\nOwner: [[Tom Lindqvist]]\nImplements: [[Decision - Product analytics vendor is PostHog Cloud (EU)]]\n\n## Done when\nPostHog Cloud (EU) is configured, data pipelines validated, and product events validated in the EU tenant.\n\n## Notes\nDecision made 2026-10-14 to move from self-hosted PostHog.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open"
+  }
+ },
+ {
+  "seq": 2505,
+  "type": "facet.set",
+  "record_id": "0412e6e5-ea51-4718-aedf-84fa4a7da1c7",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:39.794Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Task - Roll out product analytics vendor (PostHog Cloud, EU)"
+  }
+ },
+ {
+  "seq": 2506,
+  "type": "facet.set",
+  "record_id": "0412e6e5-ea51-4718-aedf-84fa4a7da1c7",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:39.795Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "open"
+  }
+ },
+ {
+  "seq": 2507,
+  "type": "facet.set",
+  "record_id": "0412e6e5-ea51-4718-aedf-84fa4a7da1c7",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:39.795Z",
+  "payload": {
+   "key": "fm.owner",
+   "value": "Tom Lindqvist"
+  }
+ },
+ {
+  "seq": 2508,
+  "type": "record.updated",
+  "record_id": "0b49dca3-00e9-4428-9142-549797d37fab",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:53.932Z",
+  "payload": {
+   "body": "# Task - Roll out product analytics vendor (PostHog self-hosted)\n\nStatus: cancelled\nOwner: [[Sofia Marchetti]]\nImplements: [[Decision - Product analytics vendor is PostHog self-hosted]]\n\n## Done when\nTask cancelled — decision made to use PostHog Cloud (EU) instead of self-hosted PostHog.\n\n## Notes\nCancelled on 2026-10-14 after decision to switch to PostHog Cloud (EU).",
+   "reason": "Decision changed to PostHog Cloud (EU) on 2026-10-14; self-hosted rollout is no longer current."
+  }
+ },
+ {
+  "seq": 2509,
+  "type": "facet.set",
+  "record_id": "0b49dca3-00e9-4428-9142-549797d37fab",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:53.933Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "cancelled"
+  }
+ },
+ {
+  "seq": 2510,
+  "type": "record.created",
+  "record_id": "78408aa5-5256-4e8f-9fcb-83e6e9f94c45",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:57.391Z",
+  "payload": {
+   "type": "Document",
+   "reason": "Record status update reported by Kenji that dark mode for day view entered beta.",
+   "kind": "note",
+   "name": "Log - Dark mode for day view in beta (2026-10-15)",
+   "body": "Dark mode for the day view is now in beta.\n\nReported by Kenji Watanabe on 2026-10-15.\n\n## Context\nThis was announced alongside concierge onboarding rollout completion for pilot clinics.",
+   "home_id": "13842e8b-a17d-4e3e-b15b-3efa92dc1e1e",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613"
+  }
+ },
+ {
+  "seq": 2511,
+  "type": "facet.set",
+  "record_id": "78408aa5-5256-4e8f-9fcb-83e6e9f94c45",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:57.393Z",
+  "payload": {
+   "key": "fm.date",
+   "value": "2026-10-15"
+  }
+ },
+ {
+  "seq": 2512,
+  "type": "facet.set",
+  "record_id": "78408aa5-5256-4e8f-9fcb-83e6e9f94c45",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:57.393Z",
+  "payload": {
+   "key": "fm.author",
+   "value": "Kenji Watanabe"
+  }
+ },
+ {
+  "seq": 2513,
+  "type": "facet.set",
+  "record_id": "78408aa5-5256-4e8f-9fcb-83e6e9f94c45",
+  "intent": null,
+  "created_at": "2026-11-22T08:42:57.394Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Log - Dark mode for day view in beta (2026-10-15)"
+  }
+ },
+ {
+  "seq": 2514,
+  "type": "record.created",
+  "record_id": "2c4c42af-c960-425a-8185-28578cd98938",
+  "intent": null,
+  "created_at": "2026-11-22T08:43:00.863Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Weekly sync agreed to wait for Plain's new pricing and revisit support tool selection in December.",
+   "kind": "task",
+   "name": "Task - Revisit customer support tool decision (Plain pricing) in December",
+   "body": "# Task - Revisit customer support tool decision (Plain pricing) in December\n\nStatus: open\nOwner: [[Maya Okafor]]\n\n## Done when\nTeam reviews Plain's new pricing and decides whether to move from Plain to Zendesk or keep Plain.\n\n## Notes\nRevisit scheduled for December as requested in the 2026-10-13 weekly sync.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open"
+  }
+ },
+ {
+  "seq": 2515,
+  "type": "facet.set",
+  "record_id": "2c4c42af-c960-425a-8185-28578cd98938",
+  "intent": null,
+  "created_at": "2026-11-22T08:43:00.865Z",
+  "payload": {
+   "key": "fm.title",
+   "value": "Task - Revisit customer support tool decision (Plain pricing) in December"
+  }
+ },
+ {
+  "seq": 2516,
+  "type": "facet.set",
+  "record_id": "2c4c42af-c960-425a-8185-28578cd98938",
+  "intent": null,
+  "created_at": "2026-11-22T08:43:00.866Z",
+  "payload": {
+   "key": "fm.status",
+   "value": "open"
+  }
+ },
+ {
+  "seq": 2517,
+  "type": "facet.set",
+  "record_id": "2c4c42af-c960-425a-8185-28578cd98938",
+  "intent": null,
+  "created_at": "2026-11-22T08:43:00.866Z",
+  "payload": {
+   "key": "fm.owner",
+   "value": "Maya Okafor"
+  }
+ },
+ {
+  "seq": 2518,
+  "type": "facet.set",
+  "record_id": "2c4c42af-c960-425a-8185-28578cd98938",
+  "intent": null,
+  "created_at": "2026-11-22T08:43:00.867Z",
+  "payload": {
+   "key": "due_date",
+   "value": "2026-12-01"
+  }
+ }
+]

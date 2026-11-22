@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Sinch (moved to Sinch effective 1 Nov 2026; Vonage decommissioned).",
+  "correct": true
+ },
+ "Q2": {
+  "answer": "PostHog Cloud EU (analytics migrated to PostHog Cloud EU).",
+  "correct": true
+ },
+ "Q3": {
+  "answer": "Continuous deploys behind feature flags.",
+  "correct": false
+ },
+ "Q4": {
+  "answer": "Monthly (investor updates adjusted to monthly).",
+  "correct": false
+ },
+ "Q5": {
+  "answer": "shadcn/ui.",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain.",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "in_progress.",
+  "correct": false
+ },
+ "Q8": {
+  "answer": "in_progress.",
+  "correct": false
+ },
+ "Q9": {
+  "answer": "No individual owner listed — the task has no person assigned (record is owned by Account b386beba).",
+  "correct": false
+ }
+}

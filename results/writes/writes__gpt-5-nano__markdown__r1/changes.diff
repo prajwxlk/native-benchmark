@@ -1,0 +1,215 @@
+diff -ruN before/Fernwork HQ/Decisions/Decision - Design system is shadcn/ui.md after/Fernwork HQ/Decisions/Decision - Design system is shadcn/ui.md
+--- before/Fernwork HQ/Decisions/Decision - Design system is shadcn/ui.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Design system is shadcn/ui.md	2026-11-22 13:59:17
+@@ -0,0 +1,19 @@
++---
++title: "Decision - Design system is shadcn/ui"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Maya Okafor"
++replaces: "Decision - Design system is Tailwind UI kit"
++---
++
++# Design system: shadcn/ui
++
++Decided on 2026-10-13 by [[Maya Okafor]].
++
++## Decision
++Design system is **shadcn/ui**.
++
++## Why
++Priya and Kenji agreed to replace the Tailwind UI kit with shadcn/ui.
++
++This replaces [[Decision - Design system is Tailwind UI kit]].
+diff -ruN before/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly update.md after/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly update.md
+--- before/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly update.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly update.md	2026-11-22 13:59:16
+@@ -0,0 +1,19 @@
++---
++title: "Decision - Investor update cadence is monthly update"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Maya Okafor"
++replaces: "Decision - Investor update cadence is fortnightly update with a metrics dashboard link"
++---
++
++# Investor update cadence: monthly update
++
++Decided on 2026-10-13 by [[Maya Okafor]].
++
++## Decision
++Investor updates cadence is **monthly**; keep the metrics dashboard link as part of the update.
++
++## Why
++To reduce reporting fatigue while maintaining visibility for investors.
++
++This replaces [[Decision - Investor update cadence is fortnightly update with a metrics dashboard link]].
+diff -ruN before/Fernwork HQ/Decisions/Decision - Onboarding rollout is live.md after/Fernwork HQ/Decisions/Decision - Onboarding rollout is live.md
+--- before/Fernwork HQ/Decisions/Decision - Onboarding rollout is live.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Onboarding rollout is live.md	2026-11-22 13:59:10
+@@ -0,0 +1,19 @@
++---
++title: "Decision - Onboarding rollout is live"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Kenji Watanabe"
++replaces: "Decision - Onboarding flow is concierge onboarding call before account creation"
++---
++
++# Onboarding rollout: concierge onboarding is live for all pilot clinics
++
++Decided on 2026-10-13 by [[Kenji Watanabe]].
++
++## Decision
++Onboarding rollout is complete; concierge onboarding is live for all pilot clinics.
++
++## Why
++The onboarding process has been rolled out and the help centre is updated.
++
++This replaces [[Decision - Onboarding flow is concierge onboarding call before account creation]].
+diff -ruN before/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud (EU region).md after/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud (EU region).md
+--- before/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud (EU region).md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud (EU region).md	2026-11-22 13:59:12
+@@ -0,0 +1,19 @@
++---
++title: "Decision - Product analytics vendor is PostHog Cloud (EU region)"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Maya Okafor"
++replaces: "Decision - Product analytics vendor is PostHog self-hosted"
++---
++
++# Product analytics vendor: PostHog Cloud (EU region)
++
++Decided on 2026-10-13 by [[Maya Okafor]].
++
++## Decision
++Product analytics vendor is **PostHog Cloud (EU region)**; data remains in the EU.
++
++## Why
++Self-hosted PostHog demanded excessive ops time. Cloud solution reduces ops burden and keeps data within the EU data region.
++
++This replaces [[Decision - Product analytics vendor is PostHog self-hosted]].
+diff -ruN before/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly releases on Tuesdays and Thursdays.md after/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly releases on Tuesdays and Thursdays.md
+--- before/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly releases on Tuesdays and Thursdays.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly releases on Tuesdays and Thursdays.md	2026-11-22 13:59:14
+@@ -0,0 +1,19 @@
++---
++title: "Decision - Release cadence is twice-weekly releases on Tuesdays and Thursdays"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Tom Lindqvist"
++replaces: "Decision - Release cadence is weekly releases every Thursday"
++---
++
++# Release cadence: twice-weekly releases on Tue/Thu
++
++Decided on 2026-10-13 by [[Tom Lindqvist]].
++
++## Decision
++Release cadence is **twice-weekly releases on Tuesdays and Thursdays**, behind feature flags.
++
++## Why
++This aligns with pilot clinics' expectations and reduces the risk of mid-day disruption for clinics.
++
++This replaces [[Decision - Release cadence is weekly releases every Thursday]].
+diff -ruN before/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md after/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md
+--- before/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md	2026-11-22 13:59:08
+@@ -0,0 +1,22 @@
++---
++title: "Decision - SMS reminder provider is Sinch"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Maya Okafor"
++replaces: "Decision - SMS reminder provider is Vonage"
++---
++
++# SMS reminder provider: Sinch
++
++Decided on 2026-10-13 by [[Maya Okafor]].
++
++## Decision
++SMS reminder provider is **Sinch**.
++
++## Why
++Vonage failures on Portuguese numbers prompted choosing Sinch as the fallbackprovider for SMS reminders.
++
++This replaces [[Decision - SMS reminder provider is Vonage]].
++
++## Context
++Operational considerations and pricing were reviewed; Sinch fulfills the required coverage.
+diff -ruN before/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md after/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md
+--- before/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md	2026-11-22 13:59:06
+@@ -0,0 +1,24 @@
++---
++title: "Weekly sync 2026-10-13"
++date: "2026-10-13"
++---
++
++
++# Weekly sync, 2026-10-13
++
++Attendees: [[Maya Okafor]], [[Tom Lindqvist]], [[Priya Raman]], [[Daniel Reyes]], [[Sofia Marchetti]], [[Kenji Watanabe]]
++
++## Decisions
++- SMS reminder provider: Sinch from 1 November 2026 (replaces [[Decision - SMS reminder provider is Vonage]]). The Vonage rollout is superseded and the plan to discontinue Vonage stands.
++- Onboarding rollout: concierge onboarding is live for all pilot clinics; onboarding rollout task is done. Replaces [[Decision - Onboarding flow is concierge onboarding call before account creation]].
++- Product analytics vendor: PostHog Cloud (EU region); data stays in EU. Replaces [[Decision - Product analytics vendor is PostHog self-hosted]].
++- Release cadence: twice-weekly releases on Tuesdays and Thursdays, behind feature flags. Replaces [[Decision - Release cadence is weekly releases every Thursday]].
++- Investor updates cadence: monthly updates (keep metrics dashboard link). Replaces [[Decision - Investor update cadence is fortnightly update with a metrics dashboard link]].
++- Design system: shadcn/ui. Replaces [[Decision - Design system is Tailwind UI kit]].
++
++## Actions
++- Priya Raman to design SMS reminder templates for Sinch by 30 October 2026.
++- Kenji Watanabe to cease Vonage rollout and ensure decommissioning of Vonage integrations by 1 November 2026.
++- Maya Okafor to coordinate migration of product analytics to PostHog Cloud (EU region) and verify EU data residency.
++- Tom Lindqvist to approve and monitor the new release cadence implementation (Tue/Thu behind feature flags).
++- Explore options for per-practitioner calendar colours as a backlog item.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Move SMS reminders to Sinch (from Vonage).md after/Fernwork HQ/Work/Tasks/Task - Move SMS reminders to Sinch (from Vonage).md
+--- before/Fernwork HQ/Work/Tasks/Task - Move SMS reminders to Sinch (from Vonage).md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Work/Tasks/Task - Move SMS reminders to Sinch (from Vonage).md	2026-11-22 13:59:22
+@@ -0,0 +1,19 @@
++---
++title: "Task - Move SMS reminders to Sinch (from Vonage)"
++status: "open"
++owner: "Kenji Watanabe"
++implements: [[Decision - SMS reminder provider is Sinch]]
++---
++
++# Task - Move SMS reminders to Sinch (from Vonage)
++
++Status: open
++Owner: [[Kenji Watanabe]]
++Implements: [[Decision - SMS reminder provider is Sinch]]
++
++## Done when
++The migration is live; Sinch is active for all pilot clinics and Vonage is decommissioned.
++
++## Notes
++- Coordinate with engineering to migrate SMS templates and endpoints.
++- Remove Vonage references from the calendar and help centre after cutover.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md after/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md
+--- before/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md	2026-11-22 13:59:20
+@@ -1,14 +1,16 @@
+ ---
+ title: "Task - Roll out sms reminder provider (Vonage)"
+-status: "in_progress"
++status: "cancelled"
+ owner: "Kenji Watanabe"
+ ---
+ 
+ # Task - Roll out sms reminder provider (Vonage)
+ 
+-Status: in_progress
++Status: cancelled
+ Owner: [[Kenji Watanabe]]
+-Implements: [[Decision - SMS reminder provider is Vonage]]
++Implements: [[Decision - SMS reminder provider is Sinch]]
++
++Note: This task has been superseded by Task - Move SMS reminders to Sinch (from Vonage).
+ 
+ ## Done when
+ The change is live for all pilot clinics and the help centre is updated.

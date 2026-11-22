@@ -1,0 +1,175 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "9e992b55-a09c-41f7-a32c-376fb2f763a0",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:38.366Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "New decision to reflect provider switch (2026-10-13 weekly sync).",
+   "kind": "decision",
+   "name": "SMS reminder provider migrated to Sinch (Vonage out)",
+   "body": "Summary: Move SMS reminders from Vonage to Sinch effective 2026-11-01.\\nRationale: Vonage is failing on Portuguese numbers; Sinch is expected to deliver higher deliverability.\\nImpact: All SMS reminders will be routed via Sinch starting 2026-11-01. Vonage will be decommissioned.\\nNotes: This decision supersedes the previous SMS reminder provider decision (external reference: 28e16715-b34d-4570-95dd-b363bd47fd5a).",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "9914f492-a960-4be7-b778-10114bcce80b",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:38.379Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Response to 2026-10-14 message about analytics hosting.",
+   "kind": "decision",
+   "name": "Switch product analytics to PostHog Cloud (EU region)",
+   "body": "Summary: Switch product analytics from PostHog self-hosted to PostHog Cloud in the EU region.\\nRationale: Self-hosted setup is costly in ops time; Cloud reduces maintenance burden while keeping data within the EU.\\nImpact: Analytics now hosted in PostHog Cloud EU; migration plan TBD.\\nNotes: This supersedes the previous decision: Decision - Product analytics vendor is PostHog self-hosted (id f004a28a...).",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "5ea7d013-9008-4f7f-b980-287070f1eefa",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:44.091Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Decision from 2026-10-15 (Daniel Reyes).",
+   "kind": "decision",
+   "name": "Ship twice-weekly releases on Tuesdays and Thursdays behind feature flags",
+   "body": "Summary: Adopt a twice-weekly release cadence on Tuesdays and Thursdays, behind feature flags.\\nRationale: Reduces mid-day disruptiveness and aligns with pilot clinic operations.\\nImpact: Releases Tue/Thu; feature flags used to gate rollout.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "3f8842e0-4bf0-4772-aada-0618848a7248",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:45.407Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Kenji Watanabe note 2026-10-15.",
+   "kind": "decision",
+   "name": "Concierge onboarding live; onboarding rollout completed",
+   "body": "Summary: Concierge onboarding is live for all pilot clinics and onboarding rollout task is marked as done.\\nRationale: Onboarding content ready; clinics can begin onboarding flows.\\nImpact: Concierge onboarding active; rollout complete.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "5df81cfe-5ec8-4f14-8892-afa1f7594c96",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:46.572Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Kenji Watanabe note 2026-10-15.",
+   "kind": "decision",
+   "name": "Dark mode for day view is in beta",
+   "body": "Summary: Dark mode for the day view is in beta.\\nRationale: User experience improvement; collect feedback before wider rollout.\\nImpact: Beta feature; measure adoption and issues.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "00a530be-a0b6-43a2-a8e3-dcf1821d5972",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:48.163Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Maya Okafor note 2026-10-16.",
+   "kind": "decision",
+   "name": "Investor updates monthly; keep metrics dashboard link",
+   "body": "Summary: Investor updates return to a monthly cadence; maintain the metrics dashboard link.\\nRationale: Align communications with expectations; dashboard remains accessible.\\nImpact: Monthly investor updates; dashboard link retained.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "f5aecf8a-e1fe-4689-8d67-d01d88615622",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:49.441Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Maya Okafor note 2026-10-16.",
+   "kind": "decision",
+   "name": "Replace Tailwind UI kit with shadcn/ui as design system",
+   "body": "Summary: Replace Tailwind UI kit with shadcn/ui as the design system across Fernwork.\\nRationale: Standardize UI with modern components; align with frontend direction.\\nImpact: All UI should migrate to shadcn/ui; Tailwind UI kit deprecated.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "9e992b55-a09c-41f7-a32c-376fb2f763a0",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:55.840Z",
+  "payload": {
+   "source_id": "9e992b55-a09c-41f7-a32c-376fb2f763a0",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "Replaces previous SMS reminder provider decision (Vonage) per 2026-10-13 sync."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "link.added",
+  "record_id": "9914f492-a960-4be7-b778-10114bcce80b",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:57.138Z",
+  "payload": {
+   "source_id": "9914f492-a960-4be7-b778-10114bcce80b",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "Replaces previous PostHog self-hosted decision (id f004a28a...)."
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "f5aecf8a-e1fe-4689-8d67-d01d88615622",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:58.700Z",
+  "payload": {
+   "source_id": "f5aecf8a-e1fe-4689-8d67-d01d88615622",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Replaces previous Tailwind UI kit decision (id 02437649...)."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": null,
+  "created_at": "2026-11-22T08:37:59.890Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Replaced by Sinch migration decision (2026-11-01 effective)"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.updated",
+  "record_id": "0b49dca3-00e9-4428-9142-549797d37fab",
+  "intent": null,
+  "created_at": "2026-11-22T08:38:01.145Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Replaced by PostHog Cloud EU decision (2026-10-14)"
+  }
+ }
+]

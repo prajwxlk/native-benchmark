@@ -1,0 +1,117 @@
+[
+  {
+    "id": "Q1",
+    "question": "What SMS reminder provider are we using or moving to now?",
+    "keys": [
+      [
+        "Sinch"
+      ]
+    ],
+    "for": "R1"
+  },
+  {
+    "id": "Q2",
+    "question": "What is our product analytics vendor now?",
+    "keys": [
+      [
+        "Cloud"
+      ]
+    ],
+    "for": "R2"
+  },
+  {
+    "id": "Q3",
+    "question": "What is our release cadence now?",
+    "keys": [
+      [
+        "Tuesday"
+      ],
+      [
+        "twice"
+      ]
+    ],
+    "for": "R3"
+  },
+  {
+    "id": "Q4",
+    "question": "What is our investor update cadence now?",
+    "keys": [
+      [
+        "monthly",
+        "dashboard"
+      ]
+    ],
+    "for": "R4"
+  },
+  {
+    "id": "Q5",
+    "question": "What design system do we use now?",
+    "keys": [
+      [
+        "shadcn"
+      ]
+    ],
+    "for": "R5"
+  },
+  {
+    "id": "Q6",
+    "question": "What customer support tool do we use now?",
+    "keys": [
+      [
+        "Plain"
+      ]
+    ],
+    "for": "D1"
+  },
+  {
+    "id": "Q7",
+    "question": "What is the status of the task 'Task - Roll out onboarding flow (concierge onboarding call before account creation)'? Answer with its status word (for example open, in_progress, completed or closed).",
+    "keys": [
+      [
+        "complete"
+      ],
+      [
+        "done"
+      ]
+    ],
+    "for": "T1"
+  },
+  {
+    "id": "Q8",
+    "question": "What is the status of the task 'Task - Roll out sms reminder provider (Vonage)'? Answer with its status word (for example open, in_progress, completed or closed).",
+    "keys": [
+      [
+        "closed"
+      ],
+      [
+        "cancel"
+      ],
+      [
+        "obsolete"
+      ],
+      [
+        "abandon"
+      ],
+      [
+        "dropped"
+      ],
+      [
+        "no longer needed"
+      ],
+      [
+        "stopped"
+      ]
+    ],
+    "for": "T2"
+  },
+  {
+    "id": "Q9",
+    "question": "Who owns the task to redesign the SMS reminder templates?",
+    "keys": [
+      [
+        "Priya"
+      ]
+    ],
+    "for": "T3"
+  }
+]

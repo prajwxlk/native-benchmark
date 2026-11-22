@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Sinch",
+  "correct": true
+ },
+ "Q2": {
+  "answer": "PostHog Cloud (EU)",
+  "correct": true
+ },
+ "Q3": {
+  "answer": "Twice-weekly on Tuesdays and Thursdays (behind feature flags)",
+  "correct": true
+ },
+ "Q4": {
+  "answer": "Monthly with metrics dashboard link",
+  "correct": true
+ },
+ "Q5": {
+  "answer": "shadcn/ui",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "completed",
+  "correct": true
+ },
+ "Q8": {
+  "answer": "cancelled",
+  "correct": true
+ },
+ "Q9": {
+  "answer": "Priya Raman",
+  "correct": true
+ }
+}

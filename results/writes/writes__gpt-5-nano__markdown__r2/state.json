@@ -1,0 +1,207 @@
+{
+ "checks": {
+  "R1_new_decision": false,
+  "R1_replacement_recorded": false,
+  "R2_new_decision": false,
+  "R2_replacement_recorded": false,
+  "R3_new_decision": false,
+  "R3_replacement_recorded": false,
+  "R4_new_decision": false,
+  "R4_replacement_recorded": false,
+  "R5_new_decision": false,
+  "R5_replacement_recorded": false,
+  "T1_status": false,
+  "T2_status": false,
+  "T3_new_task": false,
+  "D1_not_recorded": true,
+  "D2_not_recorded": true,
+  "no_deletions": true
+ },
+ "details": {
+  "R1": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false
+  },
+  "R2": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false
+  },
+  "R3": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false
+  },
+  "R4": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false
+  },
+  "R5": {
+   "candidates": [],
+   "typed_as_decision": false,
+   "edited_old_in_place": false
+  },
+  "T1": {
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "lifecycle": null
+  },
+  "T2": {
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "lifecycle": null
+  },
+  "T3": {
+   "candidates": []
+  },
+  "D1": {
+   "wrong_decisions": [],
+   "current_marked_superseded": false
+  },
+  "D2": {
+   "wrong_decisions": [],
+   "current_marked_superseded": false
+  }
+ },
+ "arm": "markdown",
+ "new": [
+  {
+   "id": "fernwork_inbox_2026_10_13.md",
+   "name": "Fernwork inbox - Week of 2026-10-13",
+   "text": "Fernwork inbox - Week of 2026-10-13\n---\ntitle: Fernwork inbox - Week of 2026-10-13\ndate: 2026-10-13\ntags: [fernwork, inbox, weekly-sync]\n---\n\n## Fernwork inbox, week of 13 October 2026\n\n[[Weekly sync, 2026-10-13]]\nAttendees: Maya Okafor, Tom Lindqvist, Priya Raman, Daniel Reyes, Sofia Marchetti, Kenji Watanabe\n\n- Launch recap: we launched publicly on 6 October as planned. Early feedback from clinics is good.\n- SMS reminders: Vonage keeps failing on Portuguese numbers too. Agreed: we move SMS reminders to Sinch from 1 November. Vonage is out.\n  - Decision: Switch SMS reminders provider from Vonage to Sinch, effective 2026-11-01. Replaces earlier decision to continue using Vonage for SMS reminders.\n- Kenji to stop the Vonage rollout; that task is no longer needed.\n- Action: Priya to redesign the SMS reminder templates for Sinch by 30 October.\n- Support tool: Sofia floated moving from Plain to Zendesk. Not decided; Maya wants to see Plain's new pricing first. Revisit in December.\n- Several receptionists asked again for per-practitioner colours on the calendar.\n\n## Messages and decisions\n\n### 2026-10-14 — Tom Lindqvist: analytics hosting\n- Self-hosting PostHog is eating too much ops time. Decision: switch product analytics to PostHog Cloud (EU region) so clinic data stays in the EU.\n- Replaces: the prior stance of hosting PostHog self-hosted. See [[PostHog Cloud EU]] for details.\n\n### 2026-10-15 — Daniel Reyes: deployment cadence\n- Continuous deploys keep surprising pilot clinics in the middle of the day. Decision: ship twice-weekly releases on Tuesdays and Thursdays, still behind feature flags.\n- This sets a cadence going forward. See [[Deployment schedule]] for the plan.\n\n### 2026-10-15 — Kenji Watanabe: onboarding and day view\n- Concierge onboarding is live for all pilot clinics and the help centre is updated, so the onboarding rollout task is done. Status: Completed.\n- Dark mode for the day view is now in beta. Status: In beta.\n\n### 2026-10-16 — Maya Okafor: design system and investor updates\n- Brightpath asked us to slow down: investor updates go back to monthly, but we keep the metrics dashboard link. Status: Policy updated.\n- Priya and Kenji agreed we replace the Tailwind UI kit with shadcn/ui as our design system. Status: Decision implemented (design system updated).\n\n## New and updated tasks\n- Priya to redesign the SMS reminder templates for Sinch by 2026-10-30. Status: In progress.\n- Investigate per-practitioner colours on the calendar. Status: Open.\n- Revisit support tool decision in December (Plain vs Zendesk pricing). Status: Planned for December.\n- Implement PostHog Cloud EU region for analytics. Status: Implemented.\n- Implement twice-weekly releases cadence (Tue/Thu) behind feature flags. Status: In effect.\n- Replace Tailwind UI kit with shadcn/ui in the design system. Status: Completed.\n- Onboarding rollout completed for concierge; dark mode day view in beta. Status: Completed and Beta respectively.\n\nIf you need links to related notes, see [[PostHog Cloud EU]], [[Deployment schedule]], [[Metrics dashboard]], and [[Design system]] pages.\n",
+   "statuses": [],
+   "decision": false,
+   "task": false
+  }
+ ],
+ "old": {
+  "Decision - SMS reminder provider is Vonage": {
+   "id": "Fernwork HQ/Decisions/Decision - SMS reminder provider is Vonage.md",
+   "name": "Decision - SMS reminder provider is Vonage",
+   "text": "Decision - SMS reminder provider is Vonage\n---\ntitle: \"Decision - SMS reminder provider is Vonage\"\ndate: \"2026-10-02\"\nstatus: \"decided\"\ndecided_by: \"Tom Lindqvist\"\n---\n\n# SMS reminder provider: Vonage\n\nDecided on 2026-10-02 by [[Tom Lindqvist]].\n\n## Decision\nSMS reminder provider is **Vonage**.\n\n## Why\nMessagebird delivery failures in portugal.\n\nThis replaces [[Decision - SMS reminder provider is MessageBird]], which is no longer current.\n\n## Context\nAccessibility review flagged low contrast on the cancelled-appointment chips. Support volume is highest on Monday mornings before 10am. Reception teams keep asking for fewer clicks when moving appointments.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Product analytics vendor is PostHog self-hosted": {
+   "id": "Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog self-hosted.md",
+   "name": "Decision - Product analytics vendor is PostHog self-hosted",
+   "text": "Decision - Product analytics vendor is PostHog self-hosted\n---\ntitle: \"Decision - Product analytics vendor is PostHog self-hosted\"\ndate: \"2026-09-25\"\nstatus: \"decided\"\ndecided_by: \"Maya Okafor\"\n---\n\n# Product analytics vendor: PostHog self-hosted\n\nDecided on 2026-09-25 by [[Maya Okafor]].\n\n## Decision\nProduct analytics vendor is **PostHog self-hosted**.\n\n## Why\nClinic data must stay in the eu.\n\nThis replaces [[Decision - Product analytics vendor is Mixpanel]], which is no longer current.\n\n## Context\nClinic owners care about no-show rates more than any other metric. Accessibility review flagged low contrast on the cancelled-appointment chips. A few clinics want per-practitioner colours on the calendar.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Release cadence is continuous deploys behind feature flags": {
+   "id": "Fernwork HQ/Decisions/Decision - Release cadence is continuous deploys behind feature flags.md",
+   "name": "Decision - Release cadence is continuous deploys behind feature flags",
+   "text": "Decision - Release cadence is continuous deploys behind feature flags\n---\ntitle: \"Decision - Release cadence is continuous deploys behind feature flags\"\ndate: \"2026-10-04\"\nstatus: \"decided\"\ndecided_by: \"Tom Lindqvist\"\n---\n\n# Release cadence: continuous deploys behind feature flags\n\nDecided on 2026-10-04 by [[Tom Lindqvist]].\n\n## Decision\nRelease cadence is **continuous deploys behind feature flags**.\n\n## Why\nWeekly batches hid regressions.\n\nThis replaces [[Decision - Release cadence is weekly releases every Thursday]], which is no longer current.\n\n## Context\nExports to CSV are used weekly by clinic managers for payroll. Support volume is highest on Monday mornings before 10am. Load testing showed the booking endpoint is fine up to 300 requests per second.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Investor update cadence is fortnightly update with a metrics dashboard link": {
+   "id": "Fernwork HQ/Decisions/Decision - Investor update cadence is fortnightly update with a metrics dashboard link.md",
+   "name": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+   "text": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link\n---\ntitle: \"Decision - Investor update cadence is fortnightly update with a metrics dashboard link\"\ndate: \"2026-08-16\"\nstatus: \"decided\"\ndecided_by: \"Priya Raman\"\n---\n\n# Investor update cadence: fortnightly update with a metrics dashboard link\n\nDecided on 2026-08-16 by [[Priya Raman]].\n\n## Decision\nInvestor update cadence is **fortnightly update with a metrics dashboard link**.\n\n## Why\nBrightpath wanted more frequent numbers.\n\nThis replaces [[Decision - Investor update cadence is monthly email update on the first Monday]], which is no longer current.\n\n## Context\nReception teams keep asking for fewer clicks when moving appointments. Calendar sync with Google and Outlook still drops edits made within the same minute. Clinic owners care about no-show rates more than any other metric.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Design system is Tailwind UI kit": {
+   "id": "Fernwork HQ/Decisions/Decision - Design system is Tailwind UI kit.md",
+   "name": "Decision - Design system is Tailwind UI kit",
+   "text": "Decision - Design system is Tailwind UI kit\n---\ntitle: \"Decision - Design system is Tailwind UI kit\"\ndate: \"2026-08-29\"\nstatus: \"decided\"\ndecided_by: \"Maya Okafor\"\n---\n\n# Design system: Tailwind UI kit\n\nDecided on 2026-08-29 by [[Maya Okafor]].\n\n## Decision\nDesign system is **Tailwind UI kit**.\n\n## Why\nSpeed.\n\n## Context\nCalendar sync with Google and Outlook still drops edits made within the same minute. Support volume is highest on Monday mornings before 10am. Load testing showed the booking endpoint is fine up to 300 requests per second.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Task - Roll out onboarding flow (concierge onboarding call before account creation)": {
+   "id": "Fernwork HQ/Work/Tasks/Task - Roll out onboarding flow (concierge onboarding call before account creation).md",
+   "name": "Task - Roll out onboarding flow (concierge onboarding call before account creation)",
+   "text": "Task - Roll out onboarding flow (concierge onboarding call before account creation)\n---\ntitle: \"Task - Roll out onboarding flow (concierge onboarding call before account creation)\"\nstatus: \"in_progress\"\nowner: \"Kenji Watanabe\"\n---\n\n# Task - Roll out onboarding flow (concierge onboarding call before account creation)\n\nStatus: in_progress\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - Onboarding flow is concierge onboarding call before account creation]]\n\n## Done when\nThe change is live for all pilot clinics and the help centre is updated.\n\n## Notes\nThe rota integration needs a clearer error when staff IDs do not match. Clinic owners care about no-show rates more than any other metric.\n",
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "decision": false,
+   "task": true,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Task - Roll out sms reminder provider (Vonage)": {
+   "id": "Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md",
+   "name": "Task - Roll out sms reminder provider (Vonage)",
+   "text": "Task - Roll out sms reminder provider (Vonage)\n---\ntitle: \"Task - Roll out sms reminder provider (Vonage)\"\nstatus: \"in_progress\"\nowner: \"Kenji Watanabe\"\n---\n\n# Task - Roll out sms reminder provider (Vonage)\n\nStatus: in_progress\nOwner: [[Kenji Watanabe]]\nImplements: [[Decision - SMS reminder provider is Vonage]]\n\n## Done when\nThe change is live for all pilot clinics and the help centre is updated.\n\n## Notes\nLoad testing showed the booking endpoint is fine up to 300 requests per second. A few clinics want per-practitioner colours on the calendar.\n",
+   "statuses": [
+    "in_progress",
+    "in_progress"
+   ],
+   "decision": false,
+   "task": true,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Customer support tool is Plain": {
+   "id": "Fernwork HQ/Decisions/Decision - Customer support tool is Plain.md",
+   "name": "Decision - Customer support tool is Plain",
+   "text": "Decision - Customer support tool is Plain\n---\ntitle: \"Decision - Customer support tool is Plain\"\ndate: \"2026-10-05\"\nstatus: \"decided\"\ndecided_by: \"Maya Okafor\"\n---\n\n# Customer support tool: Plain\n\nDecided on 2026-10-05 by [[Maya Okafor]].\n\n## Decision\nCustomer support tool is **Plain**.\n\n## Why\nIntercom pricing jumped at 5 seats.\n\nThis replaces [[Decision - Customer support tool is Intercom]], which is no longer current.\n\n## Context\nThe rota integration needs a clearer error when staff IDs do not match. Exports to CSV are used weekly by clinic managers for payroll. Several receptionists asked for a dark mode on the day view.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  },
+  "Decision - Public launch date is 6 October 2026": {
+   "id": "Fernwork HQ/Decisions/Decision - Public launch date is 6 October 2026.md",
+   "name": "Decision - Public launch date is 6 October 2026",
+   "text": "Decision - Public launch date is 6 October 2026\n---\ntitle: \"Decision - Public launch date is 6 October 2026\"\ndate: \"2026-08-11\"\nstatus: \"decided\"\ndecided_by: \"Tom Lindqvist\"\n---\n\n# Public launch date: 6 October 2026\n\nDecided on 2026-08-11 by [[Tom Lindqvist]].\n\n## Decision\nPublic launch date is **6 October 2026**.\n\n## Why\nCalendar sync bugs pushed the date.\n\nThis replaces [[Decision - Public launch date is 15 September 2026]], which is no longer current.\n\n## Context\nWe discussed whether SMS reminders should be sent 24 or 48 hours ahead. Load testing showed the booking endpoint is fine up to 300 requests per second. A few clinics want per-practitioner colours on the calendar.\n",
+   "statuses": [
+    "decided"
+   ],
+   "decision": true,
+   "task": false,
+   "exists": true,
+   "added": "",
+   "modified": false
+  }
+ },
+ "supersedes": null,
+ "deleted": [],
+ "touched": []
+}

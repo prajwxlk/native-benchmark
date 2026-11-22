@@ -1,0 +1,386 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "b1e39534-9ef2-42d8-beba-f8c6fe732c5b",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.007Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "decision",
+   "name": "Decision - SMS reminder provider is Sinch",
+   "body": "# SMS reminder provider: Sinch\n\nDecided on 2026-10-13 by Fernwork weekly sync.\n\n## Decision\nMove SMS reminders to **Sinch from 2026-11-01**; Vonage is out.\n\n## Why\nVonage keeps failing on Portuguese numbers too.\n\n## Replaces\n[[old_vonage_decision]]",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "link.added",
+  "record_id": "b1e39534-9ef2-42d8-beba-f8c6fe732c5b",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.008Z",
+  "payload": {
+   "source_id": "b1e39534-9ef2-42d8-beba-f8c6fe732c5b",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "Decision from 2026-10-13 replaces the Vonage decision."
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "ef18f6e8-2422-4ba4-ad94-4941073526c6",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.020Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "decision",
+   "name": "Decision - Product analytics vendor is PostHog Cloud in the EU region",
+   "body": "# Product analytics vendor: PostHog Cloud (EU region)\n\nDecided on 2026-10-14 by Maya Okafor and Tom Lindqvist.\n\n## Decision\nSwitch product analytics from self-hosted PostHog to **PostHog Cloud in the EU region**.\n\n## Why\nSelf-hosting PostHog is taking too much ops time.\n\n## Replaces\n[[old_posthog_decision]]",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "link.added",
+  "record_id": "ef18f6e8-2422-4ba4-ad94-4941073526c6",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.021Z",
+  "payload": {
+   "source_id": "ef18f6e8-2422-4ba4-ad94-4941073526c6",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "Decision from 2026-10-14 replaces the self-hosted PostHog decision."
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "4aa5d144-8dcf-4d58-a247-782f921e9052",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.030Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "decision",
+   "name": "Decision - Release cadence is Tuesdays and Thursdays behind feature flags",
+   "body": "# Release cadence: Tuesdays and Thursdays behind feature flags\n\nDecided on 2026-10-15 by Daniel Reyes and Tom Lindqvist.\n\n## Decision\nShip releases twice weekly, on **Tuesdays and Thursdays**, still behind feature flags.\n\n## Why\nContinuous deploys were surprising pilot clinics in the middle of the day.\n\n## Replaces\n[[old_release_decision]]",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "link.added",
+  "record_id": "4aa5d144-8dcf-4d58-a247-782f921e9052",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.031Z",
+  "payload": {
+   "source_id": "4aa5d144-8dcf-4d58-a247-782f921e9052",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes",
+   "note": "Decision from 2026-10-15 replaces continuous deploys."
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "6cc5d290-1590-4597-b9ce-8540b453d035",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.040Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "decision",
+   "name": "Decision - Investor updates are monthly with the metrics dashboard link",
+   "body": "# Investor update cadence: monthly with metrics dashboard link\n\nDecided on 2026-10-16 by Maya Okafor.\n\n## Decision\nInvestor updates go back to **monthly**, while keeping the metrics dashboard link.\n\n## Replaces\n[[old_investor_decision]]",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "6cc5d290-1590-4597-b9ce-8540b453d035",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.040Z",
+  "payload": {
+   "source_id": "6cc5d290-1590-4597-b9ce-8540b453d035",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes",
+   "note": "Decision from 2026-10-16 replaces the fortnightly cadence."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "49257168-52ce-42a8-bc50-c3a92ba74a8b",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.048Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "decision",
+   "name": "Decision - Design system is shadcn/ui",
+   "body": "# Design system: shadcn/ui\n\nDecided on 2026-10-16 by Priya Raman and Kenji Watanabe.\n\n## Decision\nReplace the Tailwind UI kit with **shadcn/ui** as Fernwork’s design system.\n\n## Replaces\n[[old_design_decision]]",
+   "home_id": "e68da5eb-c733-4162-98f4-c61481610a28",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "49257168-52ce-42a8-bc50-c3a92ba74a8b",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.049Z",
+  "payload": {
+   "source_id": "49257168-52ce-42a8-bc50-c3a92ba74a8b",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "Decision from 2026-10-16 replaces the Tailwind UI kit decision."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "818e380a-a521-4272-bdc2-fd394b611aab",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.058Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "# Task - Redesign SMS reminder templates for Sinch\n\nStatus: open\nOwner: [[Priya Raman]]\nImplements: [[b1e39534-9ef2-42d8-beba-f8c6fe732c5b]]\n\n## Due\n2026-10-30\n\n## Done when\nSMS reminder templates are redesigned for the Sinch migration.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "lifecycle": "open",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "6951586b-7b8e-4549-ab46-40d471f471fd",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.071Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "task",
+   "name": "Task - Switch product analytics to PostHog Cloud in the EU region",
+   "body": "# Task - Switch product analytics to PostHog Cloud in the EU region\n\nStatus: open\nImplements: [[ef18f6e8-2422-4ba4-ad94-4941073526c6]]\n\n## Done when\nProduct analytics runs on PostHog Cloud in the EU region and self-hosting is no longer used.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "lifecycle": "open",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.created",
+  "record_id": "2e2bb08f-e199-46d7-9ae0-05f6dee8d3dc",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:16.086Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the decisions and explicitly agreed follow-up work from Fernwork’s 13–16 October 2026 updates, including which earlier decisions they replace.",
+   "kind": "task",
+   "name": "Task - Replace Tailwind UI kit with shadcn/ui",
+   "body": "# Task - Replace Tailwind UI kit with shadcn/ui\n\nStatus: open\nOwner: [[Priya Raman]] and [[Kenji Watanabe]]\nImplements: [[49257168-52ce-42a8-bc50-c3a92ba74a8b]]\n\n## Done when\nshadcn/ui is in use as the design system instead of the Tailwind UI kit.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "lifecycle": "open",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:22.763Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "The weekly sync on 2026-10-13 agreed to stop the Vonage rollout because the provider was failing on Portuguese numbers and Sinch replaces Vonage.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": [
+     {
+      "ordinal": 0,
+      "record_id": "b1e39534-9ef2-42d8-beba-f8c6fe732c5b",
+      "revision_event_id": "5f0e2467-29c6-4849-805e-57d6b0e8ff8a",
+      "revision_supplied_by": "engine",
+      "role": null,
+      "reason": "Current Sinch decision supersedes the Vonage rollout."
+     }
+    ]
+   }
+  }
+ },
+ {
+  "seq": 2476,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:22.771Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Kenji reported on 2026-10-15 that concierge onboarding is live for all pilot clinics and the help centre is updated.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2477,
+  "type": "record.updated",
+  "record_id": "785f22df-db80-482e-964c-0ef840a3d72f",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:22.783Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "The 2026-10-16 decision returns investor updates to monthly, replacing the fortnightly cadence; this rollout task is no longer current.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": [
+     {
+      "ordinal": 0,
+      "record_id": "6cc5d290-1590-4597-b9ce-8540b453d035",
+      "revision_event_id": "7cb27fee-5101-4cfc-9eb1-2fa2f432fbaf",
+      "revision_supplied_by": "engine",
+      "role": null,
+      "reason": "Current monthly investor-update decision replaces the fortnightly decision."
+     }
+    ]
+   }
+  }
+ },
+ {
+  "seq": 2478,
+  "type": "record.updated",
+  "record_id": "0b49dca3-00e9-4428-9142-549797d37fab",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:22.788Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "The 2026-10-14 decision switches product analytics from self-hosted PostHog to PostHog Cloud in the EU region, so the self-hosted rollout task is no longer current.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": [
+     {
+      "ordinal": 0,
+      "record_id": "ef18f6e8-2422-4ba4-ad94-4941073526c6",
+      "revision_event_id": "ea0ec17d-8d39-4e3b-9375-ab0ba16e9a8b",
+      "revision_supplied_by": "engine",
+      "role": null,
+      "reason": "Current PostHog Cloud decision replaces self-hosted PostHog."
+     }
+    ]
+   }
+  }
+ },
+ {
+  "seq": 2479,
+  "type": "record.updated",
+  "record_id": "4862b6cd-6a47-4fde-b54b-788c7911d8d9",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:22.794Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "The 2026-10-16 decision replaces the Tailwind UI kit with shadcn/ui, so the Tailwind design-system task is no longer current.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": [
+     {
+      "ordinal": 0,
+      "record_id": "49257168-52ce-42a8-bc50-c3a92ba74a8b",
+      "revision_event_id": "f9f297af-e58b-469a-8ee9-be8b2aefc34c",
+      "revision_supplied_by": "engine",
+      "role": null,
+      "reason": "Current shadcn/ui decision replaces the Tailwind UI kit decision."
+     }
+    ]
+   }
+  }
+ },
+ {
+  "seq": 2480,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:29.118Z",
+  "payload": {
+   "summary": "Concierge onboarding is live for all pilot clinics and the help centre is updated, as reported by Kenji on 2026-10-15.",
+   "reason": "Record the completion outcome reported by Kenji.",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2481,
+  "type": "record.created",
+  "record_id": "edcfd528-9823-4ece-9fc3-b441913a2a83",
+  "intent": "Update Fernwork’s shared workspace with the agreed decisions, task completions, status changes, and new tasks from the week of 13 October 2026, preserving supersession links and avoiding unsupported inferences.",
+  "created_at": "2026-11-22T08:38:32.800Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the feature’s reported beta status from 2026-10-15.",
+   "kind": "task",
+   "name": "Task - Dark mode for the day view",
+   "body": "# Task - Dark mode for the day view\n\nStatus: in_progress\n\n## Notes\nDark mode for the day view is now in beta, as reported by Kenji on 2026-10-15.",
+   "home_id": "a5a651f0-cb0c-4779-bf17-c8fc2590c067",
+   "lifecycle": "in_progress",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ }
+]

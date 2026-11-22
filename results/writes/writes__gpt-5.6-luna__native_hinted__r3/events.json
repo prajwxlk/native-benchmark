@@ -1,0 +1,186 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "ec2dda7f-552d-4059-a385-2f97aa14ce55",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.345Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed SMS provider change from the 2026-10-13 weekly sync.",
+   "kind": "decision",
+   "name": "Decision - SMS reminder provider is Sinch from 1 November 2026",
+   "body": "# SMS reminder provider: Sinch from 1 November 2026\n\nDecided at the weekly sync on 2026-10-13. Vonage continues to fail on Portuguese numbers, so SMS reminders move to Sinch from 1 November 2026. Vonage is no longer the provider.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "cf772cf2-701a-47b6-89d8-a07f90c52906",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.358Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed product analytics hosting change from 2026-10-14.",
+   "kind": "decision",
+   "name": "Decision - Product analytics uses PostHog Cloud in the EU region",
+   "body": "# Product analytics: PostHog Cloud, EU region\n\nAgreed by Maya Okafor and Tom Lindqvist on 2026-10-14. Product analytics switches from self-hosted PostHog to PostHog Cloud in the EU region.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "567398d3-8cf8-49b2-9a81-ed9643b1772c",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.369Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed release cadence change from 2026-10-15.",
+   "kind": "decision",
+   "name": "Decision - Releases ship Tuesdays and Thursdays behind feature flags",
+   "body": "# Release cadence: Tuesdays and Thursdays\n\nDecided by Daniel Reyes and Tom Lindqvist on 2026-10-15. Releases ship twice weekly on Tuesdays and Thursdays, still behind feature flags.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "775340f9-156e-422c-9c24-22f6c0624242",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.380Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed investor update cadence from 2026-10-16.",
+   "kind": "decision",
+   "name": "Decision - Investor updates are monthly with the metrics dashboard link",
+   "body": "# Investor updates: monthly\n\nAgreed after Brightpath's request on 2026-10-16. Investor updates return to monthly, while the metrics dashboard link is retained.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "411626ec-97cf-4830-8df4-2d9aac5331bf",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.391Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Record the agreed design system change from 2026-10-16.",
+   "kind": "decision",
+   "name": "Decision - Design system is shadcn/ui",
+   "body": "# Design system: shadcn/ui\n\nAgreed by Priya Raman and Kenji Watanabe on 2026-10-16. Fernwork replaces the Tailwind UI kit with shadcn/ui as its design system.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "2003fbc2-92ba-4a29-b652-4fe86dd4028c",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:37.400Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the action agreed at the 2026-10-13 weekly sync.",
+   "kind": "task",
+   "name": "Task - Redesign SMS reminder templates for Sinch",
+   "body": "# Redesign SMS reminder templates for Sinch\n\nOwner: Priya Raman\nDue: 2026-10-30\n\nRedesign the SMS reminder templates for the Sinch migration.",
+   "lifecycle": "open",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "link.added",
+  "record_id": "ec2dda7f-552d-4059-a385-2f97aa14ce55",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:49.224Z",
+  "payload": {
+   "source_id": "ec2dda7f-552d-4059-a385-2f97aa14ce55",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "The 2026-10-13 weekly sync agreed to move SMS reminders from Vonage to Sinch from 1 November 2026."
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "cf772cf2-701a-47b6-89d8-a07f90c52906",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:49.230Z",
+  "payload": {
+   "source_id": "cf772cf2-701a-47b6-89d8-a07f90c52906",
+   "target_id": "f004a28a-0f5b-4147-9470-c5e335b1e803",
+   "relationship": "supersedes",
+   "note": "On 2026-10-14 Maya Okafor and Tom Lindqvist agreed to switch from self-hosted PostHog to PostHog Cloud in the EU region."
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "link.added",
+  "record_id": "567398d3-8cf8-49b2-9a81-ed9643b1772c",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:49.235Z",
+  "payload": {
+   "source_id": "567398d3-8cf8-49b2-9a81-ed9643b1772c",
+   "target_id": "316a7a96-e0ed-4bf4-8523-40eacd52e8a9",
+   "relationship": "supersedes",
+   "note": "On 2026-10-15 Daniel Reyes and Tom Lindqvist changed continuous deploys to twice-weekly Tuesday and Thursday releases, still behind feature flags."
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "link.added",
+  "record_id": "775340f9-156e-422c-9c24-22f6c0624242",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:49.239Z",
+  "payload": {
+   "source_id": "775340f9-156e-422c-9c24-22f6c0624242",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes",
+   "note": "On 2026-10-16 Brightpath requested, and Fernwork agreed, to return investor updates to monthly while retaining the metrics dashboard link."
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "link.added",
+  "record_id": "411626ec-97cf-4830-8df4-2d9aac5331bf",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:49.243Z",
+  "payload": {
+   "source_id": "411626ec-97cf-4830-8df4-2d9aac5331bf",
+   "target_id": "02437649-4835-4d9d-8576-917b980e8b66",
+   "relationship": "supersedes",
+   "note": "On 2026-10-16 Priya Raman and Kenji Watanabe agreed to replace the Tailwind UI kit with shadcn/ui."
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.updated",
+  "record_id": "07a1c90f-73a3-4e80-a603-6754719863bc",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:54.452Z",
+  "payload": {
+   "lifecycle": "closed",
+   "reason": "Kenji was instructed at the 2026-10-13 weekly sync to stop the Vonage rollout because SMS reminders are moving to Sinch."
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": "Update Fernwork's shared workspace from the week of 13 October 2026: capture agreed decisions, supersede replaced decisions, update completed or obsolete tasks, and add agreed new tasks.",
+  "created_at": "2026-11-22T08:47:54.461Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Kenji reported on 2026-10-15 that concierge onboarding is live for all pilot clinics and the help centre is updated."
+  }
+ }
+]
