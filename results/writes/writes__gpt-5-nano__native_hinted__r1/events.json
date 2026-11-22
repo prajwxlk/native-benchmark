@@ -1,0 +1,214 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "33bdc208-fff8-440d-8b76-9715dfcbc3e2",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:20.731Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Weekly sync notes: Vonage failures on Portuguese numbers; action to move to Sinch.",
+   "kind": "decision",
+   "name": "Move SMS reminders to Sinch; Vonage decommissioned",
+   "body": "Decision to move SMS reminders from Vonage to Sinch starting 1 November 2026 due to ongoing failures with Portuguese numbers on Vonage. Vonage rollout is being stopped.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "2b3c97b0-d0e5-475d-b794-16eaa9f7e7b2",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:22.348Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Tom Lindqvist note 2026-10-14: self-hosting is time-consuming; move to cloud in EU.",
+   "kind": "decision",
+   "name": "Switch analytics to PostHog Cloud (EU region)",
+   "body": "Decision to switch product analytics from self-hosted PostHog to PostHog Cloud in the EU region. This keeps clinic data within the EU and reduces ops burden.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "b5907b61-59b6-48d5-ba68-56c18e5916c2",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:24.745Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Daniel Reyes 2026-10-15: faster iterations while maintaining control.",
+   "kind": "decision",
+   "name": "Ship twice-weekly releases on Tuesdays and Thursdays behind feature flags",
+   "body": "Decision to ship releases twice per week on Tuesdays and Thursdays, still behind feature flags to minimize pilot disruption.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "05a7a80a-9ba9-420b-970b-73084601e9f9",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:26.082Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Kenji Watanabe notes 2026-10-15.",
+   "kind": "decision",
+   "name": "Concierge onboarding rollout completed",
+   "body": "Concierge onboarding is live for all pilot clinics and the help centre is updated; onboarding rollout task is done.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "31be270c-ff34-4a75-963f-c27f1730e1c2",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:27.730Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Notes from 2026-10-16 indicate day view dark mode is now in beta.",
+   "kind": "decision",
+   "name": "Dark mode day view beta",
+   "body": "Decision to roll out dark mode for the day view in beta to improve accessibility and user preference.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "0c0e9e55-5a0d-4f38-bc51-32f5236f1a0f",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:29.562Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Maya and Priya agreed 2026-10-16.",
+   "kind": "decision",
+   "name": "Replace Tailwind UI kit with shadcn/ui as design system",
+   "body": "Decision to replace Tailwind UI kit with shadcn/ui as our design system.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "ea95e54c-68cd-40f0-8939-e08dbe34a764",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:30.906Z",
+  "payload": {
+   "type": "Resolution",
+   "reason": "Brightpath requested monthly cadence on 2026-10-16.",
+   "kind": "decision",
+   "name": "Investor update cadence: monthly",
+   "body": "Decision to return investor updates to a monthly cadence, with a metrics dashboard link included.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "link.added",
+  "record_id": "33bdc208-fff8-440d-8b76-9715dfcbc3e2",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:39.915Z",
+  "payload": {
+   "source_id": "33bdc208-fff8-440d-8b76-9715dfcbc3e2",
+   "target_id": "28e16715-b34d-4570-95dd-b363bd47fd5a",
+   "relationship": "supersedes",
+   "note": "New decision Move SMS reminders to Sinch supersedes previous SMS reminder provider decision (Vonage)"
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "link.added",
+  "record_id": "ea95e54c-68cd-40f0-8939-e08dbe34a764",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:53.644Z",
+  "payload": {
+   "source_id": "ea95e54c-68cd-40f0-8939-e08dbe34a764",
+   "target_id": "4c978259-4b49-4a2a-bccc-e4122150c649",
+   "relationship": "supersedes",
+   "note": "New monthly investor update cadence supersedes fortnightly cadence with metrics dashboard link."
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "record.created",
+  "record_id": "f8cb98fd-f178-45ee-a3ae-dfed7246224d",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:58.028Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action from 2026-10-13 weekly sync: Priya to redesign templates by 30 October.",
+   "kind": "task",
+   "name": "Redesign SMS reminder templates for Sinch",
+   "body": "Redesign the SMS reminder templates to be compatible with Sinch; due by 30 October 2026.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "8bd179f1-e37f-4fa9-82a0-be0419f40dbf",
+  "intent": null,
+  "created_at": "2026-11-22T08:28:59.360Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Kenji Watanabe notes 2026-10-15.",
+   "kind": "task",
+   "name": "Onboarding rollout for concierge onboarding (pilot clinics) completed",
+   "body": "Concierge onboarding is live for all pilot clinics and the help centre is updated; onboarding rollout task is done.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "eb03e168-9821-4b6e-97cf-2014bfa99d41",
+  "intent": null,
+  "created_at": "2026-11-22T08:29:04.917Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Given the dark mode day view beta status in Oct 2026 notes.",
+   "kind": "task",
+   "name": "Test and refine dark mode day view (beta)",
+   "body": "Continue evaluating the dark mode day view in beta; collect clinic feedback.",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "lifecycle": "open",
+   "home_id": "native:unfiled"
+  }
+ },
+ {
+  "seq": 2474,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:29:12.073Z",
+  "payload": {
+   "lifecycle": "completed",
+   "reason": "Onboarding rollout completed; live for all pilot clinics and help centre updated."
+  }
+ },
+ {
+  "seq": 2475,
+  "type": "record.updated",
+  "record_id": "63677d9c-ecba-4056-94a0-b49caeee4fd6",
+  "intent": null,
+  "created_at": "2026-11-22T08:29:14.071Z",
+  "payload": {
+   "summary": "Onboarding rollout live for all pilot clinics; help center updated.",
+   "lifecycle": "completed",
+   "reason": "See note: rollout complete."
+  }
+ }
+]

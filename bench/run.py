@@ -80,14 +80,16 @@ BUILTIN = ["bash", "read", "grep", "glob", "list", "write", "edit", "patch", "we
            "todowrite", "todoread", "task", "skill", "question"]
 
 
-def config(arm, model):
+def config(arm, model, write=False):
     """A dedicated `bench` agent with an explicit tool allowlist per arm.
 
-    Markdown arm: read-only file tools + bash (like their grep/head/cat agents).
+    Markdown arm: read-only file tools + bash (like their grep/head/cat agents); with
+    write=True (the write benchmark) it may also create and edit files.
     Native arm: only Native's MCP tools; every built-in is off and denied, so the agent
     cannot read the SQLite file directly (matches their "SQLite via MCP" setup).
     """
-    allowed = {"markdown": {"bash", "read", "grep", "glob", "list"}}.get(arm, set())
+    md = {"bash", "read", "grep", "glob", "list"} | ({"write", "edit", "patch"} if write else set())
+    allowed = {"markdown": md}.get(arm, set())
     tools = {t: (t in allowed) for t in BUILTIN}
     perm = {t: ("allow" if t in allowed else "deny") for t in BUILTIN if t not in ("patch",)}
     perm["external_directory"] = "deny"
@@ -102,8 +104,10 @@ def config(arm, model):
         "permission": perm,
         "agent": {"bench": {"mode": "primary", "model": f"openai/{model}", "tools": tools,
                             "permission": perm,
-                            "prompt": "You answer questions about a company's notes using only the tools you have. "
-                                      "You cannot edit anything."}},
+                            "prompt": ("You keep a company's shared notes up to date using only the tools you have."
+                                       if write else
+                                       "You answer questions about a company's notes using only the tools you have. "
+                                       "You cannot edit anything.")}},
     }
     if arm.startswith("native"):
         cfg["mcp"] = {"native": {"type": "local", "enabled": True,
@@ -121,22 +125,14 @@ def price(model, tokens):
             + (tokens["output"] + tokens["reasoning"]) * p["output"]) / 1e6
 
 
-def run_trial(model, arm, q, run, key, timeout, workroot):
-    tid = f"{TAG}{model}__{arm}__{q['id']}__r{run}"
-    base = workroot / tid
+def make_workspace(base, cfg, key):
+    """Fresh trial dir: ws/ (agent's cwd, holds opencode.json) and isolated xdg/ dirs."""
     if base.exists():
         shutil.rmtree(base)
     ws, xdg = base / "ws", base / "xdg"
     for d in ("config", "data", "state", "cache"):
         (xdg / d).mkdir(parents=True)
     ws.mkdir(parents=True)
-    cfg = config(arm, model)
-    if arm == "markdown":
-        shutil.copytree(DATA / "vault", ws / "vault")
-    else:
-        db = base / "native.db"
-        shutil.copy(NATIVE_DB, db)
-        cfg["mcp"]["native"]["command"][1] = str(db)
     (ws / "opencode.json").write_text(json.dumps(cfg, indent=2))
     env = {k: v for k, v in os.environ.items() if not k.startswith(("OPENCODE", "XDG_"))}
     # PWD must match cwd: OpenCode resolves the project directory from $PWD, and an
@@ -144,7 +140,11 @@ def run_trial(model, arm, q, run, key, timeout, workroot):
     env.update(PWD=str(ws), OPENAI_API_KEY=key, XDG_CONFIG_HOME=str(xdg / "config"), XDG_DATA_HOME=str(xdg / "data"),
                XDG_STATE_HOME=str(xdg / "state"), XDG_CACHE_HOME=str(xdg / "cache"),
                OPENCODE_DISABLE_AUTOUPDATE="1")
-    msg = PROMPT[arm] + SUFFIX + q["question"]
+    return ws, env
+
+
+def opencode_session(base, ws, env, model, msg, timeout, name=""):
+    """Run one headless OpenCode session and read its tokens, steps and tool calls back."""
     # OpenCode's first start on a fresh data dir can fail with "Unexpected server error"
     # (database init). A no-model command initialises it first.
     subprocess.run(["opencode", "session", "list"], cwd=ws, env=env, capture_output=True, timeout=120)
@@ -160,8 +160,8 @@ def run_trial(model, arm, q, run, key, timeout, workroot):
         out = (e.stdout or b"").decode() if isinstance(e.stdout, bytes) else (e.stdout or "")
         err = (e.stderr or b"").decode() if isinstance(e.stderr, bytes) else (e.stderr or "")
     wall = time.time() - t0
-    (base / "events.jsonl").write_text(out)
-    (base / "stderr.txt").write_text(err)
+    (base / f"{name}events.jsonl").write_text(out)
+    (base / f"{name}stderr.txt").write_text(err)
 
     session = None
     for line in out.splitlines():
@@ -171,13 +171,13 @@ def run_trial(model, arm, q, run, key, timeout, workroot):
             continue
         session = session or ev.get("sessionID") or (ev.get("part") or {}).get("sessionID")
     tokens = {"input": 0, "output": 0, "reasoning": 0, "cache_read": 0, "cache_write": 0}
-    steps, tool_calls, text, oc_cost = 0, [], "", 0.0
+    steps, tool_calls, tool_errors, text, oc_cost = 0, [], 0, "", 0.0
     if session:
         # Write straight to a file: piping `opencode export` truncates at 64 KiB.
-        with open(base / "export.json", "w") as fh:
+        with open(base / f"{name}export.json", "w") as fh:
             subprocess.run(["opencode", "export", session], cwd=ws, env=env, stdout=fh,
                            stderr=subprocess.DEVNULL)
-        raw = (base / "export.json").read_text()
+        raw = (base / f"{name}export.json").read_text()
         try:
             data = json.loads(raw[raw.index("{"):])
         except (ValueError, json.JSONDecodeError):
@@ -198,24 +198,48 @@ def run_trial(model, arm, q, run, key, timeout, workroot):
                     steps += 1
                 elif p.get("type") == "tool":
                     tool_calls.append(p.get("tool"))
+                    st = p.get("state") or {}
+                    # MCP tools report failures inside a completed call as {"error": ...}.
+                    if st.get("status") == "error" or str(st.get("output", "")).lstrip().startswith('{"error"'):
+                        tool_errors += 1
                 elif p.get("type") == "text":
                     text = p.get("text", "") or text
+    # Budget safety: charge the higher of our price-table estimate and OpenCode's own figure.
+    cost = max(price(model, tokens) or 0, oc_cost)
+    return {"tokens": tokens, "steps": steps, "tool_calls": tool_calls, "tool_errors": tool_errors,
+            "text": text, "session": session, "wall": wall, "timed_out": timed_out, "cost": cost,
+            "oc_cost": oc_cost, "err": err}
+
+
+def run_trial(model, arm, q, run, key, timeout, workroot):
+    tid = f"{TAG}{model}__{arm}__{q['id']}__r{run}"
+    base = workroot / tid
+    cfg = config(arm, model)
+    if arm != "markdown":
+        db = base / "native.db"
+        cfg["mcp"]["native"]["command"][1] = str(db)
+    ws, env = make_workspace(base, cfg, key)
+    if arm == "markdown":
+        shutil.copytree(DATA / "vault", ws / "vault")
+    else:
+        shutil.copy(NATIVE_DB, db)
+    msg = PROMPT[arm] + SUFFIX + q["question"]
+    s = opencode_session(base, ws, env, model, msg, timeout)
+    tokens, text = s["tokens"], s["text"]
     answer = ""
     for line in reversed(text.splitlines()):
         if "ANSWER:" in line:
             answer = line.split("ANSWER:", 1)[1].strip()
             break
     answer = answer or text.strip()[-400:]
-    # Budget safety: charge the higher of our price-table estimate and OpenCode's own figure.
-    cost = max(price(model, tokens) or 0, oc_cost)
     return {
         "trial": tid, "corpus": TAG.rstrip("_") or "base", "model": model, "arm": arm, "qid": q["id"], "qtype": q["type"], "run": run,
         "answer": answer, "expected": q["answer"], "correct": grade(answer, q["keys"]),
         "tokens_total": tokens["input"] + tokens["output"] + tokens["reasoning"], **{f"tok_{k}": v for k, v in tokens.items()},
-        "steps": steps, "tool_calls": len(tool_calls), "tools_used": sorted(set(filter(None, tool_calls))),
-        "wall_s": round(wall, 1), "timed_out": timed_out, "cost_usd": round(cost, 6),
-        "opencode_cost_usd": round(oc_cost, 6), "session": session,
-        "error": None if session else (err.strip().splitlines() or ["no session"])[-1][:300],
+        "steps": s["steps"], "tool_calls": len(s["tool_calls"]), "tools_used": sorted(set(filter(None, s["tool_calls"]))),
+        "wall_s": round(s["wall"], 1), "timed_out": s["timed_out"], "cost_usd": round(s["cost"], 6),
+        "opencode_cost_usd": round(s["oc_cost"], 6), "session": s["session"],
+        "error": None if s["session"] else (s["err"].strip().splitlines() or ["no session"])[-1][:300],
     }
 
 

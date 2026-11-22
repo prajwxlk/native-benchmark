@@ -1,0 +1,286 @@
+diff -ruN before/Fernwork HQ/Decisions/Decision - Design system is shadcn ui.md after/Fernwork HQ/Decisions/Decision - Design system is shadcn ui.md
+--- before/Fernwork HQ/Decisions/Decision - Design system is shadcn ui.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Design system is shadcn ui.md	2026-11-22 14:16:15
+@@ -0,0 +1,15 @@
++---
++title: "Decision - Design system is shadcn/ui"
++date: "2026-10-16"
++status: "decided"
++decided_by: "Priya Raman"
++---
++
++# Design system: shadcn/ui
++
++Decided on 2026-10-16 by [[Priya Raman]] and [[Kenji Watanabe]].
++
++## Decision
++The design system is **shadcn/ui**.
++
++This replaces [[Decision - Design system is Tailwind UI kit]], which is no longer current.
+diff -ruN before/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly with a metrics dashboard link.md after/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly with a metrics dashboard link.md
+--- before/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly with a metrics dashboard link.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Investor update cadence is monthly with a metrics dashboard link.md	2026-11-22 14:16:15
+@@ -0,0 +1,15 @@
++---
++title: "Decision - Investor update cadence is monthly with a metrics dashboard link"
++date: "2026-10-16"
++status: "decided"
++decided_by: "Maya Okafor"
++---
++
++# Investor update cadence: monthly with a metrics dashboard link
++
++Decided on 2026-10-16 by [[Maya Okafor]].
++
++## Decision
++Investor updates return to **monthly**, while keeping the metrics dashboard link.
++
++This replaces [[Decision - Investor update cadence is fortnightly update with a metrics dashboard link]], which is no longer current.
+diff -ruN before/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud in the EU.md after/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud in the EU.md
+--- before/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud in the EU.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Product analytics vendor is PostHog Cloud in the EU.md	2026-11-22 14:16:15
+@@ -0,0 +1,18 @@
++---
++title: "Decision - Product analytics vendor is PostHog Cloud in the EU"
++date: "2026-10-14"
++status: "decided"
++decided_by: "Maya Okafor"
++---
++
++# Product analytics vendor: PostHog Cloud in the EU
++
++Decided on 2026-10-14 by [[Maya Okafor]] and [[Tom Lindqvist]].
++
++## Decision
++Product analytics switches to **PostHog Cloud in the EU region**.
++
++## Why
++Self-hosting PostHog is taking too much operations time while clinic data must stay in the EU.
++
++This replaces [[Decision - Product analytics vendor is PostHog self-hosted]], which is no longer current.
+diff -ruN before/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly Tuesday and Thursday releases.md after/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly Tuesday and Thursday releases.md
+--- before/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly Tuesday and Thursday releases.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - Release cadence is twice-weekly Tuesday and Thursday releases.md	2026-11-22 14:16:15
+@@ -0,0 +1,18 @@
++---
++title: "Decision - Release cadence is twice-weekly Tuesday and Thursday releases"
++date: "2026-10-15"
++status: "decided"
++decided_by: "Daniel Reyes"
++---
++
++# Release cadence: twice-weekly Tuesday and Thursday releases
++
++Decided on 2026-10-15 by [[Daniel Reyes]] and [[Tom Lindqvist]].
++
++## Decision
++Releases ship twice weekly, on **Tuesdays and Thursdays**, still behind feature flags.
++
++## Why
++Continuous deploys were surprising pilot clinics during the day.
++
++This replaces [[Decision - Release cadence is continuous deploys behind feature flags]], which is no longer current.
+diff -ruN before/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md after/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md
+--- before/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Decisions/Decision - SMS reminder provider is Sinch.md	2026-11-22 14:16:15
+@@ -0,0 +1,18 @@
++---
++title: "Decision - SMS reminder provider is Sinch"
++date: "2026-10-13"
++status: "decided"
++decided_by: "Maya Okafor"
++---
++
++# SMS reminder provider: Sinch
++
++Decided on 2026-10-13 by [[Maya Okafor]].
++
++## Decision
++SMS reminder provider is **Sinch** from 2026-11-01.
++
++## Why
++Vonage keeps failing on Portuguese numbers.
++
++This replaces [[Decision - SMS reminder provider is Vonage]], which is no longer current.
+diff -ruN before/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md after/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md
+--- before/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Meetings/Weekly sync 2026-10-13.md	2026-11-22 14:16:15
+@@ -0,0 +1,21 @@
++---
++title: "Weekly sync 2026-10-13"
++date: "2026-10-13"
++---
++
++# Weekly sync, 2026-10-13
++
++Attendees: [[Maya Okafor]], [[Tom Lindqvist]], [[Priya Raman]], [[Daniel Reyes]], [[Sofia Marchetti]], [[Kenji Watanabe]]
++
++## Decisions
++- SMS reminders move to Sinch from 2026-11-01 (see [[Decision - SMS reminder provider is Sinch]]).
++- Support tool remains undecided; revisit in December after reviewing Plain's new pricing.
++
++## Discussion
++- Public launch happened on 2026-10-06 as planned. Early feedback from clinics is good.
++- Vonage is failing on Portuguese numbers too.
++- Several receptionists asked again for per-practitioner colours on the calendar.
++
++## Actions
++- [[Kenji Watanabe]] to stop the Vonage rollout; that task is no longer needed.
++- [[Priya Raman]] to redesign the SMS reminder templates for Sinch by 2026-10-30.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Beta test dark mode for day view.md after/Fernwork HQ/Work/Tasks/Task - Beta test dark mode for day view.md
+--- before/Fernwork HQ/Work/Tasks/Task - Beta test dark mode for day view.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Work/Tasks/Task - Beta test dark mode for day view.md	2026-11-22 14:16:15
+@@ -0,0 +1,13 @@
++---
++title: "Task - Beta test dark mode for day view"
++status: "in_progress"
++owner: "Kenji Watanabe"
++---
++
++# Task - Beta test dark mode for day view
++
++Status: in_progress
++Owner: [[Kenji Watanabe]]
++
++## Notes
++Dark mode for the day view is in beta as of 2026-10-15.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Prepare customer comms for public launch date (6 October 2026).md after/Fernwork HQ/Work/Tasks/Task - Prepare customer comms for public launch date (6 October 2026).md
+--- before/Fernwork HQ/Work/Tasks/Task - Prepare customer comms for public launch date (6 October 2026).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Prepare customer comms for public launch date (6 October 2026).md	2026-11-22 14:16:15
+@@ -1,12 +1,12 @@
+ ---
+ title: "Task - Prepare customer comms for public launch date (6 October 2026)"
+-status: "in_progress"
++status: "completed"
+ owner: "Sofia Marchetti"
+ ---
+ 
+ # Task - Prepare customer comms for public launch date (6 October 2026)
+ 
+-Status: in_progress
++Status: completed
+ Owner: [[Sofia Marchetti]]
+ Implements: [[Decision - Public launch date is 6 October 2026]]
+ 
+@@ -15,3 +15,5 @@
+ 
+ ## Notes
+ Clinic owners care about no-show rates more than any other metric. The rota integration needs a clearer error when staff IDs do not match.
++
++Public launch happened as planned on 2026-10-06.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Redesign SMS reminder templates for Sinch.md after/Fernwork HQ/Work/Tasks/Task - Redesign SMS reminder templates for Sinch.md
+--- before/Fernwork HQ/Work/Tasks/Task - Redesign SMS reminder templates for Sinch.md	1970-01-01 05:30:00
++++ after/Fernwork HQ/Work/Tasks/Task - Redesign SMS reminder templates for Sinch.md	2026-11-22 14:16:15
+@@ -0,0 +1,16 @@
++---
++title: "Task - Redesign SMS reminder templates for Sinch"
++status: "open"
++owner: "Priya Raman"
++due: "2026-10-30"
++---
++
++# Task - Redesign SMS reminder templates for Sinch
++
++Status: open
++Owner: [[Priya Raman]]
++Due: 2026-10-30
++Implements: [[Decision - SMS reminder provider is Sinch]]
++
++## Done when
++The SMS reminder templates have been redesigned for Sinch.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link).md after/Fernwork HQ/Work/Tasks/Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link).md
+--- before/Fernwork HQ/Work/Tasks/Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link).md	2026-11-22 14:16:23
+@@ -1,12 +1,12 @@
+ ---
+ title: "Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link)"
+-status: "in_progress"
++status: "cancelled"
+ owner: "Daniel Reyes"
+ ---
+ 
+ # Task - Roll out investor update cadence (fortnightly update with a metrics dashboard link)
+ 
+-Status: in_progress
++Status: cancelled
+ Owner: [[Daniel Reyes]]
+ Implements: [[Decision - Investor update cadence is fortnightly update with a metrics dashboard link]]
+ 
+@@ -15,3 +15,5 @@
+ 
+ ## Notes
+ The rota integration needs a clearer error when staff IDs do not match. We discussed whether SMS reminders should be sent 24 or 48 hours ahead.
++
++The fortnightly cadence was replaced on 2026-10-16 by monthly updates with the metrics dashboard link retained.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Roll out onboarding flow (concierge onboarding call before account creation).md after/Fernwork HQ/Work/Tasks/Task - Roll out onboarding flow (concierge onboarding call before account creation).md
+--- before/Fernwork HQ/Work/Tasks/Task - Roll out onboarding flow (concierge onboarding call before account creation).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Roll out onboarding flow (concierge onboarding call before account creation).md	2026-11-22 14:16:15
+@@ -1,12 +1,12 @@
+ ---
+ title: "Task - Roll out onboarding flow (concierge onboarding call before account creation)"
+-status: "in_progress"
++status: "completed"
+ owner: "Kenji Watanabe"
+ ---
+ 
+ # Task - Roll out onboarding flow (concierge onboarding call before account creation)
+ 
+-Status: in_progress
++Status: completed
+ Owner: [[Kenji Watanabe]]
+ Implements: [[Decision - Onboarding flow is concierge onboarding call before account creation]]
+ 
+@@ -15,3 +15,5 @@
+ 
+ ## Notes
+ The rota integration needs a clearer error when staff IDs do not match. Clinic owners care about no-show rates more than any other metric.
++
++Concierge onboarding is live for all pilot clinics and the help centre is updated (2026-10-15).
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Roll out product analytics vendor (PostHog self-hosted).md after/Fernwork HQ/Work/Tasks/Task - Roll out product analytics vendor (PostHog self-hosted).md
+--- before/Fernwork HQ/Work/Tasks/Task - Roll out product analytics vendor (PostHog self-hosted).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Roll out product analytics vendor (PostHog self-hosted).md	2026-11-22 14:16:15
+@@ -1,12 +1,12 @@
+ ---
+ title: "Task - Roll out product analytics vendor (PostHog self-hosted)"
+-status: "in_progress"
++status: "cancelled"
+ owner: "Sofia Marchetti"
+ ---
+ 
+ # Task - Roll out product analytics vendor (PostHog self-hosted)
+ 
+-Status: in_progress
++Status: cancelled
+ Owner: [[Sofia Marchetti]]
+ Implements: [[Decision - Product analytics vendor is PostHog self-hosted]]
+ 
+@@ -15,3 +15,5 @@
+ 
+ ## Notes
+ Exports to CSV are used weekly by clinic managers for payroll. We should write up the double-booking incident properly at some point.
++
++The self-hosted rollout is no longer needed; product analytics is moving to PostHog Cloud in the EU region.
+diff -ruN before/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md after/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md
+--- before/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md	2026-11-19 19:44:58
++++ after/Fernwork HQ/Work/Tasks/Task - Roll out sms reminder provider (Vonage).md	2026-11-22 14:16:15
+@@ -1,12 +1,12 @@
+ ---
+ title: "Task - Roll out sms reminder provider (Vonage)"
+-status: "in_progress"
++status: "cancelled"
+ owner: "Kenji Watanabe"
+ ---
+ 
+ # Task - Roll out sms reminder provider (Vonage)
+ 
+-Status: in_progress
++Status: cancelled
+ Owner: [[Kenji Watanabe]]
+ Implements: [[Decision - SMS reminder provider is Vonage]]
+ 
+@@ -15,3 +15,5 @@
+ 
+ ## Notes
+ Load testing showed the booking endpoint is fine up to 300 requests per second. A few clinics want per-practitioner colours on the calendar.
++
++The Vonage rollout was stopped on 2026-10-13 because SMS reminders are moving to Sinch from 2026-11-01.

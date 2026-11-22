@@ -1,0 +1,9 @@
+A1: Sinch (EU)
+A2: PostHog Cloud (EU)
+A3: Twice-weekly — Tuesdays and Thursdays (behind feature flags)
+A4: Monthly (with a metrics dashboard link)
+A5: shadcn/ui
+A6: Plain
+A7: in_progress
+A8: in_progress
+A9: Priya Raman

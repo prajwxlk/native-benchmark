@@ -24,6 +24,16 @@ From one day as a first-time user of the public Native snapshot, plus 443 benchm
 
 5. **Small API papercuts that each cost one round trip:** `reason` vs `note` vs `rationale`; `idempotency_key` required only on `manage_relationships.assert`; `records_read` rejecting operations it doesn't list directly; the SELF_HOSTING check calling a tool name that isn't listed.
 
+## The write side (27 more trials)
+
+Agents filed a week of messages: 5 replaced decisions, 3 task changes and 2 traps. A fresh agent then answered questions about the result. Full numbers: [summary-writes.md](../results/summary-writes.md).
+
+1. **Status drifts after import.** An imported task keeps its status in three places: `lifecycle`, the `fm.status` facet and the "Status:" line in the body. Agents that set `lifecycle` left the other two stale. The next agent then read the stale text and got the status right 3 times out of 19. When the writer also changed the text, it was right 8 out of 8.
+   → On import, move frontmatter status into `lifecycle` and remove the duplicates, or render `lifecycle` above the body in `get_record`.
+2. **Weaker models write "supersedes" in prose but don't add the link.** Without a hint, gpt-5-mini added the link 9 times out of 15 and gpt-5-nano never did. Your own data shows the same pattern (52 links against 246 prose supersessions). A 5-line hint took gpt-5-mini to 15 out of 15.
+   → A `replaces` argument on `create_record`, so the link is part of creating the decision, plus a write recipe in the tool description.
+3. **Default writes cost more than Markdown, and the hint closes the gap.** gpt-5.6-luna used 73k tokens per correct change with default Native, 29k with Markdown and 28k with the hint. Same slim-orientation story as the read side.
+
 ## Things I'd build in the role (all open source, on the public engine)
 
 1. **`native-bench`: this harness, maintained.** Your post says you're preparing to open-source a way to reproduce the benchmark and run private evals. This repo already runs Native vs Markdown across models and corpus sizes with one command, with a budget guard, and gives Native a public, rerunnable proof point. Next steps: add DeepSeek and Claude, plus your own corpus.

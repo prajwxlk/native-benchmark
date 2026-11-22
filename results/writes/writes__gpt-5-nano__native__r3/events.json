@@ -1,0 +1,243 @@
+[
+ {
+  "seq": 2462,
+  "type": "record.created",
+  "record_id": "33a30b6d-8413-4ec8-938d-468d6960845f",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:14.603Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the launch completion and early feedback for stakeholders.",
+   "kind": "Decision",
+   "name": "Launch recap: public launch completed",
+   "body": "Launch recap: launched publicly on 6 October as planned. Early feedback from clinics is good.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "persistence": "enduring",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2463,
+  "type": "record.created",
+  "record_id": "c108367d-cf99-4778-a4d6-fa00ded0474a",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:16.749Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record the decision to switch SMS reminders to Sinch and replace the Vonage stop decision.",
+   "kind": "Decision",
+   "name": "Migrate SMS reminders from Vonage to Sinch by 1 Nov",
+   "body": "Vonage experiences failures on Portuguese numbers; decision: migrate SMS reminders to Sinch starting 1 November. Vonage rollout is decommissioned. This replaces the earlier decision to stop the Vonage rollout.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2464,
+  "type": "record.created",
+  "record_id": "79d8b4bd-2a1b-46b7-982b-1bd7c33c871b",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:18.483Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action item to execute migration timeline as decided.",
+   "kind": "Task",
+   "name": "Migrate SMS reminders to Sinch",
+   "body": "Owner: Priya; Coordinate migration of SMS reminders to Sinch. Due date: 2026-11-01.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2465,
+  "type": "record.created",
+  "record_id": "927944f4-0559-485c-8d2f-a0c598d5efea",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:20.423Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Action item from SMS migration decision.",
+   "kind": "Task",
+   "name": "Redesign SMS reminder templates for Sinch",
+   "body": "Owner: Priya; Redesign SMS templates for Sinch integration. Due date: 2026-10-30.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2466,
+  "type": "record.created",
+  "record_id": "6092748e-b1cb-476b-947b-9f4cd3b9e966",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:24.013Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Backlog item: requirement gathering for per-practitioner calendar colors.",
+   "kind": "Task",
+   "name": "Investigate per-practitioner calendar colors",
+   "body": "Receptionists requested per-practitioner colours on calendar. Backlog item to gather requirements and feasibility.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2467,
+  "type": "record.created",
+  "record_id": "db672b2a-833a-4246-8881-1382957538e8",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:27.464Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Operational decision to simplify analytics hosting while keeping data in EU.",
+   "kind": "Decision",
+   "name": "Analytics: switch to PostHog Cloud in EU",
+   "body": "Self-hosting PostHog is consuming too much ops time. Switch to PostHog Cloud (EU region) so clinic data remains in the EU.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2468,
+  "type": "record.created",
+  "record_id": "735694f8-2395-4ab9-ac56-f47e23e72f74",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:28.887Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Change release cadence to twice-weekly (Tue and Thu) behind feature flags.",
+   "kind": "Decision",
+   "name": "Twice-weekly releases on Tuesdays and Thursdays behind feature flags",
+   "body": "From now on we ship twice-weekly releases on Tuesdays and Thursdays, behind feature flags.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2469,
+  "type": "record.created",
+  "record_id": "fbbefec2-79ac-434f-9287-1e911d2e6a02",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:30.496Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Onboarding is live and rollout completed.",
+   "kind": "Decision",
+   "name": "Concierge onboarding is live; onboarding rollout completed",
+   "body": "Concierge onboarding is live for all pilot clinics and onboarding rollout task is now done.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2470,
+  "type": "record.created",
+  "record_id": "3d87cc70-5f47-417e-9017-82de1fdc06f5",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:31.720Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Dark mode for day view is now in beta.",
+   "kind": "Decision",
+   "name": "Dark mode day view beta",
+   "body": "Dark mode for the day view is now in beta.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2471,
+  "type": "record.created",
+  "record_id": "71c5de63-c0f8-4819-aa98-1ebab197f5fb",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:33.161Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Operational cadence change for investor communications.",
+   "kind": "Decision",
+   "name": "Investor updates monthly; metrics dashboard link kept",
+   "body": "Investor updates go back to monthly; metrics dashboard link to remain accessible.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2472,
+  "type": "record.created",
+  "record_id": "cd7bd54c-980a-46ed-8f6f-a40b1789e01d",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:34.407Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Replace Tailwind UI kit with shadcn/ui as design system.",
+   "kind": "Decision",
+   "name": "Design system upgrade: Tailwind to shadcn/ui",
+   "body": "Priya and Kenji agreed to replace the Tailwind UI kit with shadcn/ui as the design system.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ },
+ {
+  "seq": 2473,
+  "type": "record.created",
+  "record_id": "6bbe10fe-839d-48fc-bc9c-0e3df7bfd93c",
+  "intent": null,
+  "created_at": "2026-11-22T08:44:36.762Z",
+  "payload": {
+   "type": "WorkItem",
+   "reason": "Record: support tool migration is on hold; revisit in December after pricing review.",
+   "kind": "Decision",
+   "name": "Hold: Plain to Zendesk migration; revisit in December",
+   "body": "Move from Plain to Zendesk not decided; Maya wants to see Plain pricing first; revisit in December.",
+   "home_id": "fac4eb0f-4478-42d9-9397-804e80fa6078",
+   "owner_id": "45896ee6-522a-4c7e-a3db-3e9572691613",
+   "basis": {
+    "format": "native.source-basis.v1",
+    "sources": []
+   }
+  }
+ }
+]

@@ -1,0 +1,51 @@
+diff -ruN before/fernwork_inbox_2026_10_13.md after/fernwork_inbox_2026_10_13.md
+--- before/fernwork_inbox_2026_10_13.md	1970-01-01 05:30:00
++++ after/fernwork_inbox_2026_10_13.md	2026-11-22 14:05:40
+@@ -0,0 +1,47 @@
++---
++title: Fernwork inbox - Week of 2026-10-13
++date: 2026-10-13
++tags: [fernwork, inbox, weekly-sync]
++---
++
++## Fernwork inbox, week of 13 October 2026
++
++[[Weekly sync, 2026-10-13]]
++Attendees: Maya Okafor, Tom Lindqvist, Priya Raman, Daniel Reyes, Sofia Marchetti, Kenji Watanabe
++
++- Launch recap: we launched publicly on 6 October as planned. Early feedback from clinics is good.
++- SMS reminders: Vonage keeps failing on Portuguese numbers too. Agreed: we move SMS reminders to Sinch from 1 November. Vonage is out.
++  - Decision: Switch SMS reminders provider from Vonage to Sinch, effective 2026-11-01. Replaces earlier decision to continue using Vonage for SMS reminders.
++- Kenji to stop the Vonage rollout; that task is no longer needed.
++- Action: Priya to redesign the SMS reminder templates for Sinch by 30 October.
++- Support tool: Sofia floated moving from Plain to Zendesk. Not decided; Maya wants to see Plain's new pricing first. Revisit in December.
++- Several receptionists asked again for per-practitioner colours on the calendar.
++
++## Messages and decisions
++
++### 2026-10-14 — Tom Lindqvist: analytics hosting
++- Self-hosting PostHog is eating too much ops time. Decision: switch product analytics to PostHog Cloud (EU region) so clinic data stays in the EU.
++- Replaces: the prior stance of hosting PostHog self-hosted. See [[PostHog Cloud EU]] for details.
++
++### 2026-10-15 — Daniel Reyes: deployment cadence
++- Continuous deploys keep surprising pilot clinics in the middle of the day. Decision: ship twice-weekly releases on Tuesdays and Thursdays, still behind feature flags.
++- This sets a cadence going forward. See [[Deployment schedule]] for the plan.
++
++### 2026-10-15 — Kenji Watanabe: onboarding and day view
++- Concierge onboarding is live for all pilot clinics and the help centre is updated, so the onboarding rollout task is done. Status: Completed.
++- Dark mode for the day view is now in beta. Status: In beta.
++
++### 2026-10-16 — Maya Okafor: design system and investor updates
++- Brightpath asked us to slow down: investor updates go back to monthly, but we keep the metrics dashboard link. Status: Policy updated.
++- Priya and Kenji agreed we replace the Tailwind UI kit with shadcn/ui as our design system. Status: Decision implemented (design system updated).
++
++## New and updated tasks
++- Priya to redesign the SMS reminder templates for Sinch by 2026-10-30. Status: In progress.
++- Investigate per-practitioner colours on the calendar. Status: Open.
++- Revisit support tool decision in December (Plain vs Zendesk pricing). Status: Planned for December.
++- Implement PostHog Cloud EU region for analytics. Status: Implemented.
++- Implement twice-weekly releases cadence (Tue/Thu) behind feature flags. Status: In effect.
++- Replace Tailwind UI kit with shadcn/ui in the design system. Status: Completed.
++- Onboarding rollout completed for concierge; dark mode day view in beta. Status: Completed and Beta respectively.
++
++If you need links to related notes, see [[PostHog Cloud EU]], [[Deployment schedule]], [[Metrics dashboard]], and [[Design system]] pages.

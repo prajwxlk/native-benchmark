@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Vonage",
+  "correct": false
+ },
+ "Q2": {
+  "answer": "PostHog (self-hosted)",
+  "correct": false
+ },
+ "Q3": {
+  "answer": "Continuous deploys behind feature flags",
+  "correct": false
+ },
+ "Q4": {
+  "answer": "Fortnightly update with a metrics dashboard link",
+  "correct": false
+ },
+ "Q5": {
+  "answer": "shadcn/ui (migrated from Tailwind UI kit)",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q8": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q9": {
+  "answer": "Priya Raman",
+  "correct": true
+ }
+}

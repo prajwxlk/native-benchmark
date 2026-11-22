@@ -2,13 +2,15 @@
 
 An independent, rerunnable test of [Native](https://www.withnative.ai/)'s [Markdown benchmark](https://www.withnative.ai/research-and-posts/markdown-context-benchmark).
 
-**443 agent runs · 5 OpenAI models · 2 workspace sizes · $9.82 in API spend.**
+**443 read runs and 27 write runs · 5 OpenAI models · 2 workspace sizes · $13.01 in API spend.**
 
 ## 1. What Native claims, and what we checked
 
 Native is a database for AI agents. It replaces a folder of Markdown notes (like an Obsidian vault). Their pitch: an agent answering questions about your company uses about **40× fewer tokens** with Native than when it searches a folder of notes, and fails less often.
 
 Their own test used one model (DeepSeek) on their own company data. **We re-ran the same kind of test on 5 OpenAI models with data where we know every correct answer.** It's an independent check.
+
+Their test only covers reading. [Section 5](#5-the-write-side-can-agents-keep-it-current) adds the other half: when something changes, can an agent record it so the *next* agent gets it right?
 
 ## 2. How we benchmarked it
 
@@ -95,7 +97,38 @@ By question type (all models, base corpus):
 
 Raw tables: [`results/summary.md`](results/summary.md), [`results/summary-hinted.md`](results/summary-hinted.md), [`results/summary-scale10.md`](results/summary-scale10.md).
 
-## 5. Friction points
+## 5. The write side: can agents keep it current?
+
+Native's homepage now leads with "98% less stale context". That depends on writing, not reading: when a decision changes, an agent has to record the new one *and* mark the old one as replaced. So we tested that too.
+
+**The test.** Each run gives an agent a week of new messages ([`data/writes/feed.md`](data/writes/feed.md)) and asks it to update the workspace. The messages contain:
+- **5 decisions that replace older ones,** for example "SMS reminders move from Vonage to Sinch".
+- **3 task changes:** one task finished, one no longer needed, one new.
+- **2 traps:** a proposal nobody agreed to (switching to Zendesk), and a fact that's already recorded (the launch date).
+
+A script then checks the end state against the known right answer ([`data/writes/scenarios.json`](data/writes/scenarios.json)). Is the new decision there? Is the old one marked as replaced? Are the task statuses right? Did the traps stay out? Was anything deleted? Finally, **a fresh agent answers 9 questions about the new state.** That's the real test: did the writes make the next agent right?
+
+Three setups again. "Native + hint" here is a different, 5-line hint about *writing*: how to create a decision, add the `supersedes` link and set a task's status ([exact text below](#technical-details)). 3 models × 3 setups × 3 runs = 27 runs for $3.19.
+
+**Changes applied correctly · tokens per correct change (lower is better):**
+
+| Model | Markdown | Native | Native + hint |
+|---|---|---|---|
+| gpt-5-nano (cheapest) | 26% · 149k | 18% · 134k | **69% · 49k** |
+| gpt-5-mini | 100% · 99k | 82% · 83k | **100% · 64k** |
+| gpt-5.6-luna (strongest tested) | 100% · 29k | 100% · 73k | **100% · 28k** |
+
+What that means:
+- **Strong models write well in every setup.** luna made every change, every time. Default Native cost it 2.5× more tokens per change than Markdown; with the hint they were level.
+- **Weaker models forget the link.** Native only knows a decision was replaced if the agent adds a `supersedes` link. Without the hint, gpt-5-mini wrote "this supersedes the Vonage decision" in the text 5 times without adding the link, and gpt-5-nano never added one. Native's own data shows the same pattern: 52 links against 246 replacements written in prose. With the hint, gpt-5-mini linked 15 out of 15.
+- **The traps worked as intended.** 26 of 27 runs left the Zendesk proposal and the launch-date repeat alone.
+- **We found a status bug in imported notes.** After import, a task's status lives in three places: Native's `lifecycle` field, a copy of the note's frontmatter (`fm.status`), and the "Status:" line in the note text. Agents that set the proper field usually left the other two alone, and the next agent read the old status from the text. When a writer updated only `lifecycle`, the next agent got that task's status right 3 times out of 19. When the writer also changed the text, it was right 8 times out of 8. On the two task-status questions overall, the next agent was right 2 times out of 18 after Native + hint, against 15 out of 18 after Markdown. On the decision questions the setups were level: Markdown 54/63, Native 50/63, Native + hint 55/63.
+
+The fixes on Native's side: on import, move the note's status into `lifecycle` and drop the duplicates. Also, let `create_record` take a `replaces` argument, so marking the old decision is part of creating the new one instead of a second step agents forget.
+
+Raw tables: [`results/summary-writes.md`](results/summary-writes.md). What every agent actually wrote: `results/writes/<run>/`, with `changes.diff` for Markdown and `events.json` (Native's change log) for Native.
+
+## 6. Friction points
 
 **Setup**
 - The build was quick: 3 minutes and about 4 GB. That's a positive.
@@ -112,7 +145,7 @@ Raw tables: [`results/summary.md`](results/summary.md), [`results/summary-hinted
 - The README's showcase step, "build an artifact", is the hardest step and is undocumented. We couldn't finish it in 7 tries.
 - One clear positive: the error messages are excellent. Every mistake told the agent exactly how to fix it.
 
-## 6. The three things we'd build
+## 7. The three things we'd build
 
 1. **native-bench.** Native's post says they're planning to release a reproducible benchmark. This repo already runs with a single command across models, with a budget limit. We'd hand it over and maintain it.
 2. **A "freshness" importer.** It reads your notes, finds explicit lines like "this replaces [[X]]", and links them as replacements during import. New users then get Native's main benefit on day one without any manual work.
@@ -148,7 +181,20 @@ Those four product fixes would make the hint unnecessary. Ranked version: [findi
 
 > Tips: you do not need to call bootstrap. Search with records_read operation 'search' and arguments {query} only (scope is a record id, so omit it). A newer record that replaces an older one has a link with relationship 'supersedes' (see sql_read query_sql on the links and records tables). get_record payloads are large, so fetch only records you need.
 
+**Write benchmark.** [`bench/gen_writes.py`](bench/gen_writes.py) builds the feed, the expected end state and the read-back questions from the same ground truth. [`bench/run_writes.py`](bench/run_writes.py) gives each writer a fresh copy of the vault or database. The Markdown writer also gets write and edit tools. Each run is then graded by script, and a fresh gpt-5-mini reader answers the read-back questions. Markdown is read by the Markdown reader. Both Native setups are read by the hinted Native reader, so read-back differences come from what was written, not from how it was read. Write runs switch off OpenCode's Claude Code compatibility layer, so no local agent instructions reach the model.
+
+How "replacement recorded" is graded:
+- **Native** needs a typed `supersedes` link from the new record to the old decision. Prose alone doesn't count, because Native's freshness features can't see it; it's reported separately as "prose only".
+- **Markdown** accepts any explicit marker a reader could use: the new note naming the old one with "replaces" or "supersedes" wording, or the old note edited to say it's outdated. That's the more lenient check.
+
+Task statuses pass if `lifecycle` or the `fm.status` copy is right in Native, or if the frontmatter or the "Status:" line is right in Markdown.
+
+**The exact write hint:**
+
+> Tips: you do not need to call bootstrap. Find records with records_read operation 'search' and arguments {query} only. Create records with records_write operation 'create_record' and arguments {type, kind, name, body, reason}: decisions are type 'Resolution' kind 'decision'; tasks are type 'WorkItem' kind 'task' with a lifecycle. Record that a new decision replaces an older one with records_write operation 'manage_links.add' and arguments {source_id: new id, target_id: old id, relationship: 'supersedes', note}. Change a task's status with records_write operation 'update_record' and arguments {id, lifecycle, reason}; lifecycle is one of open, in_progress, blocked, completed, closed.
+
 **Limits**
+- **The write test is one small feed,** 10 changes over a week, run 3 times per model and setup. One nano Markdown run dumped every message into a single note. It scored 0 on our checks but 9 out of 9 on read-back, because in a small vault a dump is enough for the next reader. A bigger, messier workspace would punish that more.
 - **Small workspaces.** Native's fixed startup cost matters much more here than at 120 MB. That's partly the point of the 10× run, but neither is their scale.
 - **Mostly one run per question.** Differences on a single question are noisy; read the per-model totals.
 - **Synthetic notes are cleaner than real ones,** and every replacement is stated explicitly, which helps grep.
@@ -171,13 +217,21 @@ python3 -I bench/chart.py
 
 `run.py` skips finished runs, so it can be rerun, and stops before the total in `results/*.jsonl` passes `--budget` (default $9.90).
 
+The write benchmark:
+
+```bash
+python3 -I bench/gen_writes.py
+python3 -I bench/run_writes.py --models gpt-5-mini --runs 1 --budget 15 --out results/writes-mine.jsonl
+python3 -I bench/summarize_writes.py results/writes-mine.jsonl
+```
+
 **Harness gotcha** for anyone driving OpenCode from a script: it resolves the project folder from `$PWD`, not the process's working directory. An inherited `PWD` let our first "Native" agents grep the Markdown vault. `run.py` sets `PWD` per run and keeps workspaces outside any git repo.
 
 ## Files
 
-- `bench/`: data generator, Native loader, MCP client, runner, summariser, chart script and price table.
-- `data/`: questions and ground truth. The vaults and databases are generated; rebuild them with the commands above.
-- `results/*.jsonl`: one row per run, with tokens, steps, time, cost, answer and grade. `*-invalid.jsonl` files hold rows excluded for harness faults; they're kept so the spend total stays honest.
+- `bench/`: data generator, Native loader, MCP client, runner, summariser, chart script and price table, plus the write benchmark (`gen_writes.py`, `run_writes.py`, `summarize_writes.py`).
+- `data/`: questions and ground truth. The vaults and databases are generated; rebuild them with the commands above. `data/writes/` holds the write benchmark's feed, expected end state and read-back questions.
+- `results/*.jsonl`: one row per run, with tokens, steps, time, cost, answer and grade. `results/writes/` holds what each write run changed. `*-invalid.jsonl` files hold rows excluded for harness faults; they're kept so the spend total stays honest.
 - `docs/`: the charts above (light and dark).
 - `findings/`: [product notes](findings/product-notes.md) (short and ranked) and the [friction log](findings/friction-log.md) (16 findings with evidence).
 

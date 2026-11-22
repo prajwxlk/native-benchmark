@@ -1,0 +1,135 @@
+{
+  "replace": [
+    {
+      "id": "R1",
+      "topic": "sms provider",
+      "old": "Decision - SMS reminder provider is Vonage",
+      "old_value": "Vonage",
+      "new_value": "Sinch",
+      "keys": [
+        [
+          "Sinch"
+        ]
+      ]
+    },
+    {
+      "id": "R2",
+      "topic": "analytics",
+      "old": "Decision - Product analytics vendor is PostHog self-hosted",
+      "old_value": "PostHog self-hosted",
+      "new_value": "PostHog Cloud (EU region)",
+      "keys": [
+        [
+          "PostHog",
+          "Cloud"
+        ]
+      ]
+    },
+    {
+      "id": "R3",
+      "topic": "release cadence",
+      "old": "Decision - Release cadence is continuous deploys behind feature flags",
+      "old_value": "continuous deploys",
+      "new_value": "twice-weekly releases on Tuesdays and Thursdays",
+      "keys": [
+        [
+          "Tuesday"
+        ],
+        [
+          "twice-weekly"
+        ],
+        [
+          "twice a week"
+        ]
+      ]
+    },
+    {
+      "id": "R4",
+      "topic": "investor updates",
+      "old": "Decision - Investor update cadence is fortnightly update with a metrics dashboard link",
+      "old_value": "fortnightly",
+      "new_value": "monthly update with a metrics dashboard link",
+      "keys": [
+        [
+          "monthly",
+          "dashboard"
+        ]
+      ]
+    },
+    {
+      "id": "R5",
+      "topic": "design system",
+      "old": "Decision - Design system is Tailwind UI kit",
+      "old_value": "Tailwind UI kit",
+      "new_value": "shadcn/ui",
+      "keys": [
+        [
+          "shadcn"
+        ]
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "title": "Task - Roll out onboarding flow (concierge onboarding call before account creation)",
+      "before": "in_progress",
+      "accept": [
+        "completed",
+        "done",
+        "complete"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Task - Roll out sms reminder provider (Vonage)",
+      "before": "in_progress",
+      "accept": [
+        "closed",
+        "cancelled",
+        "canceled",
+        "obsolete",
+        "abandoned",
+        "dropped",
+        "wontfix",
+        "won't do"
+      ]
+    }
+  ],
+  "new_tasks": [
+    {
+      "id": "T3",
+      "name_keys": [
+        [
+          "template"
+        ]
+      ],
+      "owner": "Priya"
+    }
+  ],
+  "distractors": [
+    {
+      "id": "D1",
+      "topic": "support tool",
+      "current": "Decision - Customer support tool is Plain",
+      "forbid_keys": [
+        [
+          "Zendesk"
+        ]
+      ],
+      "why": "Zendesk was only proposed; Plain stays current"
+    },
+    {
+      "id": "D2",
+      "topic": "launch date",
+      "current": "Decision - Public launch date is 6 October 2026",
+      "forbid_keys": [
+        [
+          "launch"
+        ]
+      ],
+      "why": "the launch date is already recorded; no new decision"
+    }
+  ],
+  "stale_markers": "supersed|replaced|no longer current|outdated|obsolete|deprecated"
+}

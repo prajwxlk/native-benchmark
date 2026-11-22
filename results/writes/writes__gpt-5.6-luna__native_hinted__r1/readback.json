@@ -1,0 +1,38 @@
+{
+ "Q1": {
+  "answer": "Sinch (migration effective 2026-11-01)",
+  "correct": true
+ },
+ "Q2": {
+  "answer": "PostHog Cloud (EU region)",
+  "correct": true
+ },
+ "Q3": {
+  "answer": "Tuesdays and Thursdays (releases behind feature flags)",
+  "correct": true
+ },
+ "Q4": {
+  "answer": "Monthly (investor updates, with the metrics dashboard link)",
+  "correct": true
+ },
+ "Q5": {
+  "answer": "shadcn/ui",
+  "correct": true
+ },
+ "Q6": {
+  "answer": "Plain",
+  "correct": true
+ },
+ "Q7": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q8": {
+  "answer": "in_progress",
+  "correct": false
+ },
+ "Q9": {
+  "answer": "Priya Raman",
+  "correct": true
+ }
+}
