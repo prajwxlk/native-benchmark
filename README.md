@@ -110,6 +110,11 @@ A script then checks the end state against the known right answer ([`data/writes
 
 Three setups again. "Native + hint" here is a different, 5-line hint about *writing*: how to create a decision, add the `supersedes` link and set a task's status ([exact text below](#technical-details)). 3 models × 3 setups × 3 runs = 27 runs for $3.19.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/chart-writes-dark.svg">
+  <img alt="Bar chart of tokens per correct change by model and setup. Native + hint is cheapest for every model: gpt-5-nano 49k against 149k on Markdown, and level with Markdown on gpt-5.6-luna (28k vs 29k). Default Native costs the most on gpt-5.6-luna (73k)." src="docs/chart-writes-light.svg">
+</picture>
+
 **Changes applied correctly · tokens per correct change (lower is better):**
 
 | Model | Markdown | Native | Native + hint |
@@ -154,6 +159,11 @@ Raw tables: [`results/summary-writes.md`](results/summary-writes.md). What every
 ## 6. One hint for reading and writing
 
 The read hint and the write hint were tested separately, but a real agent does both. So we merged them into one hint: the read hint, followed by the write hint's lines on creating records, linking replacements and setting status. The two tips they share are said once. Then we ran both benchmarks again with it. For a fair comparison we re-ran the read hint next to it, because these runs use a cleaner prompt than the earlier read runs ([details](#technical-details)). Cost: $3.02.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/chart-combined-dark.svg">
+  <img alt="Two bar charts comparing the combined hint with the separate read or write hint. Reading: the combined hint is slightly cheaper on every model, 19k against 21k per correct answer overall, all at 100% correct. Writing: overall 50k against 47k per correct change; cheaper on gpt-5.6-luna, dearer on gpt-5-nano and gpt-5-mini." src="docs/chart-combined-light.svg">
+</picture>
 
 **Reading** (20 questions, 1 run each; % correct · tokens per correct answer):
 

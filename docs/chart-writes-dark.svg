@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" role="img" aria-label="Tokens per correct change, write benchmark">
+<rect width="760" height="420" rx="8" fill="#1a1a19"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#f0efec">Tokens per correct change, write benchmark</text>
+<text x="24" y="56" font-size="13" fill="#c3c2b7">Shorter bar = cheaper. Label shows tokens per correct change and % of changes applied correctly.</text>
+<rect x="24" y="72" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="42" y="82.5" font-size="13" fill="#c3c2b7">Markdown</text>
+<rect x="122" y="72" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="140" y="82.5" font-size="13" fill="#c3c2b7">Native (default)</text>
+<rect x="276" y="72" width="12" height="12" rx="3" fill="#199e70"/>
+<text x="294" y="82.5" font-size="13" fill="#c3c2b7">Native + hint</text>
+<line x1="150.0" y1="100" x2="150.0" y2="364" stroke="#383835" stroke-width="1"/>
+<text x="150.0" y="382" font-size="12" fill="#898781" text-anchor="middle">0k</text>
+<line x1="212.5" y1="100" x2="212.5" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="212.5" y="382" font-size="12" fill="#898781" text-anchor="middle">20k</text>
+<line x1="275.0" y1="100" x2="275.0" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="275.0" y="382" font-size="12" fill="#898781" text-anchor="middle">40k</text>
+<line x1="337.5" y1="100" x2="337.5" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="337.5" y="382" font-size="12" fill="#898781" text-anchor="middle">60k</text>
+<line x1="400.0" y1="100" x2="400.0" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="400.0" y="382" font-size="12" fill="#898781" text-anchor="middle">80k</text>
+<line x1="462.5" y1="100" x2="462.5" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="462.5" y="382" font-size="12" fill="#898781" text-anchor="middle">100k</text>
+<line x1="525.0" y1="100" x2="525.0" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="525.0" y="382" font-size="12" fill="#898781" text-anchor="middle">120k</text>
+<line x1="587.5" y1="100" x2="587.5" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="587.5" y="382" font-size="12" fill="#898781" text-anchor="middle">140k</text>
+<line x1="650.0" y1="100" x2="650.0" y2="364" stroke="#2c2c2a" stroke-width="1"/>
+<text x="650.0" y="382" font-size="12" fill="#898781" text-anchor="middle">160k</text>
+<text x="138" y="131.0" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">gpt-5-nano</text>
+<text x="138" y="146.0" font-size="11" fill="#898781" text-anchor="end">cheapest</text>
+<path d="M150,108 H610.6459375 Q614.6459375,108 614.6459375,112 V118 Q614.6459375,122 610.6459375,122 H150 Z" fill="#3987e5"><title>gpt-5-nano, Markdown: 149k tokens per correct change, 26% applied</title></path>
+<text x="620.6459375" y="119" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">149k</tspan> · 26% applied</text>
+<path d="M150,124 H565.5816964285714 Q569.5816964285714,124 569.5816964285714,128 V134 Q569.5816964285714,138 565.5816964285714,138 H150 Z" fill="#d95926"><title>gpt-5-nano, Native (default): 134k tokens per correct change, 18% applied</title></path>
+<text x="575.5816964285714" y="135" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">134k</tspan> · 18% applied</text>
+<path d="M150,140 H298.2456018518518 Q302.2456018518518,140 302.2456018518518,144 V150 Q302.2456018518518,154 298.2456018518518,154 H150 Z" fill="#199e70"><title>gpt-5-nano, Native + hint: 49k tokens per correct change, 69% applied</title></path>
+<text x="308.2456018518518" y="151" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">49k</tspan> · 69% applied</text>
+<text x="138" y="199.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">gpt-5-mini</text>
+<path d="M150,172 H456.2081730769231 Q460.2081730769231,172 460.2081730769231,176 V182 Q460.2081730769231,186 456.2081730769231,186 H150 Z" fill="#3987e5"><title>gpt-5-mini, Markdown: 99k tokens per correct change, 100% applied</title></path>
+<text x="466.2081730769231" y="183" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">99k</tspan> · 100% applied</text>
+<path d="M150,188 H406.00029296875 Q410.00029296875,188 410.00029296875,192 V198 Q410.00029296875,202 406.00029296875,202 H150 Z" fill="#d95926"><title>gpt-5-mini, Native (default): 83k tokens per correct change, 82% applied</title></path>
+<text x="416.00029296875" y="199" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">83k</tspan> · 82% applied</text>
+<path d="M150,204 H346.26883012820514 Q350.26883012820514,204 350.26883012820514,208 V214 Q350.26883012820514,218 346.26883012820514,218 H150 Z" fill="#199e70"><title>gpt-5-mini, Native + hint: 64k tokens per correct change, 100% applied</title></path>
+<text x="356.26883012820514" y="215" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">64k</tspan> · 100% applied</text>
+<text x="138" y="263.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">gpt-5.6-luna</text>
+<path d="M150,236 H236.28349358974359 Q240.28349358974359,236 240.28349358974359,240 V246 Q240.28349358974359,250 236.28349358974359,250 H150 Z" fill="#3987e5"><title>gpt-5.6-luna, Markdown: 29k tokens per correct change, 100% applied</title></path>
+<text x="246.28349358974359" y="247" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">29k</tspan> · 100% applied</text>
+<path d="M150,252 H375.1474358974359 Q379.1474358974359,252 379.1474358974359,256 V262 Q379.1474358974359,266 375.1474358974359,266 H150 Z" fill="#d95926"><title>gpt-5.6-luna, Native (default): 73k tokens per correct change, 100% applied</title></path>
+<text x="385.1474358974359" y="263" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">73k</tspan> · 100% applied</text>
+<path d="M150,268 H233.2849358974359 Q237.2849358974359,268 237.2849358974359,272 V278 Q237.2849358974359,282 233.2849358974359,282 H150 Z" fill="#199e70"><title>gpt-5.6-luna, Native + hint: 28k tokens per correct change, 100% applied</title></path>
+<text x="243.2849358974359" y="279" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">28k</tspan> · 100% applied</text>
+<line x1="24" y1="291.0" x2="736" y2="291.0" stroke="#2c2c2a" stroke-width="1"/>
+<text x="138" y="327.5" font-size="13" font-weight="600" fill="#f0efec" text-anchor="end">All models</text>
+<path d="M150,300 H376.2912997159091 Q380.2912997159091,300 380.2912997159091,304 V310 Q380.2912997159091,314 376.2912997159091,314 H150 Z" fill="#3987e5"><title>All models, Markdown: 74k tokens per correct change, 75% applied</title></path>
+<text x="386.2912997159091" y="311" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">74k</tspan> · 75% applied</text>
+<path d="M150,316 H404.8952724358974 Q408.8952724358974,316 408.8952724358974,320 V326 Q408.8952724358974,330 404.8952724358974,330 H150 Z" fill="#d95926"><title>All models, Native (default): 83k tokens per correct change, 67% applied</title></path>
+<text x="414.8952724358974" y="327" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">83k</tspan> · 67% applied</text>
+<path d="M150,332 H291.95455357142856 Q295.95455357142856,332 295.95455357142856,336 V342 Q295.95455357142856,346 291.95455357142856,346 H150 Z" fill="#199e70"><title>All models, Native + hint: 47k tokens per correct change, 90% applied</title></path>
+<text x="301.95455357142856" y="343" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">47k</tspan> · 90% applied</text>
+<text x="24" y="410" font-size="11" fill="#898781">3 runs per model and setup; Native + hint is the write hint. Source: results/writes.jsonl</text>
+</svg>
