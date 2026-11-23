@@ -2,9 +2,10 @@
 
   python3 -I bench/chart.py
 
-Writes docs/chart-{base,10x,writes,combined}-{light,dark}.svg.
+Writes docs/chart-{base,10x,writes,combined,notion}-{light,dark}.svg.
 Numbers come from the same files and maths as the README tables.
 """
+import statistics
 import sys
 from collections import defaultdict
 from html import escape
@@ -25,6 +26,10 @@ MODELS = [
 ]
 ARMS = [("markdown", "Markdown"), ("native", "Native (default)"), ("native_hinted", "Native + hint")]
 HINT_ARMS = [("native_hinted", "Separate hint"), ("native_combined", "Combined hint")]
+NOTION_ARMS = [("notion_ai", "Notion AI"), ("markdown", "Markdown"), ("native", "Native (default)"),
+               ("native_hinted", "Native + hint")]
+QTYPES = [("freshness", "Freshness", "10 questions"), ("lookup", "Lookup", "6 questions"),
+          ("multi_hop", "Two-step", "4 questions")]
 WRITE_MODELS = [m for m in MODELS if m[0] in ("gpt-5-nano", "gpt-5-mini", "gpt-5.6-luna")]
 
 THEMES = {
@@ -32,13 +37,13 @@ THEMES = {
         "surface": "#fcfcfb", "ink": "#0b0b0b", "ink2": "#52514e", "muted": "#898781",
         "grid": "#e1e0d9", "axis": "#c3c2b7",
         "series": {"markdown": "#2a78d6", "native": "#eb6834", "native_hinted": "#1baf7a",
-                   "native_combined": "#eda100"},
+                   "native_combined": "#eda100", "notion_ai": "#7d6bd6"},
     },
     "dark": {
         "surface": "#1a1a19", "ink": "#f0efec", "ink2": "#c3c2b7", "muted": "#898781",
         "grid": "#2c2c2a", "axis": "#383835",
         "series": {"markdown": "#3987e5", "native": "#d95926", "native_hinted": "#199e70",
-                   "native_combined": "#c98500"},
+                   "native_combined": "#c98500", "notion_ai": "#9585e6"},
     },
 }
 
@@ -67,6 +72,21 @@ def write_stats(paths):
     return out
 
 
+def notion_stats(base_paths, notion_paths):
+    """% correct by question type, and median seconds per answer, for Notion AI next to the base-corpus arms."""
+    rows = load([ROOT / p for p in base_paths]) + load([ROOT / p for p in notion_paths])
+    by = defaultdict(list)
+    for r in rows:
+        by[(r["qtype"], r["arm"])].append(r)
+        by[("ALL", r["arm"])].append(r)
+    out = {}
+    for k, g in by.items():
+        ok = sum(r["correct"] for r in g)
+        out[k] = {"n": len(g), "ok": ok, "acc": ok / len(g), "v": 100 * ok / len(g),
+                  "secs": statistics.median(r["wall_s"] for r in g)}
+    return out
+
+
 def bar(x0, y, w, h, r=4):
     """Bar anchored at x0, rounded only at its data end."""
     r = min(r, w, h / 2)
@@ -74,8 +94,11 @@ def bar(x0, y, w, h, r=4):
             f"V{y + h - r} Q{x0 + w},{y + h} {x0 + w - r},{y + h} H{x0} Z")
 
 
-def panel(heading, groups, xmax=100000, unit="correct answer", acc_word="correct", step=20000):
-    return {"heading": heading, "groups": groups, "xmax": xmax, "unit": unit, "acc_word": acc_word, "step": step}
+def panel(heading, groups, xmax=100000, unit="correct answer", acc_word="correct", step=20000,
+          tick=None, label=None):
+    """tick(v) formats an axis value; label(g) -> (bold, rest, tooltip) overrides the bar label."""
+    return {"heading": heading, "groups": groups, "xmax": xmax, "unit": unit, "acc_word": acc_word, "step": step,
+            "tick": tick or (lambda v: f"{v // 1000}k"), "label": label}
 
 
 def draw(theme, title, subtitle, arms, panels, note):
@@ -115,7 +138,7 @@ def draw(theme, title, subtitle, arms, panels, note):
             color = t["axis"] if v == 0 else t["grid"]
             o.append(f'<line x1="{x}" y1="{top - 8}" x2="{x}" y2="{plot_bottom}" stroke="{color}" stroke-width="1"/>')
             o.append(f'<text x="{x}" y="{plot_bottom + 18}" font-size="12" fill="{t["muted"]}" '
-                     f'text-anchor="middle">{v // 1000}k</text>')
+                     f'text-anchor="middle">{p["tick"](v)}</text>')
 
         for gi, (label, tag, data) in enumerate(p["groups"]):
             if label == "All models" and gi:
@@ -136,14 +159,19 @@ def draw(theme, title, subtitle, arms, panels, note):
                              f'font-style="italic">not run</text>')
                     continue
                 v = g["v"]
-                w = sx(v) - left
-                desc = (f'{label}, {arm_label}: {v / 1000:.0f}k tokens per {p["unit"]}, '
-                        f'{g["acc"]:.0%} {p["acc_word"]}')
+                w = max(sx(v) - left, 0.5)
+                if p["label"]:
+                    bold, rest, desc = p["label"](g)
+                    desc = f"{label}, {arm_label}: {desc}"
+                else:
+                    bold, rest = f"{v / 1000:.0f}k", f'{g["acc"]:.0%} {p["acc_word"]}'
+                    desc = (f'{label}, {arm_label}: {v / 1000:.0f}k tokens per {p["unit"]}, '
+                            f'{g["acc"]:.0%} {p["acc_word"]}')
                 o.append(f'<path d="{bar(left, by, w, bh)}" fill="{t["series"][key]}">'
                          f'<title>{escape(desc)}</title></path>')
                 o.append(f'<text x="{left + w + 6}" y="{by + 11}" font-size="12" fill="{t["ink2"]}">'
-                         f'<tspan font-weight="600" fill="{t["ink"]}">{v / 1000:.0f}k</tspan> · '
-                         f'{g["acc"]:.0%} {p["acc_word"]}</text>')
+                         f'<tspan font-weight="600" fill="{t["ink"]}">{escape(bold)}</tspan>'
+                         f'{" · " + escape(rest) if rest else ""}</text>')
             y += group_h + group_gap
         y = plot_bottom + 26
 
@@ -200,6 +228,29 @@ def main():
             [panel("Reading: tokens per correct answer", groups_cr, 80000),
              panel("Writing: tokens per correct change", groups_cw, 80000, "correct change", "applied")],
             "Reading: 1 run per question. Writing: 3 runs. Source: results/combined-read.jsonl, results/writes.jsonl"))
+    notion_files = [ROOT / "results/notion-ai.jsonl"]
+    if all(f.exists() for f in notion_files):
+        ns = notion_stats(["results/pilot.jsonl", "results/full.jsonl", "results/repeat.jsonl",
+                           "results/hinted.jsonl"], ["results/notion-ai.jsonl"])
+        groups_acc = [(name, tag, {a: ns.get((q, a)) for a, _ in NOTION_ARMS}) for q, name, tag in QTYPES]
+        groups_acc.append(("All models", "", {a: ns.get(("ALL", a)) for a, _ in NOTION_ARMS}))
+        groups_acc[-1] = ("All 20", "", groups_acc[-1][2])
+        time_groups = [("All 20", "", {a: dict(g, v=g["secs"]) if (g := ns.get(("ALL", a))) else None
+                                       for a, _ in NOTION_ARMS})]
+        pct = dict(xmax=100, step=20, tick=lambda v: f"{v}%",
+                   label=lambda g: (f'{g["acc"]:.0%}', f'{g["ok"]}/{g["n"]}',
+                                    f'{g["acc"]:.0%} correct ({g["ok"]}/{g["n"]})'))
+        secs = dict(xmax=60, step=10, tick=lambda v: f"{v}s",
+                    label=lambda g: (f'{g["v"]:.0f}s', "", f'median {g["v"]:.0f}s per answer'))
+        for theme in THEMES:
+            (OUT / f"chart-notion-{theme}.svg").write_text(draw(
+                theme, "Notion AI vs Native on the same 20 questions",
+                "Longer bar = more correct. Same synthetic workspace (333 notes); answers graded by the same script.",
+                NOTION_ARMS,
+                [panel("% of answers correct, by question type", groups_acc, **pct),
+                 panel("Median seconds per answer (Notion AI's own timer; others include harness startup)", time_groups, **secs)],
+                "Notion AI: 1 run per question, Auto model. Others: all 5 OpenAI models pooled. "
+                "Source: results/notion-ai.jsonl, results/*.jsonl"))
     print("wrote", ", ".join(sorted(p.name for p in OUT.glob("chart-*.svg"))))
 
 
