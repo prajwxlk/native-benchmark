@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 662" width="760" height="662" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif" role="img" aria-label="Notion AI vs Native on the same 20 questions">
+<rect width="760" height="662" rx="8" fill="#1a1a19"/>
+<text x="24" y="34" font-size="17" font-weight="600" fill="#f0efec">Notion AI vs Native on the same 20 questions</text>
+<text x="24" y="56" font-size="13" fill="#c3c2b7">Longer bar = more correct. Same synthetic workspace (333 notes); answers graded by the same script.</text>
+<rect x="24" y="72" width="12" height="12" rx="3" fill="#9585e6"/>
+<text x="42" y="82.5" font-size="13" fill="#c3c2b7">Notion AI</text>
+<rect x="129" y="72" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="147" y="82.5" font-size="13" fill="#c3c2b7">Markdown</text>
+<rect x="227" y="72" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="245" y="82.5" font-size="13" fill="#c3c2b7">Native (default)</text>
+<rect x="381" y="72" width="12" height="12" rx="3" fill="#199e70"/>
+<text x="399" y="82.5" font-size="13" fill="#c3c2b7">Native + hint</text>
+<text x="24" y="112" font-size="13" font-weight="600" fill="#f0efec">% of answers correct, by question type</text>
+<line x1="150.0" y1="126" x2="150.0" y2="454" stroke="#383835" stroke-width="1"/>
+<text x="150.0" y="472" font-size="12" fill="#898781" text-anchor="middle">0%</text>
+<line x1="250.0" y1="126" x2="250.0" y2="454" stroke="#2c2c2a" stroke-width="1"/>
+<text x="250.0" y="472" font-size="12" fill="#898781" text-anchor="middle">20%</text>
+<line x1="350.0" y1="126" x2="350.0" y2="454" stroke="#2c2c2a" stroke-width="1"/>
+<text x="350.0" y="472" font-size="12" fill="#898781" text-anchor="middle">40%</text>
+<line x1="450.0" y1="126" x2="450.0" y2="454" stroke="#2c2c2a" stroke-width="1"/>
+<text x="450.0" y="472" font-size="12" fill="#898781" text-anchor="middle">60%</text>
+<line x1="550.0" y1="126" x2="550.0" y2="454" stroke="#2c2c2a" stroke-width="1"/>
+<text x="550.0" y="472" font-size="12" fill="#898781" text-anchor="middle">80%</text>
+<line x1="650.0" y1="126" x2="650.0" y2="454" stroke="#2c2c2a" stroke-width="1"/>
+<text x="650.0" y="472" font-size="12" fill="#898781" text-anchor="middle">100%</text>
+<text x="138" y="165.0" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">Freshness</text>
+<text x="138" y="180.0" font-size="11" fill="#898781" text-anchor="end">10 questions</text>
+<path d="M150,134 H646.0 Q650.0,134 650.0,138 V144 Q650.0,148 646.0,148 H150 Z" fill="#9585e6"><title>Freshness, Notion AI: 100% correct (10/10)</title></path>
+<text x="656.0" y="145" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 10/10</text>
+<path d="M150,150 H610.2857142857142 Q614.2857142857142,150 614.2857142857142,154 V160 Q614.2857142857142,164 610.2857142857142,164 H150 Z" fill="#3987e5"><title>Freshness, Markdown: 93% correct (65/70)</title></path>
+<text x="620.2857142857142" y="161" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">93%</tspan> · 65/70</text>
+<path d="M150,166 H631.7142857142858 Q635.7142857142858,166 635.7142857142858,170 V176 Q635.7142857142858,180 631.7142857142858,180 H150 Z" fill="#d95926"><title>Freshness, Native (default): 97% correct (68/70)</title></path>
+<text x="641.7142857142858" y="177" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">97%</tspan> · 68/70</text>
+<path d="M150,182 H646.0 Q650.0,182 650.0,186 V192 Q650.0,196 646.0,196 H150 Z" fill="#199e70"><title>Freshness, Native + hint: 100% correct (40/40)</title></path>
+<text x="656.0" y="193" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 40/40</text>
+<text x="138" y="245.0" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">Lookup</text>
+<text x="138" y="260.0" font-size="11" fill="#898781" text-anchor="end">6 questions</text>
+<path d="M150,214 H646.0 Q650.0,214 650.0,218 V224 Q650.0,228 646.0,228 H150 Z" fill="#9585e6"><title>Lookup, Notion AI: 100% correct (6/6)</title></path>
+<text x="656.0" y="225" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 6/6</text>
+<path d="M150,230 H646.0 Q650.0,230 650.0,234 V240 Q650.0,244 646.0,244 H150 Z" fill="#3987e5"><title>Lookup, Markdown: 100% correct (42/42)</title></path>
+<text x="656.0" y="241" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 42/42</text>
+<path d="M150,246 H646.0 Q650.0,246 650.0,250 V256 Q650.0,260 646.0,260 H150 Z" fill="#d95926"><title>Lookup, Native (default): 100% correct (42/42)</title></path>
+<text x="656.0" y="257" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 42/42</text>
+<path d="M150,262 H646.0 Q650.0,262 650.0,266 V272 Q650.0,276 646.0,276 H150 Z" fill="#199e70"><title>Lookup, Native + hint: 100% correct (24/24)</title></path>
+<text x="656.0" y="273" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 24/24</text>
+<text x="138" y="325.0" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">Two-step</text>
+<text x="138" y="340.0" font-size="11" fill="#898781" text-anchor="end">4 questions</text>
+<path d="M150,294 H396.0 Q400.0,294 400.0,298 V304 Q400.0,308 396.0,308 H150 Z" fill="#9585e6"><title>Two-step, Notion AI: 50% correct (2/4)</title></path>
+<text x="406.0" y="305" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">50%</tspan> · 2/4</text>
+<path d="M150,310 H556.7142857142858 Q560.7142857142858,310 560.7142857142858,314 V320 Q560.7142857142858,324 556.7142857142858,324 H150 Z" fill="#3987e5"><title>Two-step, Markdown: 82% correct (23/28)</title></path>
+<text x="566.7142857142858" y="321" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">82%</tspan> · 23/28</text>
+<path d="M150,326 H610.2857142857142 Q614.2857142857142,326 614.2857142857142,330 V336 Q614.2857142857142,340 610.2857142857142,340 H150 Z" fill="#d95926"><title>Two-step, Native (default): 93% correct (26/28)</title></path>
+<text x="620.2857142857142" y="337" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">93%</tspan> · 26/28</text>
+<path d="M150,342 H646.0 Q650.0,342 650.0,346 V352 Q650.0,356 646.0,356 H150 Z" fill="#199e70"><title>Two-step, Native + hint: 100% correct (16/16)</title></path>
+<text x="656.0" y="353" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 16/16</text>
+<text x="138" y="409.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">All 20</text>
+<path d="M150,374 H596.0 Q600.0,374 600.0,378 V384 Q600.0,388 596.0,388 H150 Z" fill="#9585e6"><title>All 20, Notion AI: 90% correct (18/20)</title></path>
+<text x="606.0" y="385" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">90%</tspan> · 18/20</text>
+<path d="M150,390 H610.2857142857142 Q614.2857142857142,390 614.2857142857142,394 V400 Q614.2857142857142,404 610.2857142857142,404 H150 Z" fill="#3987e5"><title>All 20, Markdown: 93% correct (130/140)</title></path>
+<text x="620.2857142857142" y="401" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">93%</tspan> · 130/140</text>
+<path d="M150,406 H631.7142857142858 Q635.7142857142858,406 635.7142857142858,410 V416 Q635.7142857142858,420 631.7142857142858,420 H150 Z" fill="#d95926"><title>All 20, Native (default): 97% correct (136/140)</title></path>
+<text x="641.7142857142858" y="417" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">97%</tspan> · 136/140</text>
+<path d="M150,422 H646.0 Q650.0,422 650.0,426 V432 Q650.0,436 646.0,436 H150 Z" fill="#199e70"><title>All 20, Native + hint: 100% correct (80/80)</title></path>
+<text x="656.0" y="433" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">100%</tspan> · 80/80</text>
+<text x="24" y="504" font-size="13" font-weight="600" fill="#f0efec">Median seconds per answer (Notion AI&#x27;s own timer; others include harness startup)</text>
+<line x1="150.0" y1="518" x2="150.0" y2="606" stroke="#383835" stroke-width="1"/>
+<text x="150.0" y="624" font-size="12" fill="#898781" text-anchor="middle">0s</text>
+<line x1="233.33333333333331" y1="518" x2="233.33333333333331" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="233.33333333333331" y="624" font-size="12" fill="#898781" text-anchor="middle">10s</text>
+<line x1="316.66666666666663" y1="518" x2="316.66666666666663" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="316.66666666666663" y="624" font-size="12" fill="#898781" text-anchor="middle">20s</text>
+<line x1="400.0" y1="518" x2="400.0" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="400.0" y="624" font-size="12" fill="#898781" text-anchor="middle">30s</text>
+<line x1="483.3333333333333" y1="518" x2="483.3333333333333" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="483.3333333333333" y="624" font-size="12" fill="#898781" text-anchor="middle">40s</text>
+<line x1="566.6666666666667" y1="518" x2="566.6666666666667" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="566.6666666666667" y="624" font-size="12" fill="#898781" text-anchor="middle">50s</text>
+<line x1="650.0" y1="518" x2="650.0" y2="606" stroke="#2c2c2a" stroke-width="1"/>
+<text x="650.0" y="624" font-size="12" fill="#898781" text-anchor="middle">60s</text>
+<text x="138" y="561.5" font-size="13" font-weight="400" fill="#f0efec" text-anchor="end">All 20</text>
+<path d="M150,526 H187.66666666666666 Q191.66666666666666,526 191.66666666666666,530 V536 Q191.66666666666666,540 187.66666666666666,540 H150 Z" fill="#9585e6"><title>All 20, Notion AI: median 5s per answer</title></path>
+<text x="197.66666666666666" y="537" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">5s</tspan></text>
+<path d="M150,542 H312.25 Q316.25,542 316.25,546 V552 Q316.25,556 312.25,556 H150 Z" fill="#3987e5"><title>All 20, Markdown: median 20s per answer</title></path>
+<text x="322.25" y="553" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">20s</tspan></text>
+<path d="M150,558 H341.0 Q345.0,558 345.0,562 V568 Q345.0,572 341.0,572 H150 Z" fill="#d95926"><title>All 20, Native (default): median 23s per answer</title></path>
+<text x="351.0" y="569" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">23s</tspan></text>
+<path d="M150,574 H272.25 Q276.25,574 276.25,578 V584 Q276.25,588 272.25,588 H150 Z" fill="#199e70"><title>All 20, Native + hint: median 15s per answer</title></path>
+<text x="282.25" y="585" font-size="12" fill="#c3c2b7"><tspan font-weight="600" fill="#f0efec">15s</tspan></text>
+<text x="24" y="652" font-size="11" fill="#898781">Notion AI: 1 run per question, Auto model. Others: all 5 OpenAI models pooled. Source: results/notion-ai.jsonl, results/*.jsonl</text>
+</svg>
